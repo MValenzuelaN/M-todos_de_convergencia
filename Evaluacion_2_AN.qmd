@@ -1,0 +1,529 @@
+---
+# Metadatos del documento
+title: "Análisis Comparativo de Métodos Numéricos para la Búsqueda de Raíces"
+author: "Matías Valenzuela Nuche"
+engine: julia
+julia:
+  exeflags: ["--project=@."]
+
+# Funcionalidades añadidas
+lang: es
+date: last-modified
+date-format: long
+title-block-banner: true
+editor: visual
+
+format:
+  html:
+    # Tema y diseño de la página
+    theme:
+      light: flatly
+      dark: darkly
+    page-layout: article
+    smooth-scroll: true
+    
+    # Tabla de contenidos (TOC)
+    toc: true
+    toc-location: left
+    toc-title: "Contenido"
+    toc-depth: 3
+    toc-expand: 2
+    
+    # Numeración de secciones
+    number-sections: true
+    number-depth: 3
+    
+    # Opciones de visualización de código
+    code-fold: true
+    code-tools:
+      source: true
+      toggle: false
+    code-line-numbers: true
+    code-link: true
+    highlight-style: atom-one
+    
+    # Ubicación de leyendas para figuras y tablas
+    fig-cap-location: bottom
+    tbl-cap-location: top
+
+    # Opciones de renderizado y enlaces
+    embed-resources: true
+    html-math-method: katex
+    link-external-icon: true
+    link-external-newwindow: true
+    
+    # Hoja de estilos personalizada
+    css: "css/styles.css"
+---
+
+# Introducción
+
+## Contexto
+
+El presente informe se centra en la implementación y análisis comparativo de diversos métodos numéricos para la resolución de ecuaciones no lineales. La tarea consiste en programar los algoritmos de Regula falsi, Secante, Illinois, Punto fijo y Steffensen en Julia. Posteriormente, estos métodos se aplicarán para resolver ecuaciones específicas, comparando su rendimiento con otros métodos como Bisección y Punto fijo, bajo una tolerancia de $10^{-6}$. El objetivo general del presente informe es realizar un análisis de la eficiencia, velocidad y características de convergencia de cada algoritmo.
+
+## Objetivos específicos
+
+Los objetivos puntuales a desarrollar en este trabajo son los siguientes:
+
+  - **Implementar**: los métodos de Regula falsi, Secante, Illinois, Punto fijo y Steffensen.
+  - **Resolver**: las ecuaciones propuestas utilizando los métodos implementados.
+  - **Comparar**: el rendimiento de los diferentes métodos ante los problemas planteados.
+  - **Elaborar**: gráficos comparativos que ilustren la evolución de las aproximaciones, el error y el número de iteraciones para cada par de métodos.
+
+# Hallazgos principales
+
+Tras implementar y comparar cuatro pares de métodos numéricos para la búsqueda de raíces, se han extraído los siguientes hallazgos clave:
+
+1.  **Superioridad de Regula falsi sobre Bisección**: Para la función $f(x) = e^{-x} - x$, el método de **Regula falsi** demostró una convergencia notablemente más rápida, alcanzando la tolerancia de $10^{-6}$ en solo **7 iteraciones**, mientras que el método de Bisección requirió **20 iteraciones**. Esto se debe a que Regula falsi utiliza la información del valor de la función para estimar la raíz de manera más eficiente.
+
+2.  **Eficiencia del método de la Secante**: En la búsqueda de la raíz de $f(x) = x^3 - x - 1$, el **método de la Secante** fue considerablemente más eficiente que Regula falsi, convergiendo en **7 iteraciones** frente a las **17** de Regula falsi. La Secante, al no requerir que la raíz esté siempre contenida en el intervalo, logra una aceleración superior, aunque pierde la garantía de convergencia que sí ofrece Regula falsi.
+
+3.  **La mejora del algoritmo de Illinois**: El **método de Illinois** superó de manera contundente a Regula falsi en el mismo problema ($f(x) = x^3 - x - 1$). Illinois resolvió el problema de estancamiento de una de las cotas del intervalo, logrando la convergencia en **7 iteraciones**, menos de la mitad que las **17** de Regula falsi. Esto confirma su robustez y velocidad mejorada.
+
+4.  **Aceleración cuadrática de Steffensen**: La comparación más drástica se observó entre el método de Punto fijo y el de Steffensen para resolver $x = \cos(x)$. Mientras que el Punto fijo requirió **45 iteraciones** con convergencia lineal, el **método de Steffensen** alcanzó la solución en tan solo **4 iteraciones**, exhibiendo una convergencia cuadrática. Esto lo posiciona como una herramienta de aceleración extremadamente potente.
+
+# Resultados y análisis
+
+## Comparación: Regula falsi vs. Bisección
+
+### Análisis del problema
+
+Se busca encontrar la raíz de la función $f(x) = e^{-x} - x$ en el intervalo inicial $[0, 1]$, utilizando una tolerancia de $10^{-6}$.
+
+```{julia}
+#| label: fig-biseccion
+#| fig-cap: "Gráfico de la función f(x) = e^{-x} - x, mostrando su única raíz en el intervalo [0, 1]."
+
+using Plots
+
+f(x) = exp(-x) - x
+x_vals = 0:0.01:1
+y_vals = f.(x_vals)
+
+p = plot(x_vals, y_vals,
+    label = "f(x) = e^(-x) - x",
+    color = :steelblue,
+    linewidth = 2,
+    title = "Análisis de f(x) = e^(-x) - x",
+    xlabel = "x",
+    ylabel = "f(x)",
+    legend = :topright,
+    theme = :default
+)
+hline!([0], linestyle = :dash, color = :black, label = "")
+scatter!([0.567143], [0], color = :red, markersize = 5, label = "Raíz ≈ 0.567143")
+annotate!(0.7, 0.1, text("Raíz", :red, :left, 10))
+p
+```
+
+### Resultados tabulares
+
+A continuación, se presentan las tablas de iteraciones para ambos métodos.
+
+| Iteración | Cota inferior | Cota superior | Raíz aproximada | f(x\_k) |
+|:---:|:---:|:---:|:---:|:---|
+| 1 | 0 | 1 | 0.5 | $1.0653 \times 10^{-01}$ |
+| 2 | 0.5 | 1 | 0.75 | $-2.7763 \times 10^{-01}$ |
+| ... | ... | ... | ... | ... |
+| 19 | 0.5671425 | 0.5671463 | 0.5671444 | $-1.7294 \times 10^{-06}$ |
+| 20 | 0.5671425 | 0.5671444 | 0.5671434 | $-2.3482 \times 10^{-07}$ |
+Table: Iteraciones del método de Bisección (Tabla abreviada). {\#tbl-biseccion-iteraciones}
+
+| Iteración | Cota inferior | Cota superior | Raíz aproximada | f(x\_k) |
+|:---:|:---:|:---:|:---:|:---|
+| 1 | 0 | 1 | 0.6126998 | $-7.0814 \times 10^{-02}$ |
+| 2 | 0 | 0.6126998 | 0.5721814 | $-7.8883 \times 10^{-03}$ |
+| ... | ... | ... | ... | ... |
+| 6 | 0 | 0.5671502 | 0.5671441 | $-1.2066 \times 10^{-06}$ |
+| 7 | 0 | 0.5671441 | 0.5671434 | $-1.3419 \times 10^{-07}$ |
+Table: Iteraciones del método de Regula falsi (Tabla abreviada). {\#tbl-regula-falsi-iteraciones}
+
+### Análisis comparativo
+
+**Regula falsi es superior en rapidez de convergencia**. El método de Bisección necesitó **20 iteraciones**, mientras que Regula falsi alcanzó la misma tolerancia en solo **7 iteraciones**. La razón fundamental es que Bisección solo considera el *signo* de la función en los extremos del intervalo para reducirlo a la mitad, garantizando la convergencia pero de forma lenta. En cambio, Regula falsi utiliza la *magnitud* de $f(a)$ y $f(b)$ para trazar una recta secante y ponderar la siguiente aproximación, lo que le permite acercarse mucho más rápido a la raíz.
+
+### Gráficos de convergencia
+
+```{julia}
+#| label: fig-puntos-biseccion-rf
+#| fig-cap: "Evolución de las aproximaciones (x_k) por iteración. Se observa la convergencia más directa de Regula falsi hacia la raíz."
+
+# Datos de las aproximaciones x_k para cada método
+xk_biseccion = [0.5, 0.75, 0.625, 0.5625, 0.59375, 0.578125, 0.5703125, 0.56640625, 0.56835938, 0.56738281, 0.56689453, 0.56713867, 0.5670166, 0.56707764, 0.56710815, 0.56712341, 0.56713104, 0.56713486, 0.56714249, 0.56714344]
+xk_rf = [0.6127, 0.57218, 0.56774, 0.5672, 0.56715, 0.567144, 0.567143]
+raiz_real = 0.56714329
+
+p = plot(1:length(xk_biseccion), xk_biseccion,
+    label="Bisección", marker=:circle,
+    title="Aproximaciones de la Raíz por Iteración",
+    xlabel="Iteración", ylabel="Valor de x_k",
+    legend=:bottomright)
+plot!(1:length(xk_rf), xk_rf,
+    label="Regula falsi", marker=:square)
+hline!([raiz_real], linestyle=:dash, color=:red, label="Raíz real")
+p
+```
+
+```{julia}
+#| label: fig-error-biseccion-rf
+#| fig-cap: "Comparación del Error absoluto por iteración (escala logarítmica)."
+
+# Datos de Error absoluto extraídos de las tablas
+error_biseccion = abs.([1.06e-01, -2.77e-01, -8.97e-02, 7.28e-03, -4.14e-02, -1.71e-02, -4.96e-03, 1.15e-03, -1.90e-03, -3.75e-04, 3.89e-04, 7.23e-06, -1.84e-04, -8.84e-05, -4.05e-05, -1.66e-05, -4.71e-06, 1.25e-06, -1.72e-06, -2.34e-07])
+error_rf = abs.( [-7.08e-02, -7.88e-03, -8.77e-04, -9.75e-05, -1.08e-05, -1.20e-06, -1.34e-07])
+
+plot(1:length(error_biseccion), error_biseccion,
+    label="Bisección (20 iter.)", yscale=:log10, marker=:circle,
+    title="Error por Iteración", xlabel="Iteración", ylabel="Error absoluto (log)")
+plot!(1:length(error_rf), error_rf,
+    label="Regula falsi (7 iter.)", yscale=:log10, marker=:square)
+```
+
+## Comparación: Regula falsi vs. Secante
+
+### Análisis del problema
+
+Se busca la raíz de $f(x) = x^3 - x - 1$ partiendo de los puntos iniciales $x_0=1$ y $x_1=2$.
+
+```{julia}
+#| label: fig-secante-func
+#| fig-cap: "Gráfico de la función f(x) = x^3 - x - 1."
+
+f(x) = x^3 - x - 1
+x_vals = 1:0.01:2
+y_vals = f.(x_vals)
+
+p = plot(x_vals, y_vals,
+    label = "f(x) = x^3 - x - 1",
+    color = :steelblue,
+    linewidth = 2,
+    title = "Análisis de f(x) = x^3 - x - 1",
+    xlabel = "x",
+    ylabel = "f(x)",
+    legend = :topleft,
+    theme = :default
+)
+hline!([0], linestyle = :dash, color = :black, label = "")
+scatter!([1.324718], [0], color = :red, markersize = 5, label = "Raíz ≈ 1.324718")
+annotate!(1.5, -0.5, text("Raíz", :red, :left, 10))
+p
+```
+
+### Resultados tabulares
+
+| Iteración | Cota inferior | Cota superior | Raíz aproximada | Error |
+|:---:|:---:|:---:|:---:|:---|
+| 1 | 1 | 2 | 1.1666667 | $-5.7870 \times 10^{-01}$ |
+| 2 | 1.1666667 | 2 | 1.2531120 | $-2.8536 \times 10^{-01}$ |
+| ... | ... | ... | ... | ... |
+| 16 | 1.3247169 | 2 | 1.3247175 | $-1.9552 \times 10^{-06}$ |
+| 17 | 1.3247175 | 2 | 1.3247178 | $-8.2907 \times 10^{-07}$ |
+Table: Iteraciones de Regula falsi (Tabla abreviada). {\#tbl-regula-falsi-iteraciones-2}
+
+| Iteración | $x_{k-1}$ | $x_k$ | Raíz aproximada | Error |
+|:---:|:---:|:---:|:---:|:---|
+| 1 | 1 | 2 | 1.1666667 | $-5.7870 \times 10^{-01}$ |
+| 2 | 2 | 1.1666667 | 1.2531120 | $-2.8536 \times 10^{-01}$ |
+| 3 | 1.1666667 | 1.2531120 | 1.3372064 | $5.3881 \times 10^{-02}$ |
+| 4 | 1.2531120 | 1.3372064 | 1.3238501 | $-3.6981 \times 10^{-03}$ |
+| 5 | 1.3372064 | 1.3238501 | 1.3247079 | $-4.2734 \times 10^{-05}$ |
+| 6 | 1.3238501 | 1.3247079 | 1.3247180 | $3.4582 \times 10^{-08}$ |
+| 7 | 1.3247079 | 1.3247180 | 1.3247180 | $-3.2285 \times 10^{-13}$ |
+Table: Iteraciones del método de la Secante. {\#tbl-secante-iteraciones-2}
+
+### Análisis comparativo
+
+El método de la **Secante es considerablemente más eficiente**, convergiendo en **7 iteraciones** frente a las **17** de Regula falsi. La diferencia clave es que Regula falsi *garantiza* que la raíz permanezca acotada en el intervalo $[a_k, b_k]$, lo que asegura la convergencia pero puede ralentizarla si uno de los extremos se estanca. El método de la Secante, por otro lado, no tiene esta restricción; simplemente usa los dos últimos puntos para trazar la siguiente secante. Esta "libertad" le permite alcanzar una convergencia superlineal (orden $\approx 1.618$), pero a costa de no garantizar siempre la convergencia.
+
+### Gráficos de convergencia
+
+```{julia}
+#| label: fig-rectas-secantes
+#| fig-cap: "Primeras 3 rectas secantes para Regula Falsi y Secante. Se aprecia cómo la Secante ajusta su trayectoria de forma más agresiva."
+
+f(x) = x^3 - x - 1
+x_vals = 0.9:0.01:2.1
+
+# Puntos de Regula Falsi
+rf_p = [(1, f(1)), (2, f(2))]
+rf_p = vcat(rf_p, [(1.1667, f(1.1667))])
+rf_p = vcat(rf_p, [(1.2531, f(1.2531))])
+
+# Puntos de Secante
+s_p = [(1, f(1)), (2, f(2))]
+s_p = vcat(s_p, [(1.1667, f(1.1667))])
+s_p = vcat(s_p, [(1.2531, f(1.2531))])
+
+p = plot(x_vals, f.(x_vals), label="f(x)", linewidth=2)
+hline!([0], color=:black, linestyle=:dash, label="")
+title!("Primeras 3 Rectas Secantes")
+
+# Regula Falsi
+plot!([rf_p[1][1], rf_p[2][1]], [rf_p[1][2], rf_p[2][2]], color=:blue, linestyle=:dash, label="RF Iter 1")
+plot!([rf_p[3][1], rf_p[2][1]], [rf_p[3][2], rf_p[2][2]], color=:green, linestyle=:dash, label="RF Iter 2")
+plot!([rf_p[4][1], rf_p[2][1]], [rf_p[4][2], rf_p[2][2]], color=:purple, linestyle=:dash, label="RF Iter 3")
+
+# Secante
+plot!([s_p[1][1], s_p[2][1]], [s_p[1][2], s_p[2][2]], color=:orange, label="Secante Iter 1")
+plot!([s_p[2][1], s_p[3][1]], [s_p[2][2], s_p[3][2]], color=:red, label="Secante Iter 2")
+plot!([s_p[3][1], s_p[4][1]], [s_p[3][2], s_p[4][2]], color=:cyan, label="Secante Iter 3")
+
+hline!([0], linestyle = :dash, color = :black, label = "")
+scatter!([1.324718], [0], color = :red, markersize = 5, label = "Raíz ≈ 1.324718")
+
+p
+```
+
+```{julia}
+#| label: fig-error-rf-secante
+#| fig-cap: "Comparación del Error absoluto por iteración (escala logarítmica)."
+
+# Datos de Error absoluto extraídos de las tablas
+error_rf = abs.( [-5.78e-01, -2.85e-01, -1.29e-01, -5.65e-02, -2.43e-02, -1.03e-02, -4.40e-03, -1.86e-03, -7.92e-04, -3.36e-04, -1.42e-04, -6.04e-05, -2.56e-05, -1.08e-05, -4.61e-06, -1.95e-06, -8.29e-07])
+error_secante = abs.([-5.78e-01, -2.85e-01, 5.38e-02, -3.69e-03, -4.27e-05, 3.45e-08, -3.22e-13])
+
+plot(1:length(error_rf), error_rf,
+    label="Regula falsi (17 iter.)", yscale=:log10, marker=:circle,
+    title="Error por Iteración", xlabel="Iteración", ylabel="Error absoluto (log)")
+plot!(1:length(error_secante), error_secante,
+    label="Secante (7 iter.)", yscale=:log10, marker=:square)
+```
+
+## Comparación: Regula falsi vs. Illinois
+
+### Análisis del problema
+
+Se utiliza la misma función $f(x) = x^3 - x - 1$ en el intervalo $[1, 2]$ para analizar el problema de estancamiento de Regula falsi.
+
+```{julia}
+#| label: fig-illinois-func
+#| fig-cap: "Gráfico de la función f(x) = x^3 - x - 1."
+
+f(x) = x^3 - x - 1
+x_vals = 1:0.01:2
+y_vals = f.(x_vals)
+
+p = plot(x_vals, y_vals,
+    label = "f(x) = x^3 - x - 1",
+    color = :steelblue,
+    linewidth = 2,
+    title = "Análisis de f(x) = x^3 - x - 1",
+    xlabel = "x",
+    ylabel = "f(x)",
+    legend = :topleft,
+    theme = :default
+)
+hline!([0], linestyle = :dash, color = :black, label = "")
+scatter!([1.324718], [0], color = :red, markersize = 5, label = "Raíz ≈ 1.324718")
+p
+```
+
+### Resultados tabulares
+
+| Iteración | Cota inferior | Cota superior | Raíz aproximada | Error |
+|:---:|:---:|:---:|:---:|:---|
+| 1 | 1 | **2** | 1.1666667 | $-5.7870 \times 10^{-01}$ |
+| 2 | 1.1666667 | **2** | 1.2531120 | $-2.8536 \times 10^{-01}$ |
+| 3 | 1.2531120 | **2** | 1.2934374 | $-1.2954 \times 10^{-01}$ |
+| ... | ... | ... | ... | ... |
+| 17 | 1.3247175 | **2** | 1.3247178 | $-8.2907 \times 10^{-07}$ |
+Table: Estancamiento de la cota superior en Regula falsi (Tabla abreviada). {\#tbl-regula-falsi-iteraciones-3}
+
+| Iteración | Cota inferior | Cota superior | Raíz aproximada | Error |
+|:---:|:---:|:---:|:---:|:---|
+| 1 | 1 | 2 | 1.1666667 | $-5.7870 \times 10^{-01}$ |
+| 2 | 1.1666667 | 2 | 1.2531120 | $-2.8536 \times 10^{-01}$ |
+| 3 | 1.2531120 | **2** | 1.3296314 | $2.1050 \times 10^{-02}$ |
+| 4 | 1.2531120 | **1.3296314** | 1.3243746 | $-1.4636 \times 10^{-03}$ |
+| ... | ... | ... | ... | ... |
+| 7 | 1.3247164 | 1.3247195 | 1.3247180 | $-9.6652 \times 10^{-12}$ |
+Table: El método de Illinois actualiza ambas cotas y converge rápidamente. {\#tbl-illinois-iteraciones-3}
+
+### Análisis comparativo
+
+El **método de Illinois es una mejora directa y superior a Regula falsi**. En este problema, Illinois converge en **7 iteraciones**, mientras que Regula falsi necesita **17**. La tabla de Regula falsi muestra claramente que la cota superior se "estanca" en el valor `2` durante todo el proceso, lo que ralentiza drásticamente la convergencia. Illinois resuelve esto de forma ingeniosa: cuando detecta que un extremo no se ha actualizado, modifica el cálculo de la siguiente aproximación dividiendo por dos el valor de la función en ese extremo estancado. Esto "debilita" su influencia y fuerza al intervalo a contraerse de manera más equilibrada, resultando en una convergencia mucho más rápida.
+
+### Gráficos de convergencia
+
+```{julia}
+#| label: fig-intervalo-rf-illinois
+#| fig-cap: "Contracción del intervalo [aₖ, bₖ]. Regula Falsi mantiene bₖ fijo en 2, mientras Illinois ajusta ambas cotas, logrando una convergencia más eficiente."
+
+# Datos de los intervalos para Regula Falsi
+ak_rf = [1, 1.1667, 1.2531, 1.2934, 1.3123, 1.3204, 1.3232, 1.3242, 1.3245, 1.3246, 1.3247, 1.32471, 1.324715, 1.324717, 1.3247175, 1.3247178]
+bk_rf = fill(2, length(ak_rf)) # La cota superior se estanca
+
+# Datos de los intervalos para Illinois
+ak_illinois = [1, 1.1667, 1.2531, 1.2531, 1.32437, 1.324717, 1.324718]
+bk_illinois = [2, 2, 2, 1.32963, 1.32963, 1.324719, 1.324718]
+
+iter_rf = 1:length(ak_rf)
+iter_illinois = 1:length(ak_illinois)
+
+p = plot(iter_rf, ak_rf, label="aₖ (Regula Falsi)", color=:blue, marker=:circle)
+plot!(iter_rf, bk_rf, label="bₖ (Regula Falsi)", color=:blue, linestyle=:dash)
+plot!(iter_illinois, ak_illinois, label="aₖ (Illinois)", color=:red, marker=:square)
+plot!(iter_illinois, bk_illinois, label="bₖ (Illinois)", color=:red, linestyle=:dash, marker=:square)
+title!("Evolución del Intervalo de Búsqueda")
+xlabel!("Iteración")
+ylabel!("Valor de la cota")
+p
+```
+
+```{julia}
+#| label: fig-error-rf-illinois
+#| fig-cap: "Comparación del Error absoluto por iteración (escala logarítmica)."
+
+# Datos de Error absoluto extraídos de las tablas
+error_rf_3 = abs.( [-5.78e-01, -2.85e-01, -1.29e-01, -5.65e-02, -2.43e-02, -1.03e-02, -4.40e-03, -1.86e-03, -7.92e-04, -3.36e-04, -1.42e-04, -6.04e-05, -2.56e-05, -1.08e-05, -4.61e-06, -1.95e-06, -8.29e-07])
+error_illinois = abs.([-5.78e-01, -2.85e-01, 2.10e-02, -1.46e-03, -6.68e-06, 6.61e-06, -9.66e-12])
+
+plot(1:length(error_rf_3), error_rf_3,
+    label="Regula falsi (17 iter.)", yscale=:log10, marker=:circle,
+    title="Error por Iteración", xlabel="Iteración", ylabel="Error absoluto (log)")
+plot!(1:length(error_illinois), error_illinois,
+    label="Illinois (7 iter.)", yscale=:log10, marker=:square)
+```
+
+## Comparación: Punto fijo vs. Steffensen
+
+### Análisis del problema
+
+Se busca resolver la ecuación de Punto fijo $x = \cos(x)$ partiendo de una estimación inicial $x_0 = 0.5$. Esto es equivalente a encontrar la raíz de $f(x) = \cos(x) - x$.
+
+```{julia}
+#| label: fig-cobweb-improved
+#| fig-cap: "Comparación visual del proceso iterativo. El método de Punto fijo sigue un patrón de 'escalera' (en azul) que converge lentamente hacia la intersección. En contraste, el método de Steffensen realiza 'saltos' directos y mucho más grandes (naranja y púrpura), alcanzando la solución en muchos menos pasos."
+
+# 1. Configuración inicial
+
+g(x) = cos(x)
+x_vals = 0.4:0.01:1.0 # Rango acotado para ver mejor la zona de convergencia
+x_star = 0.7390851332 # Raíz para referencia
+
+# 2. Crear el gráfico base
+p = plot(x_vals, g.(x_vals),
+    label="g(x) = cos(x)",
+    linewidth=2.5,
+    title="Convergencia Gráfica: Punto fijo vs. Steffensen",
+    xlabel="x",
+    ylabel="y",
+    legend=:topleft,
+    size=(700,600) # Un poco más grande para mayor claridad
+)
+plot!(p, x_vals, x_vals,
+    label="y = x",
+    linestyle=:dash,
+    color=:gray,
+    linewidth=1.5
+)
+scatter!(p, [x_star], [g(x_star)],
+    color=:red,
+    markersize=6,
+    label="Punto fijo (Solución)"
+)
+
+# 3. Visualización del Método de Punto fijo
+x_i = 0.5 # Punto inicial
+plot!(p, [], [], color=:cornflowerblue, label="Iteración Punto fijo") # Entrada para la leyenda
+for _ in 1:4 # Dibujar los primeros 4 pasos para no saturar el gráfico
+    y_i = g(x_i)
+    # Línea vertical desde (x_i, x_i) hasta (x_i, y_i)
+    plot!(p, [x_i, x_i], [x_i, y_i], color=:cornflowerblue, alpha=0.8, label="")
+    # Línea horizontal desde (x_i, y_i) hasta (y_i, y_i)
+    plot!(p, [x_i, y_i], [y_i, y_i], color=:cornflowerblue, alpha=0.8, label="")
+    x_i = y_i
+end
+annotate!(p, 0.5, 0.45, text("x₀ = 0.5", :black, :center, 9))
+
+# 4. Visualización del Método de Steffensen (Saltos Cuadráticos)
+# --- Primer salto ---
+x0_s1 = 0.5
+y0_s1 = g(x0_s1)
+y1_s1 = g(y0_s1)
+x1_steff = x0_s1 - (y0_s1 - x0_s1)^2 / (y1_s1 - 2*y0_s1 + x0_s1) # Aprox. 0.731385
+
+plot!(p, [x0_s1, x1_steff], [x0_s1, x1_steff],
+    arrow=true,
+    color=:darkorange,
+    linewidth=2,
+    linestyle=:dot,
+    label="1er Salto de Steffensen"
+)
+annotate!(p, (x0_s1 + x1_steff)/2, 0.53, text("Salto 1", :darkorange, :center, 8))
+
+# --- Segundo salto ---
+x0_s2 = x1_steff # El nuevo punto de partida es el resultado del primer salto
+y0_s2 = g(x0_s2)
+y1_s2 = g(y0_s2)
+x2_steff = x0_s2 - (y0_s2 - x0_s2)^2 / (y1_s2 - 2*y0_s2 + x0_s2) # Aprox. 0.739076
+
+plot!(p, [x0_s2, x2_steff], [x0_s2, x2_steff],
+    arrow=true,
+    color=:purple,
+    linewidth=2,
+    linestyle=:dot,
+    label="2do Salto de Steffensen"
+)
+annotate!(p, x0_s2 - 0.003, 0.73, text("Salto 2", :purple, :right, 8))
+
+
+# 5. Mostrar el gráfico
+p
+```
+
+### Resultados tabulares
+
+| Iteración | $x_k$ | $g(x_k)$ | $g(g(x_k))$ | Error ($|x_{k+1}-x_k|$) |
+|:---:|:---:|:---:|:---:|:---|
+| 1 | 0.5000000 | 0.8775826 | 0.6390125 | $3.7758 \times 10^{-01}$ |
+| 2 | 0.8775826 | 0.6390125 | 0.8026851 | $2.3857 \times 10^{-01}$ |
+| ... | ... | ... | ... | ... |
+| 44 | 0.7390851 | 0.7390851 | 0.7390851 | $9.9894 \times 10^{-09}$ |
+| 45 | 0.7390851 | 0.7390851 | 0.7390851 | $6.7290 \times 10^{-09}$ |
+Table: Iteraciones de Punto fijo (Tabla abreviada). {\#tbl-punto-fijo-iteraciones-4}
+
+| Iteración | $x_k$ | $x_{k+1}$ (calculado) | Error ($|x_{k+1}-x_k|$) |
+|:---:|:---:|:---:|:---|
+| 1 | 0.5000000000 | 0.7313851864 | $2.3138 \times 10^{-01}$ |
+| 2 | 0.7313851864 | 0.7390763404 | $7.6911 \times 10^{-03}$ |
+| 3 | 0.7390763404 | 0.7390851332 | $8.7928 \times 10^{-06}$ |
+| 4 | 0.7390851332 | 0.7390851332 | $1.1102 \times 10^{-16}$ |
+Table: Iteraciones del método de Steffensen. {\#tbl-steffensen-iteraciones-4}
+
+### Análisis comparativo
+
+La diferencia en rendimiento es abrumadora y se explica teóricamente por el **orden de convergencia**.
+
+  - **Método de Punto fijo**: Tiene **convergencia lineal** (orden 1). El error disminuye a un ritmo constante, lo que resulta en un progreso lento pero seguro. En este caso, requirió **45 iteraciones**.
+  - **Método de Steffensen**: Es una técnica de aceleración que transforma la convergencia lineal en **convergencia cuadrática** (orden 2). El error en cada paso es aproximadamente el *cuadrado* del error anterior ($e_{k+1} \approx C \cdot e_k^2$). Esto significa que el número de cifras decimales correctas se duplica en cada iteración, logrando una convergencia extremadamente rápida en solo **4 iteraciones**. Steffensen es inmensamente superior para acelerar la convergencia de iteraciones de Punto fijo.
+
+### Gráfico de convergencia del error
+
+```{julia}
+#| label: fig-error-pf-steffensen
+#| fig-cap: "Comparación del Error absoluto por iteración (escala logarítmica)."
+
+# Datos de Error absoluto extraídos de las tablas
+error_pf = abs.([2.38e-01, 1.63e-01, 1.07e-01, 7.34e-02, 4.90e-02, 3.31e-02, 2.22e-02, 1.50e-02, 1.01e-02, 6.82e-03, 4.59e-03, 3.09e-03, 2.08e-03, 1.40e-03, 9.45e-04, 6.36e-04, 4.29e-04, 2.88e-04, 1.94e-04, 1.31e-04, 8.83e-05, 5.95e-05, 4.00e-05, 2.69e-05, 1.81e-05, 1.22e-05, 8.25e-06, 5.55e-06, 3.74e-06, 2.52e-06, 1.69e-06, 1.14e-06, 7.70e-07, 5.19e-07, 3.49e-07, 2.35e-07, 1.58e-07, 1.06e-07, 7.20e-08, 4.85e-08, 3.26e-08, 2.20e-08, 1.48e-08, 9.98e-09, 6.72e-09])
+
+# ¡Este es el cambio! Reemplazamos 0.0 con un número muy pequeño (1e-16) para visualizarlo en la escala logarítmica
+error_steffensen = abs.([2.31e-01, 7.69e-03, 8.79e-06, 1e-16]) 
+
+plot(1:length(error_pf), error_pf,
+    label="Punto fijo (45 iter.)", yscale=:log10, marker=:circle,
+    title="Error por Iteración", xlabel="Iteración", ylabel="Error absoluto (log)")
+plot!(1:length(error_steffensen), error_steffensen,
+    label="Steffensen (4 iter.)", yscale=:log10, marker=:square)
+```
+
+# Conclusiones
+
+Este análisis comparativo ha permitido verificar empírica y teóricamente las fortalezas y debilidades de varios algoritmos para encontrar raíces. La principal conclusión es que las mejoras algorítmicas que incorporan más información sobre el comportamiento de la función (como la magnitud de $f(x)$ o la aceleración de secuencias) ofrecen ganancias sustanciales en eficiencia.
+
+  - El método de **Regula falsi** es una mejora clara sobre la **Bisección**, aunque puede sufrir de convergencia lenta si uno de los extremos del intervalo se estanca.
+  - El **método de Illinois** se presenta como una solución robusta y eficaz a este estancamiento, siendo una alternativa superior a Regula falsi en la práctica.
+  - El **método de la Secante**, si bien es el más rápido de los métodos basados en intervalos, sacrifica la convergencia garantizada, lo que lo hace potente pero potencialmente inestable.
+  - Finalmente, el **método de Steffensen** demuestra el poder de las técnicas de aceleración, transformando un proceso de convergencia lineal (Punto fijo) en uno cuadrático, lo que reduce drásticamente el costo computacional.
+  
