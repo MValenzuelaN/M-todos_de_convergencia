@@ -2446,7 +2446,7 @@ window.Quarto = {
       <div>
       <div class="quarto-title-meta-heading">Fecha de publicación</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">15 de octubre de 2025</p>
+        <p class="date">16 de octubre de 2025</p>
       </div>
     </div>
     
@@ -2514,7 +2514,7 @@ window.Quarto = {
 <h1 data-number="1"><span class="header-section-number">1</span> Introducción</h1>
 <section id="contexto" class="level2" data-number="1.1">
 <h2 data-number="1.1" class="anchored" data-anchor-id="contexto"><span class="header-section-number">1.1</span> Contexto</h2>
-<p>El presente informe se centra en la implementación y análisis comparativo de diversos métodos numéricos para la resolución de ecuaciones no lineales. La tarea consiste en programar los algoritmos de Regula falsi, Secante, Illinois, Punto fijo y Steffensen en Julia. Posteriormente, estos métodos se aplicarán para resolver ecuaciones específicas, comparando su rendimiento con otros métodos como Bisección y Punto fijo, bajo una tolerancia de <span class="math inline">10^{-6}</span>. El objetivo general del presente informe es realizar un análisis de la eficiencia, velocidad y características de convergencia de cada algoritmo.</p>
+<p>El presente informe se centra en la implementación y análisis comparativo de diversos métodos numéricos para la resolución de ecuaciones no lineales. La tarea consiste en programar los algoritmos de Regula falsi, Secante, Illinois, Punto fijo y Steffensen en Julia. Posteriormente, estos métodos se aplicarán para resolver ecuaciones específicas, comparando su rendimiento bajo una tolerancia de <span class="math inline">10^{-6}</span>. El objetivo general del presente informe es realizar un análisis de la eficiencia, velocidad y características de convergencia de cada algoritmo.</p>
 </section>
 <section id="objetivos-específicos" class="level2" data-number="1.2">
 <h2 data-number="1.2" class="anchored" data-anchor-id="objetivos-específicos"><span class="header-section-number">1.2</span> Objetivos específicos</h2>
@@ -2595,7 +2595,7 @@ Tabla 1: Iteraciones del método de Bisección (Tabla abreviada).
 <col style="width: 20%">
 <col style="width: 20%">
 <col style="width: 20%">
-<col style="width: 16%">
+<col style="width: 20%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -2659,7 +2659,7 @@ Tabla 2: Iteraciones del método de Regula falsi (Tabla abreviada).
 <col style="width: 20%">
 <col style="width: 20%">
 <col style="width: 20%">
-<col style="width: 16%">
+<col style="width: 20%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -2878,6 +2878,13 @@ Tabla 4: Iteraciones del método de la Secante.
 </figcaption>
 <div aria-describedby="tbl-secante-iteraciones-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
+<colgroup>
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 22%">
+<col style="width: 35%">
+</colgroup>
 <thead>
 <tr class="header">
 <th style="text-align: center;">Iteración</th>
@@ -3130,7 +3137,7 @@ Tabla 6: El método de Illinois actualiza ambas cotas y converge rápidamente.
 <col style="width: 20%">
 <col style="width: 20%">
 <col style="width: 20%">
-<col style="width: 16%">
+<col style="width: 20%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -3361,6 +3368,13 @@ Tabla 7: Iteraciones de Punto fijo (Tabla abreviada).
 </figcaption>
 <div aria-describedby="tbl-punto-fijo-iteraciones-4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
+<colgroup>
+<col style="width: 15%">
+<col style="width: 15%">
+<col style="width: 15%">
+<col style="width: 18%">
+<col style="width: 36%">
+</colgroup>
 <thead>
 <tr class="header">
 <th style="text-align: center;">Iteración</th>
@@ -3418,6 +3432,12 @@ Tabla 8: Iteraciones del método de Steffensen.
 </figcaption>
 <div aria-describedby="tbl-steffensen-iteraciones-4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
+<colgroup>
+<col style="width: 14%">
+<col style="width: 18%">
+<col style="width: 31%">
+<col style="width: 35%">
+</colgroup>
 <thead>
 <tr class="header">
 <th style="text-align: center;">Iteración</th>
@@ -4043,16 +4063,16 @@ Figura 11: Comparación del Error absoluto por iteración (escala logarítmica)
 <span id="cb12-60"><a href="#cb12-60"></a></span>
 <span id="cb12-61"><a href="#cb12-61"></a><span class="fu">## Contexto</span></span>
 <span id="cb12-62"><a href="#cb12-62"></a></span>
-<span id="cb12-63"><a href="#cb12-63"></a>El presente informe se centra en la implementación y análisis comparativo de diversos métodos numéricos para la resolución de ecuaciones no lineales. La tarea consiste en programar los algoritmos de Regula falsi, Secante, Illinois, Punto fijo y Steffensen en Julia. Posteriormente, estos métodos se aplicarán para resolver ecuaciones específicas, comparando su rendimiento con otros métodos como Bisección y Punto fijo, bajo una tolerancia de $10^{-6}$. El objetivo general del presente informe es realizar un análisis de la eficiencia, velocidad y características de convergencia de cada algoritmo.</span>
+<span id="cb12-63"><a href="#cb12-63"></a>El presente informe se centra en la implementación y análisis comparativo de diversos métodos numéricos para la resolución de ecuaciones no lineales. La tarea consiste en programar los algoritmos de Regula falsi, Secante, Illinois, Punto fijo y Steffensen en Julia. Posteriormente, estos métodos se aplicarán para resolver ecuaciones específicas, comparando su rendimiento bajo una tolerancia de $10^{-6}$. El objetivo general del presente informe es realizar un análisis de la eficiencia, velocidad y características de convergencia de cada algoritmo.</span>
 <span id="cb12-64"><a href="#cb12-64"></a></span>
 <span id="cb12-65"><a href="#cb12-65"></a><span class="fu">## Objetivos específicos</span></span>
 <span id="cb12-66"><a href="#cb12-66"></a></span>
 <span id="cb12-67"><a href="#cb12-67"></a>Los objetivos puntuales a desarrollar en este trabajo son los siguientes:</span>
 <span id="cb12-68"><a href="#cb12-68"></a></span>
-<span id="cb12-69"><a href="#cb12-69"></a><span class="ss">  - </span>**Implementar**: los métodos de Regula falsi, Secante, Illinois, Punto fijo y Steffensen.</span>
-<span id="cb12-70"><a href="#cb12-70"></a><span class="ss">  - </span>**Resolver**: las ecuaciones propuestas utilizando los métodos implementados.</span>
-<span id="cb12-71"><a href="#cb12-71"></a><span class="ss">  - </span>**Comparar**: el rendimiento de los diferentes métodos ante los problemas planteados.</span>
-<span id="cb12-72"><a href="#cb12-72"></a><span class="ss">  - </span>**Elaborar**: gráficos comparativos que ilustren la evolución de las aproximaciones, el error y el número de iteraciones para cada par de métodos.</span>
+<span id="cb12-69"><a href="#cb12-69"></a><span class="ss">-   </span>**Implementar**: los métodos de Regula falsi, Secante, Illinois, Punto fijo y Steffensen.</span>
+<span id="cb12-70"><a href="#cb12-70"></a><span class="ss">-   </span>**Resolver**: las ecuaciones propuestas utilizando los métodos implementados.</span>
+<span id="cb12-71"><a href="#cb12-71"></a><span class="ss">-   </span>**Comparar**: el rendimiento de los diferentes métodos ante los problemas planteados.</span>
+<span id="cb12-72"><a href="#cb12-72"></a><span class="ss">-   </span>**Elaborar**: gráficos comparativos que ilustren la evolución de las aproximaciones, el error y el número de iteraciones para cada par de métodos.</span>
 <span id="cb12-73"><a href="#cb12-73"></a></span>
 <span id="cb12-74"><a href="#cb12-74"></a><span class="fu"># Hallazgos principales</span></span>
 <span id="cb12-75"><a href="#cb12-75"></a></span>
@@ -4104,412 +4124,419 @@ Figura 11: Comparación del Error absoluto por iteración (escala logarítmica)
 <span id="cb12-123"><a href="#cb12-123"></a></span>
 <span id="cb12-124"><a href="#cb12-124"></a>A continuación, se presentan las tablas de iteraciones para ambos métodos.</span>
 <span id="cb12-125"><a href="#cb12-125"></a></span>
-<span id="cb12-126"><a href="#cb12-126"></a><span class="pp">|</span> Iteración <span class="pp">|</span> Cota inferior <span class="pp">|</span> Cota superior <span class="pp">|</span> Raíz aproximada <span class="pp">|</span> f(x<span class="sc">\_</span>k) <span class="pp">|</span></span>
-<span id="cb12-127"><a href="#cb12-127"></a><span class="pp">|:---:|:---:|:---:|:---:|:---|</span></span>
+<span id="cb12-126"><a href="#cb12-126"></a><span class="pp">|</span> Iteración <span class="pp">|</span> Cota inferior <span class="pp">|</span> Cota superior <span class="pp">|</span> Raíz aproximada <span class="pp">|</span> f(x_k) <span class="pp">|</span></span>
+<span id="cb12-127"><a href="#cb12-127"></a><span class="pp">|:-------------:|:-------------:|:-------------:|:-------------:|:--------------|</span></span>
 <span id="cb12-128"><a href="#cb12-128"></a><span class="pp">|</span> 1 <span class="pp">|</span> 0 <span class="pp">|</span> 1 <span class="pp">|</span> 0.5 <span class="pp">|</span> $1.0653 \times 10^{-01}$ <span class="pp">|</span></span>
 <span id="cb12-129"><a href="#cb12-129"></a><span class="pp">|</span> 2 <span class="pp">|</span> 0.5 <span class="pp">|</span> 1 <span class="pp">|</span> 0.75 <span class="pp">|</span> $-2.7763 \times 10^{-01}$ <span class="pp">|</span></span>
 <span id="cb12-130"><a href="#cb12-130"></a><span class="pp">|</span> ... <span class="pp">|</span> ... <span class="pp">|</span> ... <span class="pp">|</span> ... <span class="pp">|</span> ... <span class="pp">|</span></span>
 <span id="cb12-131"><a href="#cb12-131"></a><span class="pp">|</span> 19 <span class="pp">|</span> 0.5671425 <span class="pp">|</span> 0.5671463 <span class="pp">|</span> 0.5671444 <span class="pp">|</span> $-1.7294 \times 10^{-06}$ <span class="pp">|</span></span>
 <span id="cb12-132"><a href="#cb12-132"></a><span class="pp">|</span> 20 <span class="pp">|</span> 0.5671425 <span class="pp">|</span> 0.5671444 <span class="pp">|</span> 0.5671434 <span class="pp">|</span> $-2.3482 \times 10^{-07}$ <span class="pp">|</span></span>
-<span id="cb12-133"><a href="#cb12-133"></a>Table: Iteraciones del método de Bisección (Tabla abreviada). {<span class="sc">\#</span>tbl-biseccion-iteraciones}</span>
-<span id="cb12-134"><a href="#cb12-134"></a></span>
-<span id="cb12-135"><a href="#cb12-135"></a><span class="pp">|</span> Iteración <span class="pp">|</span> Cota inferior <span class="pp">|</span> Cota superior <span class="pp">|</span> Raíz aproximada <span class="pp">|</span> f(x<span class="sc">\_</span>k) <span class="pp">|</span></span>
-<span id="cb12-136"><a href="#cb12-136"></a><span class="pp">|:---:|:---:|:---:|:---:|:---|</span></span>
-<span id="cb12-137"><a href="#cb12-137"></a><span class="pp">|</span> 1 <span class="pp">|</span> 0 <span class="pp">|</span> 1 <span class="pp">|</span> 0.6126998 <span class="pp">|</span> $-7.0814 \times 10^{-02}$ <span class="pp">|</span></span>
-<span id="cb12-138"><a href="#cb12-138"></a><span class="pp">|</span> 2 <span class="pp">|</span> 0 <span class="pp">|</span> 0.6126998 <span class="pp">|</span> 0.5721814 <span class="pp">|</span> $-7.8883 \times 10^{-03}$ <span class="pp">|</span></span>
-<span id="cb12-139"><a href="#cb12-139"></a><span class="pp">|</span> ... <span class="pp">|</span> ... <span class="pp">|</span> ... <span class="pp">|</span> ... <span class="pp">|</span> ... <span class="pp">|</span></span>
-<span id="cb12-140"><a href="#cb12-140"></a><span class="pp">|</span> 6 <span class="pp">|</span> 0 <span class="pp">|</span> 0.5671502 <span class="pp">|</span> 0.5671441 <span class="pp">|</span> $-1.2066 \times 10^{-06}$ <span class="pp">|</span></span>
-<span id="cb12-141"><a href="#cb12-141"></a><span class="pp">|</span> 7 <span class="pp">|</span> 0 <span class="pp">|</span> 0.5671441 <span class="pp">|</span> 0.5671434 <span class="pp">|</span> $-1.3419 \times 10^{-07}$ <span class="pp">|</span></span>
-<span id="cb12-142"><a href="#cb12-142"></a>Table: Iteraciones del método de Regula falsi (Tabla abreviada). {<span class="sc">\#</span>tbl-regula-falsi-iteraciones}</span>
+<span id="cb12-133"><a href="#cb12-133"></a></span>
+<span id="cb12-134"><a href="#cb12-134"></a>: Iteraciones del método de Bisección (Tabla abreviada). {#tbl-biseccion-iteraciones}</span>
+<span id="cb12-135"><a href="#cb12-135"></a></span>
+<span id="cb12-136"><a href="#cb12-136"></a><span class="pp">|</span> Iteración <span class="pp">|</span> Cota inferior <span class="pp">|</span> Cota superior <span class="pp">|</span> Raíz aproximada <span class="pp">|</span> f(x_k) <span class="pp">|</span></span>
+<span id="cb12-137"><a href="#cb12-137"></a><span class="pp">|:-------------:|:-------------:|:-------------:|:-------------:|:--------------|</span></span>
+<span id="cb12-138"><a href="#cb12-138"></a><span class="pp">|</span> 1 <span class="pp">|</span> 0 <span class="pp">|</span> 1 <span class="pp">|</span> 0.6126998 <span class="pp">|</span> $-7.0814 \times 10^{-02}$ <span class="pp">|</span></span>
+<span id="cb12-139"><a href="#cb12-139"></a><span class="pp">|</span> 2 <span class="pp">|</span> 0 <span class="pp">|</span> 0.6126998 <span class="pp">|</span> 0.5721814 <span class="pp">|</span> $-7.8883 \times 10^{-03}$ <span class="pp">|</span></span>
+<span id="cb12-140"><a href="#cb12-140"></a><span class="pp">|</span> ... <span class="pp">|</span> ... <span class="pp">|</span> ... <span class="pp">|</span> ... <span class="pp">|</span> ... <span class="pp">|</span></span>
+<span id="cb12-141"><a href="#cb12-141"></a><span class="pp">|</span> 6 <span class="pp">|</span> 0 <span class="pp">|</span> 0.5671502 <span class="pp">|</span> 0.5671441 <span class="pp">|</span> $-1.2066 \times 10^{-06}$ <span class="pp">|</span></span>
+<span id="cb12-142"><a href="#cb12-142"></a><span class="pp">|</span> 7 <span class="pp">|</span> 0 <span class="pp">|</span> 0.5671441 <span class="pp">|</span> 0.5671434 <span class="pp">|</span> $-1.3419 \times 10^{-07}$ <span class="pp">|</span></span>
 <span id="cb12-143"><a href="#cb12-143"></a></span>
-<span id="cb12-144"><a href="#cb12-144"></a><span class="fu">### Análisis comparativo</span></span>
+<span id="cb12-144"><a href="#cb12-144"></a>: Iteraciones del método de Regula falsi (Tabla abreviada). {#tbl-regula-falsi-iteraciones}</span>
 <span id="cb12-145"><a href="#cb12-145"></a></span>
-<span id="cb12-146"><a href="#cb12-146"></a>**Regula falsi es superior en rapidez de convergencia**. El método de Bisección necesitó **20 iteraciones**, mientras que Regula falsi alcanzó la misma tolerancia en solo **7 iteraciones**. La razón fundamental es que Bisección solo considera el *signo* de la función en los extremos del intervalo para reducirlo a la mitad, garantizando la convergencia pero de forma lenta. En cambio, Regula falsi utiliza la *magnitud* de $f(a)$ y $f(b)$ para trazar una recta secante y ponderar la siguiente aproximación, lo que le permite acercarse mucho más rápido a la raíz.</span>
+<span id="cb12-146"><a href="#cb12-146"></a><span class="fu">### Análisis comparativo</span></span>
 <span id="cb12-147"><a href="#cb12-147"></a></span>
-<span id="cb12-148"><a href="#cb12-148"></a><span class="fu">### Gráficos de convergencia</span></span>
+<span id="cb12-148"><a href="#cb12-148"></a>**Regula falsi es superior en rapidez de convergencia**. El método de Bisección necesitó **20 iteraciones**, mientras que Regula falsi alcanzó la misma tolerancia en solo **7 iteraciones**. La razón fundamental es que Bisección solo considera el *signo* de la función en los extremos del intervalo para reducirlo a la mitad, garantizando la convergencia pero de forma lenta. En cambio, Regula falsi utiliza la *magnitud* de $f(a)$ y $f(b)$ para trazar una recta secante y ponderar la siguiente aproximación, lo que le permite acercarse mucho más rápido a la raíz.</span>
 <span id="cb12-149"><a href="#cb12-149"></a></span>
-<span id="cb12-152"><a href="#cb12-152"></a><span class="in">```{julia}</span></span>
-<span id="cb12-153"><a href="#cb12-153"></a><span class="co">#| label: fig-puntos-biseccion-rf</span></span>
-<span id="cb12-154"><a href="#cb12-154"></a><span class="co">#| fig-cap: &quot;Evolución de las aproximaciones (x_k) por iteración. Se observa la convergencia más directa de Regula falsi hacia la raíz.&quot;</span></span>
-<span id="cb12-155"><a href="#cb12-155"></a></span>
-<span id="cb12-156"><a href="#cb12-156"></a><span class="co"># Datos de las aproximaciones x_k para cada método</span></span>
-<span id="cb12-157"><a href="#cb12-157"></a>xk_biseccion <span class="op">=</span> [<span class="fl">0.5</span>, <span class="fl">0.75</span>, <span class="fl">0.625</span>, <span class="fl">0.5625</span>, <span class="fl">0.59375</span>, <span class="fl">0.578125</span>, <span class="fl">0.5703125</span>, <span class="fl">0.56640625</span>, <span class="fl">0.56835938</span>, <span class="fl">0.56738281</span>, <span class="fl">0.56689453</span>, <span class="fl">0.56713867</span>, <span class="fl">0.5670166</span>, <span class="fl">0.56707764</span>, <span class="fl">0.56710815</span>, <span class="fl">0.56712341</span>, <span class="fl">0.56713104</span>, <span class="fl">0.56713486</span>, <span class="fl">0.56714249</span>, <span class="fl">0.56714344</span>]</span>
-<span id="cb12-158"><a href="#cb12-158"></a>xk_rf <span class="op">=</span> [<span class="fl">0.6127</span>, <span class="fl">0.57218</span>, <span class="fl">0.56774</span>, <span class="fl">0.5672</span>, <span class="fl">0.56715</span>, <span class="fl">0.567144</span>, <span class="fl">0.567143</span>]</span>
-<span id="cb12-159"><a href="#cb12-159"></a>raiz_real <span class="op">=</span> <span class="fl">0.56714329</span></span>
-<span id="cb12-160"><a href="#cb12-160"></a></span>
-<span id="cb12-161"><a href="#cb12-161"></a>p <span class="op">=</span> <span class="fu">plot</span>(<span class="fl">1</span><span class="op">:</span><span class="fu">length</span>(xk_biseccion), xk_biseccion,</span>
-<span id="cb12-162"><a href="#cb12-162"></a>    label<span class="op">=</span><span class="st">&quot;Bisección&quot;</span>, marker<span class="op">=:</span>circle,</span>
-<span id="cb12-163"><a href="#cb12-163"></a>    title<span class="op">=</span><span class="st">&quot;Aproximaciones de la Raíz por Iteración&quot;</span>,</span>
-<span id="cb12-164"><a href="#cb12-164"></a>    xlabel<span class="op">=</span><span class="st">&quot;Iteración&quot;</span>, ylabel<span class="op">=</span><span class="st">&quot;Valor de x_k&quot;</span>,</span>
-<span id="cb12-165"><a href="#cb12-165"></a>    legend<span class="op">=:</span>bottomright)</span>
-<span id="cb12-166"><a href="#cb12-166"></a><span class="fu">plot!</span>(<span class="fl">1</span><span class="op">:</span><span class="fu">length</span>(xk_rf), xk_rf,</span>
-<span id="cb12-167"><a href="#cb12-167"></a>    label<span class="op">=</span><span class="st">&quot;Regula falsi&quot;</span>, marker<span class="op">=:</span>square)</span>
-<span id="cb12-168"><a href="#cb12-168"></a><span class="fu">hline!</span>([raiz_real], linestyle<span class="op">=:</span>dash, color<span class="op">=:</span>red, label<span class="op">=</span><span class="st">&quot;Raíz real&quot;</span>)</span>
-<span id="cb12-169"><a href="#cb12-169"></a>p</span>
-<span id="cb12-170"><a href="#cb12-170"></a><span class="in">```</span></span>
-<span id="cb12-171"><a href="#cb12-171"></a></span>
-<span id="cb12-174"><a href="#cb12-174"></a><span class="in">```{julia}</span></span>
-<span id="cb12-175"><a href="#cb12-175"></a><span class="co">#| label: fig-error-biseccion-rf</span></span>
-<span id="cb12-176"><a href="#cb12-176"></a><span class="co">#| fig-cap: &quot;Comparación del Error absoluto por iteración (escala logarítmica).&quot;</span></span>
-<span id="cb12-177"><a href="#cb12-177"></a></span>
-<span id="cb12-178"><a href="#cb12-178"></a><span class="co"># Datos de Error absoluto extraídos de las tablas</span></span>
-<span id="cb12-179"><a href="#cb12-179"></a>error_biseccion <span class="op">=</span> <span class="fu">abs</span>.([<span class="fl">1.06e-01</span>, <span class="op">-</span><span class="fl">2.77e-01</span>, <span class="op">-</span><span class="fl">8.97e-02</span>, <span class="fl">7.28e-03</span>, <span class="op">-</span><span class="fl">4.14e-02</span>, <span class="op">-</span><span class="fl">1.71e-02</span>, <span class="op">-</span><span class="fl">4.96e-03</span>, <span class="fl">1.15e-03</span>, <span class="op">-</span><span class="fl">1.90e-03</span>, <span class="op">-</span><span class="fl">3.75e-04</span>, <span class="fl">3.89e-04</span>, <span class="fl">7.23e-06</span>, <span class="op">-</span><span class="fl">1.84e-04</span>, <span class="op">-</span><span class="fl">8.84e-05</span>, <span class="op">-</span><span class="fl">4.05e-05</span>, <span class="op">-</span><span class="fl">1.66e-05</span>, <span class="op">-</span><span class="fl">4.71e-06</span>, <span class="fl">1.25e-06</span>, <span class="op">-</span><span class="fl">1.72e-06</span>, <span class="op">-</span><span class="fl">2.34e-07</span>])</span>
-<span id="cb12-180"><a href="#cb12-180"></a>error_rf <span class="op">=</span> <span class="fu">abs</span>.( [<span class="op">-</span><span class="fl">7.08e-02</span>, <span class="op">-</span><span class="fl">7.88e-03</span>, <span class="op">-</span><span class="fl">8.77e-04</span>, <span class="op">-</span><span class="fl">9.75e-05</span>, <span class="op">-</span><span class="fl">1.08e-05</span>, <span class="op">-</span><span class="fl">1.20e-06</span>, <span class="op">-</span><span class="fl">1.34e-07</span>])</span>
-<span id="cb12-181"><a href="#cb12-181"></a></span>
-<span id="cb12-182"><a href="#cb12-182"></a><span class="fu">plot</span>(<span class="fl">1</span><span class="op">:</span><span class="fu">length</span>(error_biseccion), error_biseccion,</span>
-<span id="cb12-183"><a href="#cb12-183"></a>    label<span class="op">=</span><span class="st">&quot;Bisección (20 iter.)&quot;</span>, yscale<span class="op">=:</span>log10, marker<span class="op">=:</span>circle,</span>
-<span id="cb12-184"><a href="#cb12-184"></a>    title<span class="op">=</span><span class="st">&quot;Error por Iteración&quot;</span>, xlabel<span class="op">=</span><span class="st">&quot;Iteración&quot;</span>, ylabel<span class="op">=</span><span class="st">&quot;Error absoluto (log)&quot;</span>)</span>
-<span id="cb12-185"><a href="#cb12-185"></a><span class="fu">plot!</span>(<span class="fl">1</span><span class="op">:</span><span class="fu">length</span>(error_rf), error_rf,</span>
-<span id="cb12-186"><a href="#cb12-186"></a>    label<span class="op">=</span><span class="st">&quot;Regula falsi (7 iter.)&quot;</span>, yscale<span class="op">=:</span>log10, marker<span class="op">=:</span>square)</span>
-<span id="cb12-187"><a href="#cb12-187"></a><span class="in">```</span></span>
-<span id="cb12-188"><a href="#cb12-188"></a></span>
-<span id="cb12-189"><a href="#cb12-189"></a><span class="fu">## Comparación: Regula falsi vs. Secante</span></span>
+<span id="cb12-150"><a href="#cb12-150"></a><span class="fu">### Gráficos de convergencia</span></span>
+<span id="cb12-151"><a href="#cb12-151"></a></span>
+<span id="cb12-154"><a href="#cb12-154"></a><span class="in">```{julia}</span></span>
+<span id="cb12-155"><a href="#cb12-155"></a><span class="co">#| label: fig-puntos-biseccion-rf</span></span>
+<span id="cb12-156"><a href="#cb12-156"></a><span class="co">#| fig-cap: &quot;Evolución de las aproximaciones (x_k) por iteración. Se observa la convergencia más directa de Regula falsi hacia la raíz.&quot;</span></span>
+<span id="cb12-157"><a href="#cb12-157"></a></span>
+<span id="cb12-158"><a href="#cb12-158"></a><span class="co"># Datos de las aproximaciones x_k para cada método</span></span>
+<span id="cb12-159"><a href="#cb12-159"></a>xk_biseccion <span class="op">=</span> [<span class="fl">0.5</span>, <span class="fl">0.75</span>, <span class="fl">0.625</span>, <span class="fl">0.5625</span>, <span class="fl">0.59375</span>, <span class="fl">0.578125</span>, <span class="fl">0.5703125</span>, <span class="fl">0.56640625</span>, <span class="fl">0.56835938</span>, <span class="fl">0.56738281</span>, <span class="fl">0.56689453</span>, <span class="fl">0.56713867</span>, <span class="fl">0.5670166</span>, <span class="fl">0.56707764</span>, <span class="fl">0.56710815</span>, <span class="fl">0.56712341</span>, <span class="fl">0.56713104</span>, <span class="fl">0.56713486</span>, <span class="fl">0.56714249</span>, <span class="fl">0.56714344</span>]</span>
+<span id="cb12-160"><a href="#cb12-160"></a>xk_rf <span class="op">=</span> [<span class="fl">0.6127</span>, <span class="fl">0.57218</span>, <span class="fl">0.56774</span>, <span class="fl">0.5672</span>, <span class="fl">0.56715</span>, <span class="fl">0.567144</span>, <span class="fl">0.567143</span>]</span>
+<span id="cb12-161"><a href="#cb12-161"></a>raiz_real <span class="op">=</span> <span class="fl">0.56714329</span></span>
+<span id="cb12-162"><a href="#cb12-162"></a></span>
+<span id="cb12-163"><a href="#cb12-163"></a>p <span class="op">=</span> <span class="fu">plot</span>(<span class="fl">1</span><span class="op">:</span><span class="fu">length</span>(xk_biseccion), xk_biseccion,</span>
+<span id="cb12-164"><a href="#cb12-164"></a>    label<span class="op">=</span><span class="st">&quot;Bisección&quot;</span>, marker<span class="op">=:</span>circle,</span>
+<span id="cb12-165"><a href="#cb12-165"></a>    title<span class="op">=</span><span class="st">&quot;Aproximaciones de la Raíz por Iteración&quot;</span>,</span>
+<span id="cb12-166"><a href="#cb12-166"></a>    xlabel<span class="op">=</span><span class="st">&quot;Iteración&quot;</span>, ylabel<span class="op">=</span><span class="st">&quot;Valor de x_k&quot;</span>,</span>
+<span id="cb12-167"><a href="#cb12-167"></a>    legend<span class="op">=:</span>bottomright)</span>
+<span id="cb12-168"><a href="#cb12-168"></a><span class="fu">plot!</span>(<span class="fl">1</span><span class="op">:</span><span class="fu">length</span>(xk_rf), xk_rf,</span>
+<span id="cb12-169"><a href="#cb12-169"></a>    label<span class="op">=</span><span class="st">&quot;Regula falsi&quot;</span>, marker<span class="op">=:</span>square)</span>
+<span id="cb12-170"><a href="#cb12-170"></a><span class="fu">hline!</span>([raiz_real], linestyle<span class="op">=:</span>dash, color<span class="op">=:</span>red, label<span class="op">=</span><span class="st">&quot;Raíz real&quot;</span>)</span>
+<span id="cb12-171"><a href="#cb12-171"></a>p</span>
+<span id="cb12-172"><a href="#cb12-172"></a><span class="in">```</span></span>
+<span id="cb12-173"><a href="#cb12-173"></a></span>
+<span id="cb12-176"><a href="#cb12-176"></a><span class="in">```{julia}</span></span>
+<span id="cb12-177"><a href="#cb12-177"></a><span class="co">#| label: fig-error-biseccion-rf</span></span>
+<span id="cb12-178"><a href="#cb12-178"></a><span class="co">#| fig-cap: &quot;Comparación del Error absoluto por iteración (escala logarítmica).&quot;</span></span>
+<span id="cb12-179"><a href="#cb12-179"></a></span>
+<span id="cb12-180"><a href="#cb12-180"></a><span class="co"># Datos de Error absoluto extraídos de las tablas</span></span>
+<span id="cb12-181"><a href="#cb12-181"></a>error_biseccion <span class="op">=</span> <span class="fu">abs</span>.([<span class="fl">1.06e-01</span>, <span class="op">-</span><span class="fl">2.77e-01</span>, <span class="op">-</span><span class="fl">8.97e-02</span>, <span class="fl">7.28e-03</span>, <span class="op">-</span><span class="fl">4.14e-02</span>, <span class="op">-</span><span class="fl">1.71e-02</span>, <span class="op">-</span><span class="fl">4.96e-03</span>, <span class="fl">1.15e-03</span>, <span class="op">-</span><span class="fl">1.90e-03</span>, <span class="op">-</span><span class="fl">3.75e-04</span>, <span class="fl">3.89e-04</span>, <span class="fl">7.23e-06</span>, <span class="op">-</span><span class="fl">1.84e-04</span>, <span class="op">-</span><span class="fl">8.84e-05</span>, <span class="op">-</span><span class="fl">4.05e-05</span>, <span class="op">-</span><span class="fl">1.66e-05</span>, <span class="op">-</span><span class="fl">4.71e-06</span>, <span class="fl">1.25e-06</span>, <span class="op">-</span><span class="fl">1.72e-06</span>, <span class="op">-</span><span class="fl">2.34e-07</span>])</span>
+<span id="cb12-182"><a href="#cb12-182"></a>error_rf <span class="op">=</span> <span class="fu">abs</span>.( [<span class="op">-</span><span class="fl">7.08e-02</span>, <span class="op">-</span><span class="fl">7.88e-03</span>, <span class="op">-</span><span class="fl">8.77e-04</span>, <span class="op">-</span><span class="fl">9.75e-05</span>, <span class="op">-</span><span class="fl">1.08e-05</span>, <span class="op">-</span><span class="fl">1.20e-06</span>, <span class="op">-</span><span class="fl">1.34e-07</span>])</span>
+<span id="cb12-183"><a href="#cb12-183"></a></span>
+<span id="cb12-184"><a href="#cb12-184"></a><span class="fu">plot</span>(<span class="fl">1</span><span class="op">:</span><span class="fu">length</span>(error_biseccion), error_biseccion,</span>
+<span id="cb12-185"><a href="#cb12-185"></a>    label<span class="op">=</span><span class="st">&quot;Bisección (20 iter.)&quot;</span>, yscale<span class="op">=:</span>log10, marker<span class="op">=:</span>circle,</span>
+<span id="cb12-186"><a href="#cb12-186"></a>    title<span class="op">=</span><span class="st">&quot;Error por Iteración&quot;</span>, xlabel<span class="op">=</span><span class="st">&quot;Iteración&quot;</span>, ylabel<span class="op">=</span><span class="st">&quot;Error absoluto (log)&quot;</span>)</span>
+<span id="cb12-187"><a href="#cb12-187"></a><span class="fu">plot!</span>(<span class="fl">1</span><span class="op">:</span><span class="fu">length</span>(error_rf), error_rf,</span>
+<span id="cb12-188"><a href="#cb12-188"></a>    label<span class="op">=</span><span class="st">&quot;Regula falsi (7 iter.)&quot;</span>, yscale<span class="op">=:</span>log10, marker<span class="op">=:</span>square)</span>
+<span id="cb12-189"><a href="#cb12-189"></a><span class="in">```</span></span>
 <span id="cb12-190"><a href="#cb12-190"></a></span>
-<span id="cb12-191"><a href="#cb12-191"></a><span class="fu">### Análisis del problema</span></span>
+<span id="cb12-191"><a href="#cb12-191"></a><span class="fu">## Comparación: Regula falsi vs. Secante</span></span>
 <span id="cb12-192"><a href="#cb12-192"></a></span>
-<span id="cb12-193"><a href="#cb12-193"></a>Se busca la raíz de $f(x) = x^3 - x - 1$ partiendo de los puntos iniciales $x_0=1$ y $x_1=2$.</span>
+<span id="cb12-193"><a href="#cb12-193"></a><span class="fu">### Análisis del problema</span></span>
 <span id="cb12-194"><a href="#cb12-194"></a></span>
-<span id="cb12-197"><a href="#cb12-197"></a><span class="in">```{julia}</span></span>
-<span id="cb12-198"><a href="#cb12-198"></a><span class="co">#| label: fig-secante-func</span></span>
-<span id="cb12-199"><a href="#cb12-199"></a><span class="co">#| fig-cap: &quot;Gráfico de la función f(x) = x^3 - x - 1.&quot;</span></span>
-<span id="cb12-200"><a href="#cb12-200"></a></span>
-<span id="cb12-201"><a href="#cb12-201"></a><span class="fu">f</span>(x) <span class="op">=</span> x<span class="op">^</span><span class="fl">3</span> <span class="op">-</span> x <span class="op">-</span> <span class="fl">1</span></span>
-<span id="cb12-202"><a href="#cb12-202"></a>x_vals <span class="op">=</span> <span class="fl">1</span><span class="op">:</span><span class="fl">0.01</span><span class="op">:</span><span class="fl">2</span></span>
-<span id="cb12-203"><a href="#cb12-203"></a>y_vals <span class="op">=</span> <span class="fu">f</span>.(x_vals)</span>
-<span id="cb12-204"><a href="#cb12-204"></a></span>
-<span id="cb12-205"><a href="#cb12-205"></a>p <span class="op">=</span> <span class="fu">plot</span>(x_vals, y_vals,</span>
-<span id="cb12-206"><a href="#cb12-206"></a>    label <span class="op">=</span> <span class="st">&quot;f(x) = x^3 - x - 1&quot;</span>,</span>
-<span id="cb12-207"><a href="#cb12-207"></a>    color <span class="op">=</span> <span class="op">:</span>steelblue,</span>
-<span id="cb12-208"><a href="#cb12-208"></a>    linewidth <span class="op">=</span> <span class="fl">2</span>,</span>
-<span id="cb12-209"><a href="#cb12-209"></a>    title <span class="op">=</span> <span class="st">&quot;Análisis de f(x) = x^3 - x - 1&quot;</span>,</span>
-<span id="cb12-210"><a href="#cb12-210"></a>    xlabel <span class="op">=</span> <span class="st">&quot;x&quot;</span>,</span>
-<span id="cb12-211"><a href="#cb12-211"></a>    ylabel <span class="op">=</span> <span class="st">&quot;f(x)&quot;</span>,</span>
-<span id="cb12-212"><a href="#cb12-212"></a>    legend <span class="op">=</span> <span class="op">:</span>topleft,</span>
-<span id="cb12-213"><a href="#cb12-213"></a>    theme <span class="op">=</span> <span class="op">:</span>default</span>
-<span id="cb12-214"><a href="#cb12-214"></a>)</span>
-<span id="cb12-215"><a href="#cb12-215"></a><span class="fu">hline!</span>([<span class="fl">0</span>], linestyle <span class="op">=</span> <span class="op">:</span>dash, color <span class="op">=</span> <span class="op">:</span>black, label <span class="op">=</span> <span class="st">&quot;&quot;</span>)</span>
-<span id="cb12-216"><a href="#cb12-216"></a><span class="fu">scatter!</span>([<span class="fl">1.324718</span>], [<span class="fl">0</span>], color <span class="op">=</span> <span class="op">:</span>red, markersize <span class="op">=</span> <span class="fl">5</span>, label <span class="op">=</span> <span class="st">&quot;Raíz ≈ 1.324718&quot;</span>)</span>
-<span id="cb12-217"><a href="#cb12-217"></a><span class="fu">annotate!</span>(<span class="fl">1.5</span>, <span class="op">-</span><span class="fl">0.5</span>, <span class="fu">text</span>(<span class="st">&quot;Raíz&quot;</span>, <span class="op">:</span>red, <span class="op">:</span>left, <span class="fl">10</span>))</span>
-<span id="cb12-218"><a href="#cb12-218"></a>p</span>
-<span id="cb12-219"><a href="#cb12-219"></a><span class="in">```</span></span>
-<span id="cb12-220"><a href="#cb12-220"></a></span>
-<span id="cb12-221"><a href="#cb12-221"></a><span class="fu">### Resultados tabulares</span></span>
+<span id="cb12-195"><a href="#cb12-195"></a>Se busca la raíz de $f(x) = x^3 - x - 1$ partiendo de los puntos iniciales $x_0=1$ y $x_1=2$.</span>
+<span id="cb12-196"><a href="#cb12-196"></a></span>
+<span id="cb12-199"><a href="#cb12-199"></a><span class="in">```{julia}</span></span>
+<span id="cb12-200"><a href="#cb12-200"></a><span class="co">#| label: fig-secante-func</span></span>
+<span id="cb12-201"><a href="#cb12-201"></a><span class="co">#| fig-cap: &quot;Gráfico de la función f(x) = x^3 - x - 1.&quot;</span></span>
+<span id="cb12-202"><a href="#cb12-202"></a></span>
+<span id="cb12-203"><a href="#cb12-203"></a><span class="fu">f</span>(x) <span class="op">=</span> x<span class="op">^</span><span class="fl">3</span> <span class="op">-</span> x <span class="op">-</span> <span class="fl">1</span></span>
+<span id="cb12-204"><a href="#cb12-204"></a>x_vals <span class="op">=</span> <span class="fl">1</span><span class="op">:</span><span class="fl">0.01</span><span class="op">:</span><span class="fl">2</span></span>
+<span id="cb12-205"><a href="#cb12-205"></a>y_vals <span class="op">=</span> <span class="fu">f</span>.(x_vals)</span>
+<span id="cb12-206"><a href="#cb12-206"></a></span>
+<span id="cb12-207"><a href="#cb12-207"></a>p <span class="op">=</span> <span class="fu">plot</span>(x_vals, y_vals,</span>
+<span id="cb12-208"><a href="#cb12-208"></a>    label <span class="op">=</span> <span class="st">&quot;f(x) = x^3 - x - 1&quot;</span>,</span>
+<span id="cb12-209"><a href="#cb12-209"></a>    color <span class="op">=</span> <span class="op">:</span>steelblue,</span>
+<span id="cb12-210"><a href="#cb12-210"></a>    linewidth <span class="op">=</span> <span class="fl">2</span>,</span>
+<span id="cb12-211"><a href="#cb12-211"></a>    title <span class="op">=</span> <span class="st">&quot;Análisis de f(x) = x^3 - x - 1&quot;</span>,</span>
+<span id="cb12-212"><a href="#cb12-212"></a>    xlabel <span class="op">=</span> <span class="st">&quot;x&quot;</span>,</span>
+<span id="cb12-213"><a href="#cb12-213"></a>    ylabel <span class="op">=</span> <span class="st">&quot;f(x)&quot;</span>,</span>
+<span id="cb12-214"><a href="#cb12-214"></a>    legend <span class="op">=</span> <span class="op">:</span>topleft,</span>
+<span id="cb12-215"><a href="#cb12-215"></a>    theme <span class="op">=</span> <span class="op">:</span>default</span>
+<span id="cb12-216"><a href="#cb12-216"></a>)</span>
+<span id="cb12-217"><a href="#cb12-217"></a><span class="fu">hline!</span>([<span class="fl">0</span>], linestyle <span class="op">=</span> <span class="op">:</span>dash, color <span class="op">=</span> <span class="op">:</span>black, label <span class="op">=</span> <span class="st">&quot;&quot;</span>)</span>
+<span id="cb12-218"><a href="#cb12-218"></a><span class="fu">scatter!</span>([<span class="fl">1.324718</span>], [<span class="fl">0</span>], color <span class="op">=</span> <span class="op">:</span>red, markersize <span class="op">=</span> <span class="fl">5</span>, label <span class="op">=</span> <span class="st">&quot;Raíz ≈ 1.324718&quot;</span>)</span>
+<span id="cb12-219"><a href="#cb12-219"></a><span class="fu">annotate!</span>(<span class="fl">1.5</span>, <span class="op">-</span><span class="fl">0.5</span>, <span class="fu">text</span>(<span class="st">&quot;Raíz&quot;</span>, <span class="op">:</span>red, <span class="op">:</span>left, <span class="fl">10</span>))</span>
+<span id="cb12-220"><a href="#cb12-220"></a>p</span>
+<span id="cb12-221"><a href="#cb12-221"></a><span class="in">```</span></span>
 <span id="cb12-222"><a href="#cb12-222"></a></span>
-<span id="cb12-223"><a href="#cb12-223"></a><span class="pp">|</span> Iteración <span class="pp">|</span> Cota inferior <span class="pp">|</span> Cota superior <span class="pp">|</span> Raíz aproximada <span class="pp">|</span> Error <span class="pp">|</span></span>
-<span id="cb12-224"><a href="#cb12-224"></a><span class="pp">|:---:|:---:|:---:|:---:|:---|</span></span>
-<span id="cb12-225"><a href="#cb12-225"></a><span class="pp">|</span> 1 <span class="pp">|</span> 1 <span class="pp">|</span> 2 <span class="pp">|</span> 1.1666667 <span class="pp">|</span> $-5.7870 \times 10^{-01}$ <span class="pp">|</span></span>
-<span id="cb12-226"><a href="#cb12-226"></a><span class="pp">|</span> 2 <span class="pp">|</span> 1.1666667 <span class="pp">|</span> 2 <span class="pp">|</span> 1.2531120 <span class="pp">|</span> $-2.8536 \times 10^{-01}$ <span class="pp">|</span></span>
-<span id="cb12-227"><a href="#cb12-227"></a><span class="pp">|</span> ... <span class="pp">|</span> ... <span class="pp">|</span> ... <span class="pp">|</span> ... <span class="pp">|</span> ... <span class="pp">|</span></span>
-<span id="cb12-228"><a href="#cb12-228"></a><span class="pp">|</span> 16 <span class="pp">|</span> 1.3247169 <span class="pp">|</span> 2 <span class="pp">|</span> 1.3247175 <span class="pp">|</span> $-1.9552 \times 10^{-06}$ <span class="pp">|</span></span>
-<span id="cb12-229"><a href="#cb12-229"></a><span class="pp">|</span> 17 <span class="pp">|</span> 1.3247175 <span class="pp">|</span> 2 <span class="pp">|</span> 1.3247178 <span class="pp">|</span> $-8.2907 \times 10^{-07}$ <span class="pp">|</span></span>
-<span id="cb12-230"><a href="#cb12-230"></a>Table: Iteraciones de Regula falsi (Tabla abreviada). {<span class="sc">\#</span>tbl-regula-falsi-iteraciones-2}</span>
-<span id="cb12-231"><a href="#cb12-231"></a></span>
-<span id="cb12-232"><a href="#cb12-232"></a><span class="pp">|</span> Iteración <span class="pp">|</span> $x_{k-1}$ <span class="pp">|</span> $x_k$ <span class="pp">|</span> Raíz aproximada <span class="pp">|</span> Error <span class="pp">|</span></span>
-<span id="cb12-233"><a href="#cb12-233"></a><span class="pp">|:---:|:---:|:---:|:---:|:---|</span></span>
-<span id="cb12-234"><a href="#cb12-234"></a><span class="pp">|</span> 1 <span class="pp">|</span> 1 <span class="pp">|</span> 2 <span class="pp">|</span> 1.1666667 <span class="pp">|</span> $-5.7870 \times 10^{-01}$ <span class="pp">|</span></span>
-<span id="cb12-235"><a href="#cb12-235"></a><span class="pp">|</span> 2 <span class="pp">|</span> 2 <span class="pp">|</span> 1.1666667 <span class="pp">|</span> 1.2531120 <span class="pp">|</span> $-2.8536 \times 10^{-01}$ <span class="pp">|</span></span>
-<span id="cb12-236"><a href="#cb12-236"></a><span class="pp">|</span> 3 <span class="pp">|</span> 1.1666667 <span class="pp">|</span> 1.2531120 <span class="pp">|</span> 1.3372064 <span class="pp">|</span> $5.3881 \times 10^{-02}$ <span class="pp">|</span></span>
-<span id="cb12-237"><a href="#cb12-237"></a><span class="pp">|</span> 4 <span class="pp">|</span> 1.2531120 <span class="pp">|</span> 1.3372064 <span class="pp">|</span> 1.3238501 <span class="pp">|</span> $-3.6981 \times 10^{-03}$ <span class="pp">|</span></span>
-<span id="cb12-238"><a href="#cb12-238"></a><span class="pp">|</span> 5 <span class="pp">|</span> 1.3372064 <span class="pp">|</span> 1.3238501 <span class="pp">|</span> 1.3247079 <span class="pp">|</span> $-4.2734 \times 10^{-05}$ <span class="pp">|</span></span>
-<span id="cb12-239"><a href="#cb12-239"></a><span class="pp">|</span> 6 <span class="pp">|</span> 1.3238501 <span class="pp">|</span> 1.3247079 <span class="pp">|</span> 1.3247180 <span class="pp">|</span> $3.4582 \times 10^{-08}$ <span class="pp">|</span></span>
-<span id="cb12-240"><a href="#cb12-240"></a><span class="pp">|</span> 7 <span class="pp">|</span> 1.3247079 <span class="pp">|</span> 1.3247180 <span class="pp">|</span> 1.3247180 <span class="pp">|</span> $-3.2285 \times 10^{-13}$ <span class="pp">|</span></span>
-<span id="cb12-241"><a href="#cb12-241"></a>Table: Iteraciones del método de la Secante. {<span class="sc">\#</span>tbl-secante-iteraciones-2}</span>
-<span id="cb12-242"><a href="#cb12-242"></a></span>
-<span id="cb12-243"><a href="#cb12-243"></a><span class="fu">### Análisis comparativo</span></span>
+<span id="cb12-223"><a href="#cb12-223"></a><span class="fu">### Resultados tabulares</span></span>
+<span id="cb12-224"><a href="#cb12-224"></a></span>
+<span id="cb12-225"><a href="#cb12-225"></a><span class="pp">|</span> Iteración <span class="pp">|</span> Cota inferior <span class="pp">|</span> Cota superior <span class="pp">|</span> Raíz aproximada <span class="pp">|</span> Error <span class="pp">|</span></span>
+<span id="cb12-226"><a href="#cb12-226"></a><span class="pp">|</span>:--:<span class="pp">|</span>:--:<span class="pp">|</span>:--:<span class="pp">|</span>:--:<span class="pp">|:---|</span></span>
+<span id="cb12-227"><a href="#cb12-227"></a><span class="pp">|</span> 1 <span class="pp">|</span> 1 <span class="pp">|</span> 2 <span class="pp">|</span> 1.1666667 <span class="pp">|</span> $-5.7870 \times 10^{-01}$ <span class="pp">|</span></span>
+<span id="cb12-228"><a href="#cb12-228"></a><span class="pp">|</span> 2 <span class="pp">|</span> 1.1666667 <span class="pp">|</span> 2 <span class="pp">|</span> 1.2531120 <span class="pp">|</span> $-2.8536 \times 10^{-01}$ <span class="pp">|</span></span>
+<span id="cb12-229"><a href="#cb12-229"></a><span class="pp">|</span> ... <span class="pp">|</span> ... <span class="pp">|</span> ... <span class="pp">|</span> ... <span class="pp">|</span> ... <span class="pp">|</span></span>
+<span id="cb12-230"><a href="#cb12-230"></a><span class="pp">|</span> 16 <span class="pp">|</span> 1.3247169 <span class="pp">|</span> 2 <span class="pp">|</span> 1.3247175 <span class="pp">|</span> $-1.9552 \times 10^{-06}$ <span class="pp">|</span></span>
+<span id="cb12-231"><a href="#cb12-231"></a><span class="pp">|</span> 17 <span class="pp">|</span> 1.3247175 <span class="pp">|</span> 2 <span class="pp">|</span> 1.3247178 <span class="pp">|</span> $-8.2907 \times 10^{-07}$ <span class="pp">|</span></span>
+<span id="cb12-232"><a href="#cb12-232"></a></span>
+<span id="cb12-233"><a href="#cb12-233"></a>: Iteraciones de Regula falsi (Tabla abreviada). {#tbl-regula-falsi-iteraciones-2}</span>
+<span id="cb12-234"><a href="#cb12-234"></a></span>
+<span id="cb12-235"><a href="#cb12-235"></a><span class="pp">|</span> Iteración <span class="pp">|</span> $x_{k-1}$ <span class="pp">|</span>   $x_k$   <span class="pp">|</span> Raíz aproximada <span class="pp">|</span> Error                     <span class="pp">|</span></span>
+<span id="cb12-236"><a href="#cb12-236"></a><span class="pp">|:---------:|:---------:|:---------:|:---------------:|:--------------------------|</span></span>
+<span id="cb12-237"><a href="#cb12-237"></a><span class="pp">|</span>     1     <span class="pp">|</span>     1     <span class="pp">|</span>     2     <span class="pp">|</span>    1.1666667    <span class="pp">|</span> $-5.7870 \times 10^{-01}$ <span class="pp">|</span></span>
+<span id="cb12-238"><a href="#cb12-238"></a><span class="pp">|</span>     2     <span class="pp">|</span>     2     <span class="pp">|</span> 1.1666667 <span class="pp">|</span>    1.2531120    <span class="pp">|</span> $-2.8536 \times 10^{-01}$ <span class="pp">|</span></span>
+<span id="cb12-239"><a href="#cb12-239"></a><span class="pp">|</span>     3     <span class="pp">|</span> 1.1666667 <span class="pp">|</span> 1.2531120 <span class="pp">|</span>    1.3372064    <span class="pp">|</span> $5.3881 \times 10^{-02}$  <span class="pp">|</span></span>
+<span id="cb12-240"><a href="#cb12-240"></a><span class="pp">|</span>     4     <span class="pp">|</span> 1.2531120 <span class="pp">|</span> 1.3372064 <span class="pp">|</span>    1.3238501    <span class="pp">|</span> $-3.6981 \times 10^{-03}$ <span class="pp">|</span></span>
+<span id="cb12-241"><a href="#cb12-241"></a><span class="pp">|</span>     5     <span class="pp">|</span> 1.3372064 <span class="pp">|</span> 1.3238501 <span class="pp">|</span>    1.3247079    <span class="pp">|</span> $-4.2734 \times 10^{-05}$ <span class="pp">|</span></span>
+<span id="cb12-242"><a href="#cb12-242"></a><span class="pp">|</span>     6     <span class="pp">|</span> 1.3238501 <span class="pp">|</span> 1.3247079 <span class="pp">|</span>    1.3247180    <span class="pp">|</span> $3.4582 \times 10^{-08}$  <span class="pp">|</span></span>
+<span id="cb12-243"><a href="#cb12-243"></a><span class="pp">|</span>     7     <span class="pp">|</span> 1.3247079 <span class="pp">|</span> 1.3247180 <span class="pp">|</span>    1.3247180    <span class="pp">|</span> $-3.2285 \times 10^{-13}$ <span class="pp">|</span></span>
 <span id="cb12-244"><a href="#cb12-244"></a></span>
-<span id="cb12-245"><a href="#cb12-245"></a>El método de la **Secante es considerablemente más eficiente**, convergiendo en **7 iteraciones** frente a las **17** de Regula falsi. La diferencia clave es que Regula falsi *garantiza* que la raíz permanezca acotada en el intervalo $<span class="co">[</span><span class="ot">a_k, b_k</span><span class="co">]</span>$, lo que asegura la convergencia pero puede ralentizarla si uno de los extremos se estanca. El método de la Secante, por otro lado, no tiene esta restricción; simplemente usa los dos últimos puntos para trazar la siguiente secante. Esta &quot;libertad&quot; le permite alcanzar una convergencia superlineal (orden $\approx 1.618$), pero a costa de no garantizar siempre la convergencia.</span>
+<span id="cb12-245"><a href="#cb12-245"></a>: Iteraciones del método de la Secante. {#tbl-secante-iteraciones-2}</span>
 <span id="cb12-246"><a href="#cb12-246"></a></span>
-<span id="cb12-247"><a href="#cb12-247"></a><span class="fu">### Gráficos de convergencia</span></span>
+<span id="cb12-247"><a href="#cb12-247"></a><span class="fu">### Análisis comparativo</span></span>
 <span id="cb12-248"><a href="#cb12-248"></a></span>
-<span id="cb12-251"><a href="#cb12-251"></a><span class="in">```{julia}</span></span>
-<span id="cb12-252"><a href="#cb12-252"></a><span class="co">#| label: fig-rectas-secantes</span></span>
-<span id="cb12-253"><a href="#cb12-253"></a><span class="co">#| fig-cap: &quot;Primeras 3 rectas secantes para Regula Falsi y Secante. Se aprecia cómo la Secante ajusta su trayectoria de forma más agresiva.&quot;</span></span>
-<span id="cb12-254"><a href="#cb12-254"></a></span>
-<span id="cb12-255"><a href="#cb12-255"></a><span class="fu">f</span>(x) <span class="op">=</span> x<span class="op">^</span><span class="fl">3</span> <span class="op">-</span> x <span class="op">-</span> <span class="fl">1</span></span>
-<span id="cb12-256"><a href="#cb12-256"></a>x_vals <span class="op">=</span> <span class="fl">0.9</span><span class="op">:</span><span class="fl">0.01</span><span class="op">:</span><span class="fl">2.1</span></span>
-<span id="cb12-257"><a href="#cb12-257"></a></span>
-<span id="cb12-258"><a href="#cb12-258"></a><span class="co"># Puntos de Regula Falsi</span></span>
-<span id="cb12-259"><a href="#cb12-259"></a>rf_p <span class="op">=</span> [(<span class="fl">1</span>, <span class="fu">f</span>(<span class="fl">1</span>)), (<span class="fl">2</span>, <span class="fu">f</span>(<span class="fl">2</span>))]</span>
-<span id="cb12-260"><a href="#cb12-260"></a>rf_p <span class="op">=</span> <span class="fu">vcat</span>(rf_p, [(<span class="fl">1.1667</span>, <span class="fu">f</span>(<span class="fl">1.1667</span>))])</span>
-<span id="cb12-261"><a href="#cb12-261"></a>rf_p <span class="op">=</span> <span class="fu">vcat</span>(rf_p, [(<span class="fl">1.2531</span>, <span class="fu">f</span>(<span class="fl">1.2531</span>))])</span>
-<span id="cb12-262"><a href="#cb12-262"></a></span>
-<span id="cb12-263"><a href="#cb12-263"></a><span class="co"># Puntos de Secante</span></span>
-<span id="cb12-264"><a href="#cb12-264"></a>s_p <span class="op">=</span> [(<span class="fl">1</span>, <span class="fu">f</span>(<span class="fl">1</span>)), (<span class="fl">2</span>, <span class="fu">f</span>(<span class="fl">2</span>))]</span>
-<span id="cb12-265"><a href="#cb12-265"></a>s_p <span class="op">=</span> <span class="fu">vcat</span>(s_p, [(<span class="fl">1.1667</span>, <span class="fu">f</span>(<span class="fl">1.1667</span>))])</span>
-<span id="cb12-266"><a href="#cb12-266"></a>s_p <span class="op">=</span> <span class="fu">vcat</span>(s_p, [(<span class="fl">1.2531</span>, <span class="fu">f</span>(<span class="fl">1.2531</span>))])</span>
-<span id="cb12-267"><a href="#cb12-267"></a></span>
-<span id="cb12-268"><a href="#cb12-268"></a>p <span class="op">=</span> <span class="fu">plot</span>(x_vals, <span class="fu">f</span>.(x_vals), label<span class="op">=</span><span class="st">&quot;f(x)&quot;</span>, linewidth<span class="op">=</span><span class="fl">2</span>)</span>
-<span id="cb12-269"><a href="#cb12-269"></a><span class="fu">hline!</span>([<span class="fl">0</span>], color<span class="op">=:</span>black, linestyle<span class="op">=:</span>dash, label<span class="op">=</span><span class="st">&quot;&quot;</span>)</span>
-<span id="cb12-270"><a href="#cb12-270"></a><span class="fu">title!</span>(<span class="st">&quot;Primeras 3 Rectas Secantes&quot;</span>)</span>
+<span id="cb12-249"><a href="#cb12-249"></a>El método de la **Secante es considerablemente más eficiente**, convergiendo en **7 iteraciones** frente a las **17** de Regula falsi. La diferencia clave es que Regula falsi *garantiza* que la raíz permanezca acotada en el intervalo $<span class="co">[</span><span class="ot">a_k, b_k</span><span class="co">]</span>$, lo que asegura la convergencia pero puede ralentizarla si uno de los extremos se estanca. El método de la Secante, por otro lado, no tiene esta restricción; simplemente usa los dos últimos puntos para trazar la siguiente secante. Esta &quot;libertad&quot; le permite alcanzar una convergencia superlineal (orden $\approx 1.618$), pero a costa de no garantizar siempre la convergencia.</span>
+<span id="cb12-250"><a href="#cb12-250"></a></span>
+<span id="cb12-251"><a href="#cb12-251"></a><span class="fu">### Gráficos de convergencia</span></span>
+<span id="cb12-252"><a href="#cb12-252"></a></span>
+<span id="cb12-255"><a href="#cb12-255"></a><span class="in">```{julia}</span></span>
+<span id="cb12-256"><a href="#cb12-256"></a><span class="co">#| label: fig-rectas-secantes</span></span>
+<span id="cb12-257"><a href="#cb12-257"></a><span class="co">#| fig-cap: &quot;Primeras 3 rectas secantes para Regula Falsi y Secante. Se aprecia cómo la Secante ajusta su trayectoria de forma más agresiva.&quot;</span></span>
+<span id="cb12-258"><a href="#cb12-258"></a></span>
+<span id="cb12-259"><a href="#cb12-259"></a><span class="fu">f</span>(x) <span class="op">=</span> x<span class="op">^</span><span class="fl">3</span> <span class="op">-</span> x <span class="op">-</span> <span class="fl">1</span></span>
+<span id="cb12-260"><a href="#cb12-260"></a>x_vals <span class="op">=</span> <span class="fl">0.9</span><span class="op">:</span><span class="fl">0.01</span><span class="op">:</span><span class="fl">2.1</span></span>
+<span id="cb12-261"><a href="#cb12-261"></a></span>
+<span id="cb12-262"><a href="#cb12-262"></a><span class="co"># Puntos de Regula Falsi</span></span>
+<span id="cb12-263"><a href="#cb12-263"></a>rf_p <span class="op">=</span> [(<span class="fl">1</span>, <span class="fu">f</span>(<span class="fl">1</span>)), (<span class="fl">2</span>, <span class="fu">f</span>(<span class="fl">2</span>))]</span>
+<span id="cb12-264"><a href="#cb12-264"></a>rf_p <span class="op">=</span> <span class="fu">vcat</span>(rf_p, [(<span class="fl">1.1667</span>, <span class="fu">f</span>(<span class="fl">1.1667</span>))])</span>
+<span id="cb12-265"><a href="#cb12-265"></a>rf_p <span class="op">=</span> <span class="fu">vcat</span>(rf_p, [(<span class="fl">1.2531</span>, <span class="fu">f</span>(<span class="fl">1.2531</span>))])</span>
+<span id="cb12-266"><a href="#cb12-266"></a></span>
+<span id="cb12-267"><a href="#cb12-267"></a><span class="co"># Puntos de Secante</span></span>
+<span id="cb12-268"><a href="#cb12-268"></a>s_p <span class="op">=</span> [(<span class="fl">1</span>, <span class="fu">f</span>(<span class="fl">1</span>)), (<span class="fl">2</span>, <span class="fu">f</span>(<span class="fl">2</span>))]</span>
+<span id="cb12-269"><a href="#cb12-269"></a>s_p <span class="op">=</span> <span class="fu">vcat</span>(s_p, [(<span class="fl">1.1667</span>, <span class="fu">f</span>(<span class="fl">1.1667</span>))])</span>
+<span id="cb12-270"><a href="#cb12-270"></a>s_p <span class="op">=</span> <span class="fu">vcat</span>(s_p, [(<span class="fl">1.2531</span>, <span class="fu">f</span>(<span class="fl">1.2531</span>))])</span>
 <span id="cb12-271"><a href="#cb12-271"></a></span>
-<span id="cb12-272"><a href="#cb12-272"></a><span class="co"># Regula Falsi</span></span>
-<span id="cb12-273"><a href="#cb12-273"></a><span class="fu">plot!</span>([rf_p[<span class="fl">1</span>][<span class="fl">1</span>], rf_p[<span class="fl">2</span>][<span class="fl">1</span>]], [rf_p[<span class="fl">1</span>][<span class="fl">2</span>], rf_p[<span class="fl">2</span>][<span class="fl">2</span>]], color<span class="op">=:</span>blue, linestyle<span class="op">=:</span>dash, label<span class="op">=</span><span class="st">&quot;RF Iter 1&quot;</span>)</span>
-<span id="cb12-274"><a href="#cb12-274"></a><span class="fu">plot!</span>([rf_p[<span class="fl">3</span>][<span class="fl">1</span>], rf_p[<span class="fl">2</span>][<span class="fl">1</span>]], [rf_p[<span class="fl">3</span>][<span class="fl">2</span>], rf_p[<span class="fl">2</span>][<span class="fl">2</span>]], color<span class="op">=:</span>green, linestyle<span class="op">=:</span>dash, label<span class="op">=</span><span class="st">&quot;RF Iter 2&quot;</span>)</span>
-<span id="cb12-275"><a href="#cb12-275"></a><span class="fu">plot!</span>([rf_p[<span class="fl">4</span>][<span class="fl">1</span>], rf_p[<span class="fl">2</span>][<span class="fl">1</span>]], [rf_p[<span class="fl">4</span>][<span class="fl">2</span>], rf_p[<span class="fl">2</span>][<span class="fl">2</span>]], color<span class="op">=:</span>purple, linestyle<span class="op">=:</span>dash, label<span class="op">=</span><span class="st">&quot;RF Iter 3&quot;</span>)</span>
-<span id="cb12-276"><a href="#cb12-276"></a></span>
-<span id="cb12-277"><a href="#cb12-277"></a><span class="co"># Secante</span></span>
-<span id="cb12-278"><a href="#cb12-278"></a><span class="fu">plot!</span>([s_p[<span class="fl">1</span>][<span class="fl">1</span>], s_p[<span class="fl">2</span>][<span class="fl">1</span>]], [s_p[<span class="fl">1</span>][<span class="fl">2</span>], s_p[<span class="fl">2</span>][<span class="fl">2</span>]], color<span class="op">=:</span>orange, label<span class="op">=</span><span class="st">&quot;Secante Iter 1&quot;</span>)</span>
-<span id="cb12-279"><a href="#cb12-279"></a><span class="fu">plot!</span>([s_p[<span class="fl">2</span>][<span class="fl">1</span>], s_p[<span class="fl">3</span>][<span class="fl">1</span>]], [s_p[<span class="fl">2</span>][<span class="fl">2</span>], s_p[<span class="fl">3</span>][<span class="fl">2</span>]], color<span class="op">=:</span>red, label<span class="op">=</span><span class="st">&quot;Secante Iter 2&quot;</span>)</span>
-<span id="cb12-280"><a href="#cb12-280"></a><span class="fu">plot!</span>([s_p[<span class="fl">3</span>][<span class="fl">1</span>], s_p[<span class="fl">4</span>][<span class="fl">1</span>]], [s_p[<span class="fl">3</span>][<span class="fl">2</span>], s_p[<span class="fl">4</span>][<span class="fl">2</span>]], color<span class="op">=:</span>cyan, label<span class="op">=</span><span class="st">&quot;Secante Iter 3&quot;</span>)</span>
-<span id="cb12-281"><a href="#cb12-281"></a></span>
-<span id="cb12-282"><a href="#cb12-282"></a><span class="fu">hline!</span>([<span class="fl">0</span>], linestyle <span class="op">=</span> <span class="op">:</span>dash, color <span class="op">=</span> <span class="op">:</span>black, label <span class="op">=</span> <span class="st">&quot;&quot;</span>)</span>
-<span id="cb12-283"><a href="#cb12-283"></a><span class="fu">scatter!</span>([<span class="fl">1.324718</span>], [<span class="fl">0</span>], color <span class="op">=</span> <span class="op">:</span>red, markersize <span class="op">=</span> <span class="fl">5</span>, label <span class="op">=</span> <span class="st">&quot;Raíz ≈ 1.324718&quot;</span>)</span>
-<span id="cb12-284"><a href="#cb12-284"></a></span>
-<span id="cb12-285"><a href="#cb12-285"></a>p</span>
-<span id="cb12-286"><a href="#cb12-286"></a><span class="in">```</span></span>
-<span id="cb12-287"><a href="#cb12-287"></a></span>
-<span id="cb12-290"><a href="#cb12-290"></a><span class="in">```{julia}</span></span>
-<span id="cb12-291"><a href="#cb12-291"></a><span class="co">#| label: fig-error-rf-secante</span></span>
-<span id="cb12-292"><a href="#cb12-292"></a><span class="co">#| fig-cap: &quot;Comparación del Error absoluto por iteración (escala logarítmica).&quot;</span></span>
-<span id="cb12-293"><a href="#cb12-293"></a></span>
-<span id="cb12-294"><a href="#cb12-294"></a><span class="co"># Datos de Error absoluto extraídos de las tablas</span></span>
-<span id="cb12-295"><a href="#cb12-295"></a>error_rf <span class="op">=</span> <span class="fu">abs</span>.( [<span class="op">-</span><span class="fl">5.78e-01</span>, <span class="op">-</span><span class="fl">2.85e-01</span>, <span class="op">-</span><span class="fl">1.29e-01</span>, <span class="op">-</span><span class="fl">5.65e-02</span>, <span class="op">-</span><span class="fl">2.43e-02</span>, <span class="op">-</span><span class="fl">1.03e-02</span>, <span class="op">-</span><span class="fl">4.40e-03</span>, <span class="op">-</span><span class="fl">1.86e-03</span>, <span class="op">-</span><span class="fl">7.92e-04</span>, <span class="op">-</span><span class="fl">3.36e-04</span>, <span class="op">-</span><span class="fl">1.42e-04</span>, <span class="op">-</span><span class="fl">6.04e-05</span>, <span class="op">-</span><span class="fl">2.56e-05</span>, <span class="op">-</span><span class="fl">1.08e-05</span>, <span class="op">-</span><span class="fl">4.61e-06</span>, <span class="op">-</span><span class="fl">1.95e-06</span>, <span class="op">-</span><span class="fl">8.29e-07</span>])</span>
-<span id="cb12-296"><a href="#cb12-296"></a>error_secante <span class="op">=</span> <span class="fu">abs</span>.([<span class="op">-</span><span class="fl">5.78e-01</span>, <span class="op">-</span><span class="fl">2.85e-01</span>, <span class="fl">5.38e-02</span>, <span class="op">-</span><span class="fl">3.69e-03</span>, <span class="op">-</span><span class="fl">4.27e-05</span>, <span class="fl">3.45e-08</span>, <span class="op">-</span><span class="fl">3.22e-13</span>])</span>
+<span id="cb12-272"><a href="#cb12-272"></a>p <span class="op">=</span> <span class="fu">plot</span>(x_vals, <span class="fu">f</span>.(x_vals), label<span class="op">=</span><span class="st">&quot;f(x)&quot;</span>, linewidth<span class="op">=</span><span class="fl">2</span>)</span>
+<span id="cb12-273"><a href="#cb12-273"></a><span class="fu">hline!</span>([<span class="fl">0</span>], color<span class="op">=:</span>black, linestyle<span class="op">=:</span>dash, label<span class="op">=</span><span class="st">&quot;&quot;</span>)</span>
+<span id="cb12-274"><a href="#cb12-274"></a><span class="fu">title!</span>(<span class="st">&quot;Primeras 3 Rectas Secantes&quot;</span>)</span>
+<span id="cb12-275"><a href="#cb12-275"></a></span>
+<span id="cb12-276"><a href="#cb12-276"></a><span class="co"># Regula Falsi</span></span>
+<span id="cb12-277"><a href="#cb12-277"></a><span class="fu">plot!</span>([rf_p[<span class="fl">1</span>][<span class="fl">1</span>], rf_p[<span class="fl">2</span>][<span class="fl">1</span>]], [rf_p[<span class="fl">1</span>][<span class="fl">2</span>], rf_p[<span class="fl">2</span>][<span class="fl">2</span>]], color<span class="op">=:</span>blue, linestyle<span class="op">=:</span>dash, label<span class="op">=</span><span class="st">&quot;RF Iter 1&quot;</span>)</span>
+<span id="cb12-278"><a href="#cb12-278"></a><span class="fu">plot!</span>([rf_p[<span class="fl">3</span>][<span class="fl">1</span>], rf_p[<span class="fl">2</span>][<span class="fl">1</span>]], [rf_p[<span class="fl">3</span>][<span class="fl">2</span>], rf_p[<span class="fl">2</span>][<span class="fl">2</span>]], color<span class="op">=:</span>green, linestyle<span class="op">=:</span>dash, label<span class="op">=</span><span class="st">&quot;RF Iter 2&quot;</span>)</span>
+<span id="cb12-279"><a href="#cb12-279"></a><span class="fu">plot!</span>([rf_p[<span class="fl">4</span>][<span class="fl">1</span>], rf_p[<span class="fl">2</span>][<span class="fl">1</span>]], [rf_p[<span class="fl">4</span>][<span class="fl">2</span>], rf_p[<span class="fl">2</span>][<span class="fl">2</span>]], color<span class="op">=:</span>purple, linestyle<span class="op">=:</span>dash, label<span class="op">=</span><span class="st">&quot;RF Iter 3&quot;</span>)</span>
+<span id="cb12-280"><a href="#cb12-280"></a></span>
+<span id="cb12-281"><a href="#cb12-281"></a><span class="co"># Secante</span></span>
+<span id="cb12-282"><a href="#cb12-282"></a><span class="fu">plot!</span>([s_p[<span class="fl">1</span>][<span class="fl">1</span>], s_p[<span class="fl">2</span>][<span class="fl">1</span>]], [s_p[<span class="fl">1</span>][<span class="fl">2</span>], s_p[<span class="fl">2</span>][<span class="fl">2</span>]], color<span class="op">=:</span>orange, label<span class="op">=</span><span class="st">&quot;Secante Iter 1&quot;</span>)</span>
+<span id="cb12-283"><a href="#cb12-283"></a><span class="fu">plot!</span>([s_p[<span class="fl">2</span>][<span class="fl">1</span>], s_p[<span class="fl">3</span>][<span class="fl">1</span>]], [s_p[<span class="fl">2</span>][<span class="fl">2</span>], s_p[<span class="fl">3</span>][<span class="fl">2</span>]], color<span class="op">=:</span>red, label<span class="op">=</span><span class="st">&quot;Secante Iter 2&quot;</span>)</span>
+<span id="cb12-284"><a href="#cb12-284"></a><span class="fu">plot!</span>([s_p[<span class="fl">3</span>][<span class="fl">1</span>], s_p[<span class="fl">4</span>][<span class="fl">1</span>]], [s_p[<span class="fl">3</span>][<span class="fl">2</span>], s_p[<span class="fl">4</span>][<span class="fl">2</span>]], color<span class="op">=:</span>cyan, label<span class="op">=</span><span class="st">&quot;Secante Iter 3&quot;</span>)</span>
+<span id="cb12-285"><a href="#cb12-285"></a></span>
+<span id="cb12-286"><a href="#cb12-286"></a><span class="fu">hline!</span>([<span class="fl">0</span>], linestyle <span class="op">=</span> <span class="op">:</span>dash, color <span class="op">=</span> <span class="op">:</span>black, label <span class="op">=</span> <span class="st">&quot;&quot;</span>)</span>
+<span id="cb12-287"><a href="#cb12-287"></a><span class="fu">scatter!</span>([<span class="fl">1.324718</span>], [<span class="fl">0</span>], color <span class="op">=</span> <span class="op">:</span>red, markersize <span class="op">=</span> <span class="fl">5</span>, label <span class="op">=</span> <span class="st">&quot;Raíz ≈ 1.324718&quot;</span>)</span>
+<span id="cb12-288"><a href="#cb12-288"></a></span>
+<span id="cb12-289"><a href="#cb12-289"></a>p</span>
+<span id="cb12-290"><a href="#cb12-290"></a><span class="in">```</span></span>
+<span id="cb12-291"><a href="#cb12-291"></a></span>
+<span id="cb12-294"><a href="#cb12-294"></a><span class="in">```{julia}</span></span>
+<span id="cb12-295"><a href="#cb12-295"></a><span class="co">#| label: fig-error-rf-secante</span></span>
+<span id="cb12-296"><a href="#cb12-296"></a><span class="co">#| fig-cap: &quot;Comparación del Error absoluto por iteración (escala logarítmica).&quot;</span></span>
 <span id="cb12-297"><a href="#cb12-297"></a></span>
-<span id="cb12-298"><a href="#cb12-298"></a><span class="fu">plot</span>(<span class="fl">1</span><span class="op">:</span><span class="fu">length</span>(error_rf), error_rf,</span>
-<span id="cb12-299"><a href="#cb12-299"></a>    label<span class="op">=</span><span class="st">&quot;Regula falsi (17 iter.)&quot;</span>, yscale<span class="op">=:</span>log10, marker<span class="op">=:</span>circle,</span>
-<span id="cb12-300"><a href="#cb12-300"></a>    title<span class="op">=</span><span class="st">&quot;Error por Iteración&quot;</span>, xlabel<span class="op">=</span><span class="st">&quot;Iteración&quot;</span>, ylabel<span class="op">=</span><span class="st">&quot;Error absoluto (log)&quot;</span>)</span>
-<span id="cb12-301"><a href="#cb12-301"></a><span class="fu">plot!</span>(<span class="fl">1</span><span class="op">:</span><span class="fu">length</span>(error_secante), error_secante,</span>
-<span id="cb12-302"><a href="#cb12-302"></a>    label<span class="op">=</span><span class="st">&quot;Secante (7 iter.)&quot;</span>, yscale<span class="op">=:</span>log10, marker<span class="op">=:</span>square)</span>
-<span id="cb12-303"><a href="#cb12-303"></a><span class="in">```</span></span>
-<span id="cb12-304"><a href="#cb12-304"></a></span>
-<span id="cb12-305"><a href="#cb12-305"></a><span class="fu">## Comparación: Regula falsi vs. Illinois</span></span>
-<span id="cb12-306"><a href="#cb12-306"></a></span>
-<span id="cb12-307"><a href="#cb12-307"></a><span class="fu">### Análisis del problema</span></span>
+<span id="cb12-298"><a href="#cb12-298"></a><span class="co"># Datos de Error absoluto extraídos de las tablas</span></span>
+<span id="cb12-299"><a href="#cb12-299"></a>error_rf <span class="op">=</span> <span class="fu">abs</span>.( [<span class="op">-</span><span class="fl">5.78e-01</span>, <span class="op">-</span><span class="fl">2.85e-01</span>, <span class="op">-</span><span class="fl">1.29e-01</span>, <span class="op">-</span><span class="fl">5.65e-02</span>, <span class="op">-</span><span class="fl">2.43e-02</span>, <span class="op">-</span><span class="fl">1.03e-02</span>, <span class="op">-</span><span class="fl">4.40e-03</span>, <span class="op">-</span><span class="fl">1.86e-03</span>, <span class="op">-</span><span class="fl">7.92e-04</span>, <span class="op">-</span><span class="fl">3.36e-04</span>, <span class="op">-</span><span class="fl">1.42e-04</span>, <span class="op">-</span><span class="fl">6.04e-05</span>, <span class="op">-</span><span class="fl">2.56e-05</span>, <span class="op">-</span><span class="fl">1.08e-05</span>, <span class="op">-</span><span class="fl">4.61e-06</span>, <span class="op">-</span><span class="fl">1.95e-06</span>, <span class="op">-</span><span class="fl">8.29e-07</span>])</span>
+<span id="cb12-300"><a href="#cb12-300"></a>error_secante <span class="op">=</span> <span class="fu">abs</span>.([<span class="op">-</span><span class="fl">5.78e-01</span>, <span class="op">-</span><span class="fl">2.85e-01</span>, <span class="fl">5.38e-02</span>, <span class="op">-</span><span class="fl">3.69e-03</span>, <span class="op">-</span><span class="fl">4.27e-05</span>, <span class="fl">3.45e-08</span>, <span class="op">-</span><span class="fl">3.22e-13</span>])</span>
+<span id="cb12-301"><a href="#cb12-301"></a></span>
+<span id="cb12-302"><a href="#cb12-302"></a><span class="fu">plot</span>(<span class="fl">1</span><span class="op">:</span><span class="fu">length</span>(error_rf), error_rf,</span>
+<span id="cb12-303"><a href="#cb12-303"></a>    label<span class="op">=</span><span class="st">&quot;Regula falsi (17 iter.)&quot;</span>, yscale<span class="op">=:</span>log10, marker<span class="op">=:</span>circle,</span>
+<span id="cb12-304"><a href="#cb12-304"></a>    title<span class="op">=</span><span class="st">&quot;Error por Iteración&quot;</span>, xlabel<span class="op">=</span><span class="st">&quot;Iteración&quot;</span>, ylabel<span class="op">=</span><span class="st">&quot;Error absoluto (log)&quot;</span>)</span>
+<span id="cb12-305"><a href="#cb12-305"></a><span class="fu">plot!</span>(<span class="fl">1</span><span class="op">:</span><span class="fu">length</span>(error_secante), error_secante,</span>
+<span id="cb12-306"><a href="#cb12-306"></a>    label<span class="op">=</span><span class="st">&quot;Secante (7 iter.)&quot;</span>, yscale<span class="op">=:</span>log10, marker<span class="op">=:</span>square)</span>
+<span id="cb12-307"><a href="#cb12-307"></a><span class="in">```</span></span>
 <span id="cb12-308"><a href="#cb12-308"></a></span>
-<span id="cb12-309"><a href="#cb12-309"></a>Se utiliza la misma función $f(x) = x^3 - x - 1$ en el intervalo $<span class="co">[</span><span class="ot">1, 2</span><span class="co">]</span>$ para analizar el problema de estancamiento de Regula falsi.</span>
+<span id="cb12-309"><a href="#cb12-309"></a><span class="fu">## Comparación: Regula falsi vs. Illinois</span></span>
 <span id="cb12-310"><a href="#cb12-310"></a></span>
-<span id="cb12-313"><a href="#cb12-313"></a><span class="in">```{julia}</span></span>
-<span id="cb12-314"><a href="#cb12-314"></a><span class="co">#| label: fig-illinois-func</span></span>
-<span id="cb12-315"><a href="#cb12-315"></a><span class="co">#| fig-cap: &quot;Gráfico de la función f(x) = x^3 - x - 1.&quot;</span></span>
-<span id="cb12-316"><a href="#cb12-316"></a></span>
-<span id="cb12-317"><a href="#cb12-317"></a><span class="fu">f</span>(x) <span class="op">=</span> x<span class="op">^</span><span class="fl">3</span> <span class="op">-</span> x <span class="op">-</span> <span class="fl">1</span></span>
-<span id="cb12-318"><a href="#cb12-318"></a>x_vals <span class="op">=</span> <span class="fl">1</span><span class="op">:</span><span class="fl">0.01</span><span class="op">:</span><span class="fl">2</span></span>
-<span id="cb12-319"><a href="#cb12-319"></a>y_vals <span class="op">=</span> <span class="fu">f</span>.(x_vals)</span>
+<span id="cb12-311"><a href="#cb12-311"></a><span class="fu">### Análisis del problema</span></span>
+<span id="cb12-312"><a href="#cb12-312"></a></span>
+<span id="cb12-313"><a href="#cb12-313"></a>Se utiliza la misma función $f(x) = x^3 - x - 1$ en el intervalo $<span class="co">[</span><span class="ot">1, 2</span><span class="co">]</span>$ para analizar el problema de estancamiento de Regula falsi.</span>
+<span id="cb12-314"><a href="#cb12-314"></a></span>
+<span id="cb12-317"><a href="#cb12-317"></a><span class="in">```{julia}</span></span>
+<span id="cb12-318"><a href="#cb12-318"></a><span class="co">#| label: fig-illinois-func</span></span>
+<span id="cb12-319"><a href="#cb12-319"></a><span class="co">#| fig-cap: &quot;Gráfico de la función f(x) = x^3 - x - 1.&quot;</span></span>
 <span id="cb12-320"><a href="#cb12-320"></a></span>
-<span id="cb12-321"><a href="#cb12-321"></a>p <span class="op">=</span> <span class="fu">plot</span>(x_vals, y_vals,</span>
-<span id="cb12-322"><a href="#cb12-322"></a>    label <span class="op">=</span> <span class="st">&quot;f(x) = x^3 - x - 1&quot;</span>,</span>
-<span id="cb12-323"><a href="#cb12-323"></a>    color <span class="op">=</span> <span class="op">:</span>steelblue,</span>
-<span id="cb12-324"><a href="#cb12-324"></a>    linewidth <span class="op">=</span> <span class="fl">2</span>,</span>
-<span id="cb12-325"><a href="#cb12-325"></a>    title <span class="op">=</span> <span class="st">&quot;Análisis de f(x) = x^3 - x - 1&quot;</span>,</span>
-<span id="cb12-326"><a href="#cb12-326"></a>    xlabel <span class="op">=</span> <span class="st">&quot;x&quot;</span>,</span>
-<span id="cb12-327"><a href="#cb12-327"></a>    ylabel <span class="op">=</span> <span class="st">&quot;f(x)&quot;</span>,</span>
-<span id="cb12-328"><a href="#cb12-328"></a>    legend <span class="op">=</span> <span class="op">:</span>topleft,</span>
-<span id="cb12-329"><a href="#cb12-329"></a>    theme <span class="op">=</span> <span class="op">:</span>default</span>
-<span id="cb12-330"><a href="#cb12-330"></a>)</span>
-<span id="cb12-331"><a href="#cb12-331"></a><span class="fu">hline!</span>([<span class="fl">0</span>], linestyle <span class="op">=</span> <span class="op">:</span>dash, color <span class="op">=</span> <span class="op">:</span>black, label <span class="op">=</span> <span class="st">&quot;&quot;</span>)</span>
-<span id="cb12-332"><a href="#cb12-332"></a><span class="fu">scatter!</span>([<span class="fl">1.324718</span>], [<span class="fl">0</span>], color <span class="op">=</span> <span class="op">:</span>red, markersize <span class="op">=</span> <span class="fl">5</span>, label <span class="op">=</span> <span class="st">&quot;Raíz ≈ 1.324718&quot;</span>)</span>
-<span id="cb12-333"><a href="#cb12-333"></a>p</span>
-<span id="cb12-334"><a href="#cb12-334"></a><span class="in">```</span></span>
-<span id="cb12-335"><a href="#cb12-335"></a></span>
-<span id="cb12-336"><a href="#cb12-336"></a><span class="fu">### Resultados tabulares</span></span>
-<span id="cb12-337"><a href="#cb12-337"></a></span>
-<span id="cb12-338"><a href="#cb12-338"></a><span class="pp">|</span> Iteración <span class="pp">|</span> Cota inferior <span class="pp">|</span> Cota superior <span class="pp">|</span> Raíz aproximada <span class="pp">|</span> Error <span class="pp">|</span></span>
-<span id="cb12-339"><a href="#cb12-339"></a><span class="pp">|:---:|:---:|:---:|:---:|:---|</span></span>
-<span id="cb12-340"><a href="#cb12-340"></a><span class="pp">|</span> 1 <span class="pp">|</span> 1 <span class="pp">|</span> **2** <span class="pp">|</span> 1.1666667 <span class="pp">|</span> $-5.7870 \times 10^{-01}$ <span class="pp">|</span></span>
-<span id="cb12-341"><a href="#cb12-341"></a><span class="pp">|</span> 2 <span class="pp">|</span> 1.1666667 <span class="pp">|</span> **2** <span class="pp">|</span> 1.2531120 <span class="pp">|</span> $-2.8536 \times 10^{-01}$ <span class="pp">|</span></span>
-<span id="cb12-342"><a href="#cb12-342"></a><span class="pp">|</span> 3 <span class="pp">|</span> 1.2531120 <span class="pp">|</span> **2** <span class="pp">|</span> 1.2934374 <span class="pp">|</span> $-1.2954 \times 10^{-01}$ <span class="pp">|</span></span>
-<span id="cb12-343"><a href="#cb12-343"></a><span class="pp">|</span> ... <span class="pp">|</span> ... <span class="pp">|</span> ... <span class="pp">|</span> ... <span class="pp">|</span> ... <span class="pp">|</span></span>
-<span id="cb12-344"><a href="#cb12-344"></a><span class="pp">|</span> 17 <span class="pp">|</span> 1.3247175 <span class="pp">|</span> **2** <span class="pp">|</span> 1.3247178 <span class="pp">|</span> $-8.2907 \times 10^{-07}$ <span class="pp">|</span></span>
-<span id="cb12-345"><a href="#cb12-345"></a>Table: Estancamiento de la cota superior en Regula falsi (Tabla abreviada). {<span class="sc">\#</span>tbl-regula-falsi-iteraciones-3}</span>
-<span id="cb12-346"><a href="#cb12-346"></a></span>
-<span id="cb12-347"><a href="#cb12-347"></a><span class="pp">|</span> Iteración <span class="pp">|</span> Cota inferior <span class="pp">|</span> Cota superior <span class="pp">|</span> Raíz aproximada <span class="pp">|</span> Error <span class="pp">|</span></span>
-<span id="cb12-348"><a href="#cb12-348"></a><span class="pp">|:---:|:---:|:---:|:---:|:---|</span></span>
-<span id="cb12-349"><a href="#cb12-349"></a><span class="pp">|</span> 1 <span class="pp">|</span> 1 <span class="pp">|</span> 2 <span class="pp">|</span> 1.1666667 <span class="pp">|</span> $-5.7870 \times 10^{-01}$ <span class="pp">|</span></span>
-<span id="cb12-350"><a href="#cb12-350"></a><span class="pp">|</span> 2 <span class="pp">|</span> 1.1666667 <span class="pp">|</span> 2 <span class="pp">|</span> 1.2531120 <span class="pp">|</span> $-2.8536 \times 10^{-01}$ <span class="pp">|</span></span>
-<span id="cb12-351"><a href="#cb12-351"></a><span class="pp">|</span> 3 <span class="pp">|</span> 1.2531120 <span class="pp">|</span> **2** <span class="pp">|</span> 1.3296314 <span class="pp">|</span> $2.1050 \times 10^{-02}$ <span class="pp">|</span></span>
-<span id="cb12-352"><a href="#cb12-352"></a><span class="pp">|</span> 4 <span class="pp">|</span> 1.2531120 <span class="pp">|</span> **1.3296314** <span class="pp">|</span> 1.3243746 <span class="pp">|</span> $-1.4636 \times 10^{-03}$ <span class="pp">|</span></span>
-<span id="cb12-353"><a href="#cb12-353"></a><span class="pp">|</span> ... <span class="pp">|</span> ... <span class="pp">|</span> ... <span class="pp">|</span> ... <span class="pp">|</span> ... <span class="pp">|</span></span>
-<span id="cb12-354"><a href="#cb12-354"></a><span class="pp">|</span> 7 <span class="pp">|</span> 1.3247164 <span class="pp">|</span> 1.3247195 <span class="pp">|</span> 1.3247180 <span class="pp">|</span> $-9.6652 \times 10^{-12}$ <span class="pp">|</span></span>
-<span id="cb12-355"><a href="#cb12-355"></a>Table: El método de Illinois actualiza ambas cotas y converge rápidamente. {<span class="sc">\#</span>tbl-illinois-iteraciones-3}</span>
-<span id="cb12-356"><a href="#cb12-356"></a></span>
-<span id="cb12-357"><a href="#cb12-357"></a><span class="fu">### Análisis comparativo</span></span>
-<span id="cb12-358"><a href="#cb12-358"></a></span>
-<span id="cb12-359"><a href="#cb12-359"></a>El **método de Illinois es una mejora directa y superior a Regula falsi**. En este problema, Illinois converge en **7 iteraciones**, mientras que Regula falsi necesita **17**. La tabla de Regula falsi muestra claramente que la cota superior se &quot;estanca&quot; en el valor <span class="in">`2`</span> durante todo el proceso, lo que ralentiza drásticamente la convergencia. Illinois resuelve esto de forma ingeniosa: cuando detecta que un extremo no se ha actualizado, modifica el cálculo de la siguiente aproximación dividiendo por dos el valor de la función en ese extremo estancado. Esto &quot;debilita&quot; su influencia y fuerza al intervalo a contraerse de manera más equilibrada, resultando en una convergencia mucho más rápida.</span>
+<span id="cb12-321"><a href="#cb12-321"></a><span class="fu">f</span>(x) <span class="op">=</span> x<span class="op">^</span><span class="fl">3</span> <span class="op">-</span> x <span class="op">-</span> <span class="fl">1</span></span>
+<span id="cb12-322"><a href="#cb12-322"></a>x_vals <span class="op">=</span> <span class="fl">1</span><span class="op">:</span><span class="fl">0.01</span><span class="op">:</span><span class="fl">2</span></span>
+<span id="cb12-323"><a href="#cb12-323"></a>y_vals <span class="op">=</span> <span class="fu">f</span>.(x_vals)</span>
+<span id="cb12-324"><a href="#cb12-324"></a></span>
+<span id="cb12-325"><a href="#cb12-325"></a>p <span class="op">=</span> <span class="fu">plot</span>(x_vals, y_vals,</span>
+<span id="cb12-326"><a href="#cb12-326"></a>    label <span class="op">=</span> <span class="st">&quot;f(x) = x^3 - x - 1&quot;</span>,</span>
+<span id="cb12-327"><a href="#cb12-327"></a>    color <span class="op">=</span> <span class="op">:</span>steelblue,</span>
+<span id="cb12-328"><a href="#cb12-328"></a>    linewidth <span class="op">=</span> <span class="fl">2</span>,</span>
+<span id="cb12-329"><a href="#cb12-329"></a>    title <span class="op">=</span> <span class="st">&quot;Análisis de f(x) = x^3 - x - 1&quot;</span>,</span>
+<span id="cb12-330"><a href="#cb12-330"></a>    xlabel <span class="op">=</span> <span class="st">&quot;x&quot;</span>,</span>
+<span id="cb12-331"><a href="#cb12-331"></a>    ylabel <span class="op">=</span> <span class="st">&quot;f(x)&quot;</span>,</span>
+<span id="cb12-332"><a href="#cb12-332"></a>    legend <span class="op">=</span> <span class="op">:</span>topleft,</span>
+<span id="cb12-333"><a href="#cb12-333"></a>    theme <span class="op">=</span> <span class="op">:</span>default</span>
+<span id="cb12-334"><a href="#cb12-334"></a>)</span>
+<span id="cb12-335"><a href="#cb12-335"></a><span class="fu">hline!</span>([<span class="fl">0</span>], linestyle <span class="op">=</span> <span class="op">:</span>dash, color <span class="op">=</span> <span class="op">:</span>black, label <span class="op">=</span> <span class="st">&quot;&quot;</span>)</span>
+<span id="cb12-336"><a href="#cb12-336"></a><span class="fu">scatter!</span>([<span class="fl">1.324718</span>], [<span class="fl">0</span>], color <span class="op">=</span> <span class="op">:</span>red, markersize <span class="op">=</span> <span class="fl">5</span>, label <span class="op">=</span> <span class="st">&quot;Raíz ≈ 1.324718&quot;</span>)</span>
+<span id="cb12-337"><a href="#cb12-337"></a>p</span>
+<span id="cb12-338"><a href="#cb12-338"></a><span class="in">```</span></span>
+<span id="cb12-339"><a href="#cb12-339"></a></span>
+<span id="cb12-340"><a href="#cb12-340"></a><span class="fu">### Resultados tabulares</span></span>
+<span id="cb12-341"><a href="#cb12-341"></a></span>
+<span id="cb12-342"><a href="#cb12-342"></a><span class="pp">|</span> Iteración <span class="pp">|</span> Cota inferior <span class="pp">|</span> Cota superior <span class="pp">|</span> Raíz aproximada <span class="pp">|</span> Error <span class="pp">|</span></span>
+<span id="cb12-343"><a href="#cb12-343"></a><span class="pp">|</span>:--:<span class="pp">|</span>:--:<span class="pp">|</span>:--:<span class="pp">|</span>:--:<span class="pp">|:---|</span></span>
+<span id="cb12-344"><a href="#cb12-344"></a><span class="pp">|</span> 1 <span class="pp">|</span> 1 <span class="pp">|</span> **2** <span class="pp">|</span> 1.1666667 <span class="pp">|</span> $-5.7870 \times 10^{-01}$ <span class="pp">|</span></span>
+<span id="cb12-345"><a href="#cb12-345"></a><span class="pp">|</span> 2 <span class="pp">|</span> 1.1666667 <span class="pp">|</span> **2** <span class="pp">|</span> 1.2531120 <span class="pp">|</span> $-2.8536 \times 10^{-01}$ <span class="pp">|</span></span>
+<span id="cb12-346"><a href="#cb12-346"></a><span class="pp">|</span> 3 <span class="pp">|</span> 1.2531120 <span class="pp">|</span> **2** <span class="pp">|</span> 1.2934374 <span class="pp">|</span> $-1.2954 \times 10^{-01}$ <span class="pp">|</span></span>
+<span id="cb12-347"><a href="#cb12-347"></a><span class="pp">|</span> ... <span class="pp">|</span> ... <span class="pp">|</span> ... <span class="pp">|</span> ... <span class="pp">|</span> ... <span class="pp">|</span></span>
+<span id="cb12-348"><a href="#cb12-348"></a><span class="pp">|</span> 17 <span class="pp">|</span> 1.3247175 <span class="pp">|</span> **2** <span class="pp">|</span> 1.3247178 <span class="pp">|</span> $-8.2907 \times 10^{-07}$ <span class="pp">|</span></span>
+<span id="cb12-349"><a href="#cb12-349"></a></span>
+<span id="cb12-350"><a href="#cb12-350"></a>: Estancamiento de la cota superior en Regula falsi (Tabla abreviada). {#tbl-regula-falsi-iteraciones-3}</span>
+<span id="cb12-351"><a href="#cb12-351"></a></span>
+<span id="cb12-352"><a href="#cb12-352"></a><span class="pp">|</span> Iteración <span class="pp">|</span> Cota inferior <span class="pp">|</span> Cota superior <span class="pp">|</span> Raíz aproximada <span class="pp">|</span> Error <span class="pp">|</span></span>
+<span id="cb12-353"><a href="#cb12-353"></a><span class="pp">|:-------------:|:-------------:|:-------------:|:-------------:|:--------------|</span></span>
+<span id="cb12-354"><a href="#cb12-354"></a><span class="pp">|</span> 1 <span class="pp">|</span> 1 <span class="pp">|</span> 2 <span class="pp">|</span> 1.1666667 <span class="pp">|</span> $-5.7870 \times 10^{-01}$ <span class="pp">|</span></span>
+<span id="cb12-355"><a href="#cb12-355"></a><span class="pp">|</span> 2 <span class="pp">|</span> 1.1666667 <span class="pp">|</span> 2 <span class="pp">|</span> 1.2531120 <span class="pp">|</span> $-2.8536 \times 10^{-01}$ <span class="pp">|</span></span>
+<span id="cb12-356"><a href="#cb12-356"></a><span class="pp">|</span> 3 <span class="pp">|</span> 1.2531120 <span class="pp">|</span> **2** <span class="pp">|</span> 1.3296314 <span class="pp">|</span> $2.1050 \times 10^{-02}$ <span class="pp">|</span></span>
+<span id="cb12-357"><a href="#cb12-357"></a><span class="pp">|</span> 4 <span class="pp">|</span> 1.2531120 <span class="pp">|</span> **1.3296314** <span class="pp">|</span> 1.3243746 <span class="pp">|</span> $-1.4636 \times 10^{-03}$ <span class="pp">|</span></span>
+<span id="cb12-358"><a href="#cb12-358"></a><span class="pp">|</span> ... <span class="pp">|</span> ... <span class="pp">|</span> ... <span class="pp">|</span> ... <span class="pp">|</span> ... <span class="pp">|</span></span>
+<span id="cb12-359"><a href="#cb12-359"></a><span class="pp">|</span> 7 <span class="pp">|</span> 1.3247164 <span class="pp">|</span> 1.3247195 <span class="pp">|</span> 1.3247180 <span class="pp">|</span> $-9.6652 \times 10^{-12}$ <span class="pp">|</span></span>
 <span id="cb12-360"><a href="#cb12-360"></a></span>
-<span id="cb12-361"><a href="#cb12-361"></a><span class="fu">### Gráficos de convergencia</span></span>
+<span id="cb12-361"><a href="#cb12-361"></a>: El método de Illinois actualiza ambas cotas y converge rápidamente. {#tbl-illinois-iteraciones-3}</span>
 <span id="cb12-362"><a href="#cb12-362"></a></span>
-<span id="cb12-365"><a href="#cb12-365"></a><span class="in">```{julia}</span></span>
-<span id="cb12-366"><a href="#cb12-366"></a><span class="co">#| label: fig-intervalo-rf-illinois</span></span>
-<span id="cb12-367"><a href="#cb12-367"></a><span class="co">#| fig-cap: &quot;Contracción del intervalo [aₖ, bₖ]. Regula Falsi mantiene bₖ fijo en 2, mientras Illinois ajusta ambas cotas, logrando una convergencia más eficiente.&quot;</span></span>
+<span id="cb12-363"><a href="#cb12-363"></a><span class="fu">### Análisis comparativo</span></span>
+<span id="cb12-364"><a href="#cb12-364"></a></span>
+<span id="cb12-365"><a href="#cb12-365"></a>El **método de Illinois es una mejora directa y superior a Regula falsi**. En este problema, Illinois converge en **7 iteraciones**, mientras que Regula falsi necesita **17**. La tabla de Regula falsi muestra claramente que la cota superior se &quot;estanca&quot; en el valor <span class="in">`2`</span> durante todo el proceso, lo que ralentiza drásticamente la convergencia. Illinois resuelve esto de forma ingeniosa: cuando detecta que un extremo no se ha actualizado, modifica el cálculo de la siguiente aproximación dividiendo por dos el valor de la función en ese extremo estancado. Esto &quot;debilita&quot; su influencia y fuerza al intervalo a contraerse de manera más equilibrada, resultando en una convergencia mucho más rápida.</span>
+<span id="cb12-366"><a href="#cb12-366"></a></span>
+<span id="cb12-367"><a href="#cb12-367"></a><span class="fu">### Gráficos de convergencia</span></span>
 <span id="cb12-368"><a href="#cb12-368"></a></span>
-<span id="cb12-369"><a href="#cb12-369"></a><span class="co"># Datos de los intervalos para Regula Falsi</span></span>
-<span id="cb12-370"><a href="#cb12-370"></a>ak_rf <span class="op">=</span> [<span class="fl">1</span>, <span class="fl">1.1667</span>, <span class="fl">1.2531</span>, <span class="fl">1.2934</span>, <span class="fl">1.3123</span>, <span class="fl">1.3204</span>, <span class="fl">1.3232</span>, <span class="fl">1.3242</span>, <span class="fl">1.3245</span>, <span class="fl">1.3246</span>, <span class="fl">1.3247</span>, <span class="fl">1.32471</span>, <span class="fl">1.324715</span>, <span class="fl">1.324717</span>, <span class="fl">1.3247175</span>, <span class="fl">1.3247178</span>]</span>
-<span id="cb12-371"><a href="#cb12-371"></a>bk_rf <span class="op">=</span> <span class="fu">fill</span>(<span class="fl">2</span>, <span class="fu">length</span>(ak_rf)) <span class="co"># La cota superior se estanca</span></span>
-<span id="cb12-372"><a href="#cb12-372"></a></span>
-<span id="cb12-373"><a href="#cb12-373"></a><span class="co"># Datos de los intervalos para Illinois</span></span>
-<span id="cb12-374"><a href="#cb12-374"></a>ak_illinois <span class="op">=</span> [<span class="fl">1</span>, <span class="fl">1.1667</span>, <span class="fl">1.2531</span>, <span class="fl">1.2531</span>, <span class="fl">1.32437</span>, <span class="fl">1.324717</span>, <span class="fl">1.324718</span>]</span>
-<span id="cb12-375"><a href="#cb12-375"></a>bk_illinois <span class="op">=</span> [<span class="fl">2</span>, <span class="fl">2</span>, <span class="fl">2</span>, <span class="fl">1.32963</span>, <span class="fl">1.32963</span>, <span class="fl">1.324719</span>, <span class="fl">1.324718</span>]</span>
-<span id="cb12-376"><a href="#cb12-376"></a></span>
-<span id="cb12-377"><a href="#cb12-377"></a>iter_rf <span class="op">=</span> <span class="fl">1</span><span class="op">:</span><span class="fu">length</span>(ak_rf)</span>
-<span id="cb12-378"><a href="#cb12-378"></a>iter_illinois <span class="op">=</span> <span class="fl">1</span><span class="op">:</span><span class="fu">length</span>(ak_illinois)</span>
-<span id="cb12-379"><a href="#cb12-379"></a></span>
-<span id="cb12-380"><a href="#cb12-380"></a>p <span class="op">=</span> <span class="fu">plot</span>(iter_rf, ak_rf, label<span class="op">=</span><span class="st">&quot;aₖ (Regula Falsi)&quot;</span>, color<span class="op">=:</span>blue, marker<span class="op">=:</span>circle)</span>
-<span id="cb12-381"><a href="#cb12-381"></a><span class="fu">plot!</span>(iter_rf, bk_rf, label<span class="op">=</span><span class="st">&quot;bₖ (Regula Falsi)&quot;</span>, color<span class="op">=:</span>blue, linestyle<span class="op">=:</span>dash)</span>
-<span id="cb12-382"><a href="#cb12-382"></a><span class="fu">plot!</span>(iter_illinois, ak_illinois, label<span class="op">=</span><span class="st">&quot;aₖ (Illinois)&quot;</span>, color<span class="op">=:</span>red, marker<span class="op">=:</span>square)</span>
-<span id="cb12-383"><a href="#cb12-383"></a><span class="fu">plot!</span>(iter_illinois, bk_illinois, label<span class="op">=</span><span class="st">&quot;bₖ (Illinois)&quot;</span>, color<span class="op">=:</span>red, linestyle<span class="op">=:</span>dash, marker<span class="op">=:</span>square)</span>
-<span id="cb12-384"><a href="#cb12-384"></a><span class="fu">title!</span>(<span class="st">&quot;Evolución del Intervalo de Búsqueda&quot;</span>)</span>
-<span id="cb12-385"><a href="#cb12-385"></a><span class="fu">xlabel!</span>(<span class="st">&quot;Iteración&quot;</span>)</span>
-<span id="cb12-386"><a href="#cb12-386"></a><span class="fu">ylabel!</span>(<span class="st">&quot;Valor de la cota&quot;</span>)</span>
-<span id="cb12-387"><a href="#cb12-387"></a>p</span>
-<span id="cb12-388"><a href="#cb12-388"></a><span class="in">```</span></span>
-<span id="cb12-389"><a href="#cb12-389"></a></span>
-<span id="cb12-392"><a href="#cb12-392"></a><span class="in">```{julia}</span></span>
-<span id="cb12-393"><a href="#cb12-393"></a><span class="co">#| label: fig-error-rf-illinois</span></span>
-<span id="cb12-394"><a href="#cb12-394"></a><span class="co">#| fig-cap: &quot;Comparación del Error absoluto por iteración (escala logarítmica).&quot;</span></span>
+<span id="cb12-371"><a href="#cb12-371"></a><span class="in">```{julia}</span></span>
+<span id="cb12-372"><a href="#cb12-372"></a><span class="co">#| label: fig-intervalo-rf-illinois</span></span>
+<span id="cb12-373"><a href="#cb12-373"></a><span class="co">#| fig-cap: &quot;Contracción del intervalo [aₖ, bₖ]. Regula Falsi mantiene bₖ fijo en 2, mientras Illinois ajusta ambas cotas, logrando una convergencia más eficiente.&quot;</span></span>
+<span id="cb12-374"><a href="#cb12-374"></a></span>
+<span id="cb12-375"><a href="#cb12-375"></a><span class="co"># Datos de los intervalos para Regula Falsi</span></span>
+<span id="cb12-376"><a href="#cb12-376"></a>ak_rf <span class="op">=</span> [<span class="fl">1</span>, <span class="fl">1.1667</span>, <span class="fl">1.2531</span>, <span class="fl">1.2934</span>, <span class="fl">1.3123</span>, <span class="fl">1.3204</span>, <span class="fl">1.3232</span>, <span class="fl">1.3242</span>, <span class="fl">1.3245</span>, <span class="fl">1.3246</span>, <span class="fl">1.3247</span>, <span class="fl">1.32471</span>, <span class="fl">1.324715</span>, <span class="fl">1.324717</span>, <span class="fl">1.3247175</span>, <span class="fl">1.3247178</span>]</span>
+<span id="cb12-377"><a href="#cb12-377"></a>bk_rf <span class="op">=</span> <span class="fu">fill</span>(<span class="fl">2</span>, <span class="fu">length</span>(ak_rf)) <span class="co"># La cota superior se estanca</span></span>
+<span id="cb12-378"><a href="#cb12-378"></a></span>
+<span id="cb12-379"><a href="#cb12-379"></a><span class="co"># Datos de los intervalos para Illinois</span></span>
+<span id="cb12-380"><a href="#cb12-380"></a>ak_illinois <span class="op">=</span> [<span class="fl">1</span>, <span class="fl">1.1667</span>, <span class="fl">1.2531</span>, <span class="fl">1.2531</span>, <span class="fl">1.32437</span>, <span class="fl">1.324717</span>, <span class="fl">1.324718</span>]</span>
+<span id="cb12-381"><a href="#cb12-381"></a>bk_illinois <span class="op">=</span> [<span class="fl">2</span>, <span class="fl">2</span>, <span class="fl">2</span>, <span class="fl">1.32963</span>, <span class="fl">1.32963</span>, <span class="fl">1.324719</span>, <span class="fl">1.324718</span>]</span>
+<span id="cb12-382"><a href="#cb12-382"></a></span>
+<span id="cb12-383"><a href="#cb12-383"></a>iter_rf <span class="op">=</span> <span class="fl">1</span><span class="op">:</span><span class="fu">length</span>(ak_rf)</span>
+<span id="cb12-384"><a href="#cb12-384"></a>iter_illinois <span class="op">=</span> <span class="fl">1</span><span class="op">:</span><span class="fu">length</span>(ak_illinois)</span>
+<span id="cb12-385"><a href="#cb12-385"></a></span>
+<span id="cb12-386"><a href="#cb12-386"></a>p <span class="op">=</span> <span class="fu">plot</span>(iter_rf, ak_rf, label<span class="op">=</span><span class="st">&quot;aₖ (Regula Falsi)&quot;</span>, color<span class="op">=:</span>blue, marker<span class="op">=:</span>circle)</span>
+<span id="cb12-387"><a href="#cb12-387"></a><span class="fu">plot!</span>(iter_rf, bk_rf, label<span class="op">=</span><span class="st">&quot;bₖ (Regula Falsi)&quot;</span>, color<span class="op">=:</span>blue, linestyle<span class="op">=:</span>dash)</span>
+<span id="cb12-388"><a href="#cb12-388"></a><span class="fu">plot!</span>(iter_illinois, ak_illinois, label<span class="op">=</span><span class="st">&quot;aₖ (Illinois)&quot;</span>, color<span class="op">=:</span>red, marker<span class="op">=:</span>square)</span>
+<span id="cb12-389"><a href="#cb12-389"></a><span class="fu">plot!</span>(iter_illinois, bk_illinois, label<span class="op">=</span><span class="st">&quot;bₖ (Illinois)&quot;</span>, color<span class="op">=:</span>red, linestyle<span class="op">=:</span>dash, marker<span class="op">=:</span>square)</span>
+<span id="cb12-390"><a href="#cb12-390"></a><span class="fu">title!</span>(<span class="st">&quot;Evolución del Intervalo de Búsqueda&quot;</span>)</span>
+<span id="cb12-391"><a href="#cb12-391"></a><span class="fu">xlabel!</span>(<span class="st">&quot;Iteración&quot;</span>)</span>
+<span id="cb12-392"><a href="#cb12-392"></a><span class="fu">ylabel!</span>(<span class="st">&quot;Valor de la cota&quot;</span>)</span>
+<span id="cb12-393"><a href="#cb12-393"></a>p</span>
+<span id="cb12-394"><a href="#cb12-394"></a><span class="in">```</span></span>
 <span id="cb12-395"><a href="#cb12-395"></a></span>
-<span id="cb12-396"><a href="#cb12-396"></a><span class="co"># Datos de Error absoluto extraídos de las tablas</span></span>
-<span id="cb12-397"><a href="#cb12-397"></a>error_rf_3 <span class="op">=</span> <span class="fu">abs</span>.( [<span class="op">-</span><span class="fl">5.78e-01</span>, <span class="op">-</span><span class="fl">2.85e-01</span>, <span class="op">-</span><span class="fl">1.29e-01</span>, <span class="op">-</span><span class="fl">5.65e-02</span>, <span class="op">-</span><span class="fl">2.43e-02</span>, <span class="op">-</span><span class="fl">1.03e-02</span>, <span class="op">-</span><span class="fl">4.40e-03</span>, <span class="op">-</span><span class="fl">1.86e-03</span>, <span class="op">-</span><span class="fl">7.92e-04</span>, <span class="op">-</span><span class="fl">3.36e-04</span>, <span class="op">-</span><span class="fl">1.42e-04</span>, <span class="op">-</span><span class="fl">6.04e-05</span>, <span class="op">-</span><span class="fl">2.56e-05</span>, <span class="op">-</span><span class="fl">1.08e-05</span>, <span class="op">-</span><span class="fl">4.61e-06</span>, <span class="op">-</span><span class="fl">1.95e-06</span>, <span class="op">-</span><span class="fl">8.29e-07</span>])</span>
-<span id="cb12-398"><a href="#cb12-398"></a>error_illinois <span class="op">=</span> <span class="fu">abs</span>.([<span class="op">-</span><span class="fl">5.78e-01</span>, <span class="op">-</span><span class="fl">2.85e-01</span>, <span class="fl">2.10e-02</span>, <span class="op">-</span><span class="fl">1.46e-03</span>, <span class="op">-</span><span class="fl">6.68e-06</span>, <span class="fl">6.61e-06</span>, <span class="op">-</span><span class="fl">9.66e-12</span>])</span>
-<span id="cb12-399"><a href="#cb12-399"></a></span>
-<span id="cb12-400"><a href="#cb12-400"></a><span class="fu">plot</span>(<span class="fl">1</span><span class="op">:</span><span class="fu">length</span>(error_rf_3), error_rf_3,</span>
-<span id="cb12-401"><a href="#cb12-401"></a>    label<span class="op">=</span><span class="st">&quot;Regula falsi (17 iter.)&quot;</span>, yscale<span class="op">=:</span>log10, marker<span class="op">=:</span>circle,</span>
-<span id="cb12-402"><a href="#cb12-402"></a>    title<span class="op">=</span><span class="st">&quot;Error por Iteración&quot;</span>, xlabel<span class="op">=</span><span class="st">&quot;Iteración&quot;</span>, ylabel<span class="op">=</span><span class="st">&quot;Error absoluto (log)&quot;</span>)</span>
-<span id="cb12-403"><a href="#cb12-403"></a><span class="fu">plot!</span>(<span class="fl">1</span><span class="op">:</span><span class="fu">length</span>(error_illinois), error_illinois,</span>
-<span id="cb12-404"><a href="#cb12-404"></a>    label<span class="op">=</span><span class="st">&quot;Illinois (7 iter.)&quot;</span>, yscale<span class="op">=:</span>log10, marker<span class="op">=:</span>square)</span>
-<span id="cb12-405"><a href="#cb12-405"></a><span class="in">```</span></span>
-<span id="cb12-406"><a href="#cb12-406"></a></span>
-<span id="cb12-407"><a href="#cb12-407"></a><span class="fu">## Comparación: Punto fijo vs. Steffensen</span></span>
-<span id="cb12-408"><a href="#cb12-408"></a></span>
-<span id="cb12-409"><a href="#cb12-409"></a><span class="fu">### Análisis del problema</span></span>
-<span id="cb12-410"><a href="#cb12-410"></a></span>
-<span id="cb12-411"><a href="#cb12-411"></a>Se busca resolver la ecuación de Punto fijo $x = \cos(x)$ partiendo de una estimación inicial $x_0 = 0.5$. Esto es equivalente a encontrar la raíz de $f(x) = \cos(x) - x$.</span>
+<span id="cb12-398"><a href="#cb12-398"></a><span class="in">```{julia}</span></span>
+<span id="cb12-399"><a href="#cb12-399"></a><span class="co">#| label: fig-error-rf-illinois</span></span>
+<span id="cb12-400"><a href="#cb12-400"></a><span class="co">#| fig-cap: &quot;Comparación del Error absoluto por iteración (escala logarítmica).&quot;</span></span>
+<span id="cb12-401"><a href="#cb12-401"></a></span>
+<span id="cb12-402"><a href="#cb12-402"></a><span class="co"># Datos de Error absoluto extraídos de las tablas</span></span>
+<span id="cb12-403"><a href="#cb12-403"></a>error_rf_3 <span class="op">=</span> <span class="fu">abs</span>.( [<span class="op">-</span><span class="fl">5.78e-01</span>, <span class="op">-</span><span class="fl">2.85e-01</span>, <span class="op">-</span><span class="fl">1.29e-01</span>, <span class="op">-</span><span class="fl">5.65e-02</span>, <span class="op">-</span><span class="fl">2.43e-02</span>, <span class="op">-</span><span class="fl">1.03e-02</span>, <span class="op">-</span><span class="fl">4.40e-03</span>, <span class="op">-</span><span class="fl">1.86e-03</span>, <span class="op">-</span><span class="fl">7.92e-04</span>, <span class="op">-</span><span class="fl">3.36e-04</span>, <span class="op">-</span><span class="fl">1.42e-04</span>, <span class="op">-</span><span class="fl">6.04e-05</span>, <span class="op">-</span><span class="fl">2.56e-05</span>, <span class="op">-</span><span class="fl">1.08e-05</span>, <span class="op">-</span><span class="fl">4.61e-06</span>, <span class="op">-</span><span class="fl">1.95e-06</span>, <span class="op">-</span><span class="fl">8.29e-07</span>])</span>
+<span id="cb12-404"><a href="#cb12-404"></a>error_illinois <span class="op">=</span> <span class="fu">abs</span>.([<span class="op">-</span><span class="fl">5.78e-01</span>, <span class="op">-</span><span class="fl">2.85e-01</span>, <span class="fl">2.10e-02</span>, <span class="op">-</span><span class="fl">1.46e-03</span>, <span class="op">-</span><span class="fl">6.68e-06</span>, <span class="fl">6.61e-06</span>, <span class="op">-</span><span class="fl">9.66e-12</span>])</span>
+<span id="cb12-405"><a href="#cb12-405"></a></span>
+<span id="cb12-406"><a href="#cb12-406"></a><span class="fu">plot</span>(<span class="fl">1</span><span class="op">:</span><span class="fu">length</span>(error_rf_3), error_rf_3,</span>
+<span id="cb12-407"><a href="#cb12-407"></a>    label<span class="op">=</span><span class="st">&quot;Regula falsi (17 iter.)&quot;</span>, yscale<span class="op">=:</span>log10, marker<span class="op">=:</span>circle,</span>
+<span id="cb12-408"><a href="#cb12-408"></a>    title<span class="op">=</span><span class="st">&quot;Error por Iteración&quot;</span>, xlabel<span class="op">=</span><span class="st">&quot;Iteración&quot;</span>, ylabel<span class="op">=</span><span class="st">&quot;Error absoluto (log)&quot;</span>)</span>
+<span id="cb12-409"><a href="#cb12-409"></a><span class="fu">plot!</span>(<span class="fl">1</span><span class="op">:</span><span class="fu">length</span>(error_illinois), error_illinois,</span>
+<span id="cb12-410"><a href="#cb12-410"></a>    label<span class="op">=</span><span class="st">&quot;Illinois (7 iter.)&quot;</span>, yscale<span class="op">=:</span>log10, marker<span class="op">=:</span>square)</span>
+<span id="cb12-411"><a href="#cb12-411"></a><span class="in">```</span></span>
 <span id="cb12-412"><a href="#cb12-412"></a></span>
-<span id="cb12-415"><a href="#cb12-415"></a><span class="in">```{julia}</span></span>
-<span id="cb12-416"><a href="#cb12-416"></a><span class="co">#| label: fig-cobweb-improved</span></span>
-<span id="cb12-417"><a href="#cb12-417"></a><span class="co">#| fig-cap: &quot;Comparación visual del proceso iterativo. El método de Punto fijo sigue un patrón de &#39;escalera&#39; (en azul) que converge lentamente hacia la intersección. En contraste, el método de Steffensen realiza &#39;saltos&#39; directos y mucho más grandes (naranja y púrpura), alcanzando la solución en muchos menos pasos.&quot;</span></span>
+<span id="cb12-413"><a href="#cb12-413"></a><span class="fu">## Comparación: Punto fijo vs. Steffensen</span></span>
+<span id="cb12-414"><a href="#cb12-414"></a></span>
+<span id="cb12-415"><a href="#cb12-415"></a><span class="fu">### Análisis del problema</span></span>
+<span id="cb12-416"><a href="#cb12-416"></a></span>
+<span id="cb12-417"><a href="#cb12-417"></a>Se busca resolver la ecuación de Punto fijo $x = \cos(x)$ partiendo de una estimación inicial $x_0 = 0.5$. Esto es equivalente a encontrar la raíz de $f(x) = \cos(x) - x$.</span>
 <span id="cb12-418"><a href="#cb12-418"></a></span>
-<span id="cb12-419"><a href="#cb12-419"></a><span class="co"># 1. Configuración inicial</span></span>
-<span id="cb12-420"><a href="#cb12-420"></a></span>
-<span id="cb12-421"><a href="#cb12-421"></a><span class="fu">g</span>(x) <span class="op">=</span> <span class="fu">cos</span>(x)</span>
-<span id="cb12-422"><a href="#cb12-422"></a>x_vals <span class="op">=</span> <span class="fl">0.4</span><span class="op">:</span><span class="fl">0.01</span><span class="op">:</span><span class="fl">1.0</span> <span class="co"># Rango acotado para ver mejor la zona de convergencia</span></span>
-<span id="cb12-423"><a href="#cb12-423"></a>x_star <span class="op">=</span> <span class="fl">0.7390851332</span> <span class="co"># Raíz para referencia</span></span>
+<span id="cb12-421"><a href="#cb12-421"></a><span class="in">```{julia}</span></span>
+<span id="cb12-422"><a href="#cb12-422"></a><span class="co">#| label: fig-cobweb-improved</span></span>
+<span id="cb12-423"><a href="#cb12-423"></a><span class="co">#| fig-cap: &quot;Comparación visual del proceso iterativo. El método de Punto fijo sigue un patrón de &#39;escalera&#39; (en azul) que converge lentamente hacia la intersección. En contraste, el método de Steffensen realiza &#39;saltos&#39; directos y mucho más grandes (naranja y púrpura), alcanzando la solución en muchos menos pasos.&quot;</span></span>
 <span id="cb12-424"><a href="#cb12-424"></a></span>
-<span id="cb12-425"><a href="#cb12-425"></a><span class="co"># 2. Crear el gráfico base</span></span>
-<span id="cb12-426"><a href="#cb12-426"></a>p <span class="op">=</span> <span class="fu">plot</span>(x_vals, <span class="fu">g</span>.(x_vals),</span>
-<span id="cb12-427"><a href="#cb12-427"></a>    label<span class="op">=</span><span class="st">&quot;g(x) = cos(x)&quot;</span>,</span>
-<span id="cb12-428"><a href="#cb12-428"></a>    linewidth<span class="op">=</span><span class="fl">2.5</span>,</span>
-<span id="cb12-429"><a href="#cb12-429"></a>    title<span class="op">=</span><span class="st">&quot;Convergencia Gráfica: Punto fijo vs. Steffensen&quot;</span>,</span>
-<span id="cb12-430"><a href="#cb12-430"></a>    xlabel<span class="op">=</span><span class="st">&quot;x&quot;</span>,</span>
-<span id="cb12-431"><a href="#cb12-431"></a>    ylabel<span class="op">=</span><span class="st">&quot;y&quot;</span>,</span>
-<span id="cb12-432"><a href="#cb12-432"></a>    legend<span class="op">=:</span>topleft,</span>
-<span id="cb12-433"><a href="#cb12-433"></a>    size<span class="op">=</span>(<span class="fl">700</span>,<span class="fl">600</span>) <span class="co"># Un poco más grande para mayor claridad</span></span>
-<span id="cb12-434"><a href="#cb12-434"></a>)</span>
-<span id="cb12-435"><a href="#cb12-435"></a><span class="fu">plot!</span>(p, x_vals, x_vals,</span>
-<span id="cb12-436"><a href="#cb12-436"></a>    label<span class="op">=</span><span class="st">&quot;y = x&quot;</span>,</span>
-<span id="cb12-437"><a href="#cb12-437"></a>    linestyle<span class="op">=:</span>dash,</span>
-<span id="cb12-438"><a href="#cb12-438"></a>    color<span class="op">=:</span>gray,</span>
-<span id="cb12-439"><a href="#cb12-439"></a>    linewidth<span class="op">=</span><span class="fl">1.5</span></span>
+<span id="cb12-425"><a href="#cb12-425"></a><span class="co"># 1. Configuración inicial</span></span>
+<span id="cb12-426"><a href="#cb12-426"></a></span>
+<span id="cb12-427"><a href="#cb12-427"></a><span class="fu">g</span>(x) <span class="op">=</span> <span class="fu">cos</span>(x)</span>
+<span id="cb12-428"><a href="#cb12-428"></a>x_vals <span class="op">=</span> <span class="fl">0.4</span><span class="op">:</span><span class="fl">0.01</span><span class="op">:</span><span class="fl">1.0</span> <span class="co"># Rango acotado para ver mejor la zona de convergencia</span></span>
+<span id="cb12-429"><a href="#cb12-429"></a>x_star <span class="op">=</span> <span class="fl">0.7390851332</span> <span class="co"># Raíz para referencia</span></span>
+<span id="cb12-430"><a href="#cb12-430"></a></span>
+<span id="cb12-431"><a href="#cb12-431"></a><span class="co"># 2. Crear el gráfico base</span></span>
+<span id="cb12-432"><a href="#cb12-432"></a>p <span class="op">=</span> <span class="fu">plot</span>(x_vals, <span class="fu">g</span>.(x_vals),</span>
+<span id="cb12-433"><a href="#cb12-433"></a>    label<span class="op">=</span><span class="st">&quot;g(x) = cos(x)&quot;</span>,</span>
+<span id="cb12-434"><a href="#cb12-434"></a>    linewidth<span class="op">=</span><span class="fl">2.5</span>,</span>
+<span id="cb12-435"><a href="#cb12-435"></a>    title<span class="op">=</span><span class="st">&quot;Convergencia Gráfica: Punto fijo vs. Steffensen&quot;</span>,</span>
+<span id="cb12-436"><a href="#cb12-436"></a>    xlabel<span class="op">=</span><span class="st">&quot;x&quot;</span>,</span>
+<span id="cb12-437"><a href="#cb12-437"></a>    ylabel<span class="op">=</span><span class="st">&quot;y&quot;</span>,</span>
+<span id="cb12-438"><a href="#cb12-438"></a>    legend<span class="op">=:</span>topleft,</span>
+<span id="cb12-439"><a href="#cb12-439"></a>    size<span class="op">=</span>(<span class="fl">700</span>,<span class="fl">600</span>) <span class="co"># Un poco más grande para mayor claridad</span></span>
 <span id="cb12-440"><a href="#cb12-440"></a>)</span>
-<span id="cb12-441"><a href="#cb12-441"></a><span class="fu">scatter!</span>(p, [x_star], [<span class="fu">g</span>(x_star)],</span>
-<span id="cb12-442"><a href="#cb12-442"></a>    color<span class="op">=:</span>red,</span>
-<span id="cb12-443"><a href="#cb12-443"></a>    markersize<span class="op">=</span><span class="fl">6</span>,</span>
-<span id="cb12-444"><a href="#cb12-444"></a>    label<span class="op">=</span><span class="st">&quot;Punto fijo (Solución)&quot;</span></span>
-<span id="cb12-445"><a href="#cb12-445"></a>)</span>
-<span id="cb12-446"><a href="#cb12-446"></a></span>
-<span id="cb12-447"><a href="#cb12-447"></a><span class="co"># 3. Visualización del Método de Punto fijo</span></span>
-<span id="cb12-448"><a href="#cb12-448"></a>x_i <span class="op">=</span> <span class="fl">0.5</span> <span class="co"># Punto inicial</span></span>
-<span id="cb12-449"><a href="#cb12-449"></a><span class="fu">plot!</span>(p, [], [], color<span class="op">=:</span>cornflowerblue, label<span class="op">=</span><span class="st">&quot;Iteración Punto fijo&quot;</span>) <span class="co"># Entrada para la leyenda</span></span>
-<span id="cb12-450"><a href="#cb12-450"></a><span class="cf">for</span> _ <span class="kw">in</span> <span class="fl">1</span><span class="op">:</span><span class="fl">4</span> <span class="co"># Dibujar los primeros 4 pasos para no saturar el gráfico</span></span>
-<span id="cb12-451"><a href="#cb12-451"></a>    y_i <span class="op">=</span> <span class="fu">g</span>(x_i)</span>
-<span id="cb12-452"><a href="#cb12-452"></a>    <span class="co"># Línea vertical desde (x_i, x_i) hasta (x_i, y_i)</span></span>
-<span id="cb12-453"><a href="#cb12-453"></a>    <span class="fu">plot!</span>(p, [x_i, x_i], [x_i, y_i], color<span class="op">=:</span>cornflowerblue, alpha<span class="op">=</span><span class="fl">0.8</span>, label<span class="op">=</span><span class="st">&quot;&quot;</span>)</span>
-<span id="cb12-454"><a href="#cb12-454"></a>    <span class="co"># Línea horizontal desde (x_i, y_i) hasta (y_i, y_i)</span></span>
-<span id="cb12-455"><a href="#cb12-455"></a>    <span class="fu">plot!</span>(p, [x_i, y_i], [y_i, y_i], color<span class="op">=:</span>cornflowerblue, alpha<span class="op">=</span><span class="fl">0.8</span>, label<span class="op">=</span><span class="st">&quot;&quot;</span>)</span>
-<span id="cb12-456"><a href="#cb12-456"></a>    x_i <span class="op">=</span> y_i</span>
-<span id="cb12-457"><a href="#cb12-457"></a><span class="cf">end</span></span>
-<span id="cb12-458"><a href="#cb12-458"></a><span class="fu">annotate!</span>(p, <span class="fl">0.5</span>, <span class="fl">0.45</span>, <span class="fu">text</span>(<span class="st">&quot;x₀ = 0.5&quot;</span>, <span class="op">:</span>black, <span class="op">:</span>center, <span class="fl">9</span>))</span>
-<span id="cb12-459"><a href="#cb12-459"></a></span>
-<span id="cb12-460"><a href="#cb12-460"></a><span class="co"># 4. Visualización del Método de Steffensen (Saltos Cuadráticos)</span></span>
-<span id="cb12-461"><a href="#cb12-461"></a><span class="co"># --- Primer salto ---</span></span>
-<span id="cb12-462"><a href="#cb12-462"></a>x0_s1 <span class="op">=</span> <span class="fl">0.5</span></span>
-<span id="cb12-463"><a href="#cb12-463"></a>y0_s1 <span class="op">=</span> <span class="fu">g</span>(x0_s1)</span>
-<span id="cb12-464"><a href="#cb12-464"></a>y1_s1 <span class="op">=</span> <span class="fu">g</span>(y0_s1)</span>
-<span id="cb12-465"><a href="#cb12-465"></a>x1_steff <span class="op">=</span> x0_s1 <span class="op">-</span> (y0_s1 <span class="op">-</span> x0_s1)<span class="op">^</span><span class="fl">2</span> <span class="op">/</span> (y1_s1 <span class="op">-</span> <span class="fl">2</span><span class="op">*</span>y0_s1 <span class="op">+</span> x0_s1) <span class="co"># Aprox. 0.731385</span></span>
-<span id="cb12-466"><a href="#cb12-466"></a></span>
-<span id="cb12-467"><a href="#cb12-467"></a><span class="fu">plot!</span>(p, [x0_s1, x1_steff], [x0_s1, x1_steff],</span>
-<span id="cb12-468"><a href="#cb12-468"></a>    arrow<span class="op">=</span><span class="cn">true</span>,</span>
-<span id="cb12-469"><a href="#cb12-469"></a>    color<span class="op">=:</span>darkorange,</span>
-<span id="cb12-470"><a href="#cb12-470"></a>    linewidth<span class="op">=</span><span class="fl">2</span>,</span>
-<span id="cb12-471"><a href="#cb12-471"></a>    linestyle<span class="op">=:</span>dot,</span>
-<span id="cb12-472"><a href="#cb12-472"></a>    label<span class="op">=</span><span class="st">&quot;1er Salto de Steffensen&quot;</span></span>
-<span id="cb12-473"><a href="#cb12-473"></a>)</span>
-<span id="cb12-474"><a href="#cb12-474"></a><span class="fu">annotate!</span>(p, (x0_s1 <span class="op">+</span> x1_steff)<span class="op">/</span><span class="fl">2</span>, <span class="fl">0.53</span>, <span class="fu">text</span>(<span class="st">&quot;Salto 1&quot;</span>, <span class="op">:</span>darkorange, <span class="op">:</span>center, <span class="fl">8</span>))</span>
-<span id="cb12-475"><a href="#cb12-475"></a></span>
-<span id="cb12-476"><a href="#cb12-476"></a><span class="co"># --- Segundo salto ---</span></span>
-<span id="cb12-477"><a href="#cb12-477"></a>x0_s2 <span class="op">=</span> x1_steff <span class="co"># El nuevo punto de partida es el resultado del primer salto</span></span>
-<span id="cb12-478"><a href="#cb12-478"></a>y0_s2 <span class="op">=</span> <span class="fu">g</span>(x0_s2)</span>
-<span id="cb12-479"><a href="#cb12-479"></a>y1_s2 <span class="op">=</span> <span class="fu">g</span>(y0_s2)</span>
-<span id="cb12-480"><a href="#cb12-480"></a>x2_steff <span class="op">=</span> x0_s2 <span class="op">-</span> (y0_s2 <span class="op">-</span> x0_s2)<span class="op">^</span><span class="fl">2</span> <span class="op">/</span> (y1_s2 <span class="op">-</span> <span class="fl">2</span><span class="op">*</span>y0_s2 <span class="op">+</span> x0_s2) <span class="co"># Aprox. 0.739076</span></span>
+<span id="cb12-441"><a href="#cb12-441"></a><span class="fu">plot!</span>(p, x_vals, x_vals,</span>
+<span id="cb12-442"><a href="#cb12-442"></a>    label<span class="op">=</span><span class="st">&quot;y = x&quot;</span>,</span>
+<span id="cb12-443"><a href="#cb12-443"></a>    linestyle<span class="op">=:</span>dash,</span>
+<span id="cb12-444"><a href="#cb12-444"></a>    color<span class="op">=:</span>gray,</span>
+<span id="cb12-445"><a href="#cb12-445"></a>    linewidth<span class="op">=</span><span class="fl">1.5</span></span>
+<span id="cb12-446"><a href="#cb12-446"></a>)</span>
+<span id="cb12-447"><a href="#cb12-447"></a><span class="fu">scatter!</span>(p, [x_star], [<span class="fu">g</span>(x_star)],</span>
+<span id="cb12-448"><a href="#cb12-448"></a>    color<span class="op">=:</span>red,</span>
+<span id="cb12-449"><a href="#cb12-449"></a>    markersize<span class="op">=</span><span class="fl">6</span>,</span>
+<span id="cb12-450"><a href="#cb12-450"></a>    label<span class="op">=</span><span class="st">&quot;Punto fijo (Solución)&quot;</span></span>
+<span id="cb12-451"><a href="#cb12-451"></a>)</span>
+<span id="cb12-452"><a href="#cb12-452"></a></span>
+<span id="cb12-453"><a href="#cb12-453"></a><span class="co"># 3. Visualización del Método de Punto fijo</span></span>
+<span id="cb12-454"><a href="#cb12-454"></a>x_i <span class="op">=</span> <span class="fl">0.5</span> <span class="co"># Punto inicial</span></span>
+<span id="cb12-455"><a href="#cb12-455"></a><span class="fu">plot!</span>(p, [], [], color<span class="op">=:</span>cornflowerblue, label<span class="op">=</span><span class="st">&quot;Iteración Punto fijo&quot;</span>) <span class="co"># Entrada para la leyenda</span></span>
+<span id="cb12-456"><a href="#cb12-456"></a><span class="cf">for</span> _ <span class="kw">in</span> <span class="fl">1</span><span class="op">:</span><span class="fl">4</span> <span class="co"># Dibujar los primeros 4 pasos para no saturar el gráfico</span></span>
+<span id="cb12-457"><a href="#cb12-457"></a>    y_i <span class="op">=</span> <span class="fu">g</span>(x_i)</span>
+<span id="cb12-458"><a href="#cb12-458"></a>    <span class="co"># Línea vertical desde (x_i, x_i) hasta (x_i, y_i)</span></span>
+<span id="cb12-459"><a href="#cb12-459"></a>    <span class="fu">plot!</span>(p, [x_i, x_i], [x_i, y_i], color<span class="op">=:</span>cornflowerblue, alpha<span class="op">=</span><span class="fl">0.8</span>, label<span class="op">=</span><span class="st">&quot;&quot;</span>)</span>
+<span id="cb12-460"><a href="#cb12-460"></a>    <span class="co"># Línea horizontal desde (x_i, y_i) hasta (y_i, y_i)</span></span>
+<span id="cb12-461"><a href="#cb12-461"></a>    <span class="fu">plot!</span>(p, [x_i, y_i], [y_i, y_i], color<span class="op">=:</span>cornflowerblue, alpha<span class="op">=</span><span class="fl">0.8</span>, label<span class="op">=</span><span class="st">&quot;&quot;</span>)</span>
+<span id="cb12-462"><a href="#cb12-462"></a>    x_i <span class="op">=</span> y_i</span>
+<span id="cb12-463"><a href="#cb12-463"></a><span class="cf">end</span></span>
+<span id="cb12-464"><a href="#cb12-464"></a><span class="fu">annotate!</span>(p, <span class="fl">0.5</span>, <span class="fl">0.45</span>, <span class="fu">text</span>(<span class="st">&quot;x₀ = 0.5&quot;</span>, <span class="op">:</span>black, <span class="op">:</span>center, <span class="fl">9</span>))</span>
+<span id="cb12-465"><a href="#cb12-465"></a></span>
+<span id="cb12-466"><a href="#cb12-466"></a><span class="co"># 4. Visualización del Método de Steffensen (Saltos Cuadráticos)</span></span>
+<span id="cb12-467"><a href="#cb12-467"></a><span class="co"># --- Primer salto ---</span></span>
+<span id="cb12-468"><a href="#cb12-468"></a>x0_s1 <span class="op">=</span> <span class="fl">0.5</span></span>
+<span id="cb12-469"><a href="#cb12-469"></a>y0_s1 <span class="op">=</span> <span class="fu">g</span>(x0_s1)</span>
+<span id="cb12-470"><a href="#cb12-470"></a>y1_s1 <span class="op">=</span> <span class="fu">g</span>(y0_s1)</span>
+<span id="cb12-471"><a href="#cb12-471"></a>x1_steff <span class="op">=</span> x0_s1 <span class="op">-</span> (y0_s1 <span class="op">-</span> x0_s1)<span class="op">^</span><span class="fl">2</span> <span class="op">/</span> (y1_s1 <span class="op">-</span> <span class="fl">2</span><span class="op">*</span>y0_s1 <span class="op">+</span> x0_s1) <span class="co"># Aprox. 0.731385</span></span>
+<span id="cb12-472"><a href="#cb12-472"></a></span>
+<span id="cb12-473"><a href="#cb12-473"></a><span class="fu">plot!</span>(p, [x0_s1, x1_steff], [x0_s1, x1_steff],</span>
+<span id="cb12-474"><a href="#cb12-474"></a>    arrow<span class="op">=</span><span class="cn">true</span>,</span>
+<span id="cb12-475"><a href="#cb12-475"></a>    color<span class="op">=:</span>darkorange,</span>
+<span id="cb12-476"><a href="#cb12-476"></a>    linewidth<span class="op">=</span><span class="fl">2</span>,</span>
+<span id="cb12-477"><a href="#cb12-477"></a>    linestyle<span class="op">=:</span>dot,</span>
+<span id="cb12-478"><a href="#cb12-478"></a>    label<span class="op">=</span><span class="st">&quot;1er Salto de Steffensen&quot;</span></span>
+<span id="cb12-479"><a href="#cb12-479"></a>)</span>
+<span id="cb12-480"><a href="#cb12-480"></a><span class="fu">annotate!</span>(p, (x0_s1 <span class="op">+</span> x1_steff)<span class="op">/</span><span class="fl">2</span>, <span class="fl">0.53</span>, <span class="fu">text</span>(<span class="st">&quot;Salto 1&quot;</span>, <span class="op">:</span>darkorange, <span class="op">:</span>center, <span class="fl">8</span>))</span>
 <span id="cb12-481"><a href="#cb12-481"></a></span>
-<span id="cb12-482"><a href="#cb12-482"></a><span class="fu">plot!</span>(p, [x0_s2, x2_steff], [x0_s2, x2_steff],</span>
-<span id="cb12-483"><a href="#cb12-483"></a>    arrow<span class="op">=</span><span class="cn">true</span>,</span>
-<span id="cb12-484"><a href="#cb12-484"></a>    color<span class="op">=:</span>purple,</span>
-<span id="cb12-485"><a href="#cb12-485"></a>    linewidth<span class="op">=</span><span class="fl">2</span>,</span>
-<span id="cb12-486"><a href="#cb12-486"></a>    linestyle<span class="op">=:</span>dot,</span>
-<span id="cb12-487"><a href="#cb12-487"></a>    label<span class="op">=</span><span class="st">&quot;2do Salto de Steffensen&quot;</span></span>
-<span id="cb12-488"><a href="#cb12-488"></a>)</span>
-<span id="cb12-489"><a href="#cb12-489"></a><span class="fu">annotate!</span>(p, x0_s2 <span class="op">-</span> <span class="fl">0.003</span>, <span class="fl">0.73</span>, <span class="fu">text</span>(<span class="st">&quot;Salto 2&quot;</span>, <span class="op">:</span>purple, <span class="op">:</span>right, <span class="fl">8</span>))</span>
-<span id="cb12-490"><a href="#cb12-490"></a></span>
-<span id="cb12-491"><a href="#cb12-491"></a></span>
-<span id="cb12-492"><a href="#cb12-492"></a><span class="co"># 5. Mostrar el gráfico</span></span>
-<span id="cb12-493"><a href="#cb12-493"></a>p</span>
-<span id="cb12-494"><a href="#cb12-494"></a><span class="in">```</span></span>
-<span id="cb12-495"><a href="#cb12-495"></a></span>
-<span id="cb12-496"><a href="#cb12-496"></a><span class="fu">### Resultados tabulares</span></span>
+<span id="cb12-482"><a href="#cb12-482"></a><span class="co"># --- Segundo salto ---</span></span>
+<span id="cb12-483"><a href="#cb12-483"></a>x0_s2 <span class="op">=</span> x1_steff <span class="co"># El nuevo punto de partida es el resultado del primer salto</span></span>
+<span id="cb12-484"><a href="#cb12-484"></a>y0_s2 <span class="op">=</span> <span class="fu">g</span>(x0_s2)</span>
+<span id="cb12-485"><a href="#cb12-485"></a>y1_s2 <span class="op">=</span> <span class="fu">g</span>(y0_s2)</span>
+<span id="cb12-486"><a href="#cb12-486"></a>x2_steff <span class="op">=</span> x0_s2 <span class="op">-</span> (y0_s2 <span class="op">-</span> x0_s2)<span class="op">^</span><span class="fl">2</span> <span class="op">/</span> (y1_s2 <span class="op">-</span> <span class="fl">2</span><span class="op">*</span>y0_s2 <span class="op">+</span> x0_s2) <span class="co"># Aprox. 0.739076</span></span>
+<span id="cb12-487"><a href="#cb12-487"></a></span>
+<span id="cb12-488"><a href="#cb12-488"></a><span class="fu">plot!</span>(p, [x0_s2, x2_steff], [x0_s2, x2_steff],</span>
+<span id="cb12-489"><a href="#cb12-489"></a>    arrow<span class="op">=</span><span class="cn">true</span>,</span>
+<span id="cb12-490"><a href="#cb12-490"></a>    color<span class="op">=:</span>purple,</span>
+<span id="cb12-491"><a href="#cb12-491"></a>    linewidth<span class="op">=</span><span class="fl">2</span>,</span>
+<span id="cb12-492"><a href="#cb12-492"></a>    linestyle<span class="op">=:</span>dot,</span>
+<span id="cb12-493"><a href="#cb12-493"></a>    label<span class="op">=</span><span class="st">&quot;2do Salto de Steffensen&quot;</span></span>
+<span id="cb12-494"><a href="#cb12-494"></a>)</span>
+<span id="cb12-495"><a href="#cb12-495"></a><span class="fu">annotate!</span>(p, x0_s2 <span class="op">-</span> <span class="fl">0.003</span>, <span class="fl">0.73</span>, <span class="fu">text</span>(<span class="st">&quot;Salto 2&quot;</span>, <span class="op">:</span>purple, <span class="op">:</span>right, <span class="fl">8</span>))</span>
+<span id="cb12-496"><a href="#cb12-496"></a></span>
 <span id="cb12-497"><a href="#cb12-497"></a></span>
-<span id="cb12-498"><a href="#cb12-498"></a><span class="pp">|</span> Iteración <span class="pp">|</span> $x_k$ <span class="pp">|</span> $g(x_k)$ <span class="pp">|</span> $g(g(x_k))$ <span class="pp">|</span> Error ($<span class="pp">|</span>x_{k+1}-x_k<span class="pp">|</span>$) <span class="pp">|</span></span>
-<span id="cb12-499"><a href="#cb12-499"></a><span class="pp">|:---:|:---:|:---:|:---:|:---|</span></span>
-<span id="cb12-500"><a href="#cb12-500"></a><span class="pp">|</span> 1 <span class="pp">|</span> 0.5000000 <span class="pp">|</span> 0.8775826 <span class="pp">|</span> 0.6390125 <span class="pp">|</span> $3.7758 \times 10^{-01}$ <span class="pp">|</span></span>
-<span id="cb12-501"><a href="#cb12-501"></a><span class="pp">|</span> 2 <span class="pp">|</span> 0.8775826 <span class="pp">|</span> 0.6390125 <span class="pp">|</span> 0.8026851 <span class="pp">|</span> $2.3857 \times 10^{-01}$ <span class="pp">|</span></span>
-<span id="cb12-502"><a href="#cb12-502"></a><span class="pp">|</span> ... <span class="pp">|</span> ... <span class="pp">|</span> ... <span class="pp">|</span> ... <span class="pp">|</span> ... <span class="pp">|</span></span>
-<span id="cb12-503"><a href="#cb12-503"></a><span class="pp">|</span> 44 <span class="pp">|</span> 0.7390851 <span class="pp">|</span> 0.7390851 <span class="pp">|</span> 0.7390851 <span class="pp">|</span> $9.9894 \times 10^{-09}$ <span class="pp">|</span></span>
-<span id="cb12-504"><a href="#cb12-504"></a><span class="pp">|</span> 45 <span class="pp">|</span> 0.7390851 <span class="pp">|</span> 0.7390851 <span class="pp">|</span> 0.7390851 <span class="pp">|</span> $6.7290 \times 10^{-09}$ <span class="pp">|</span></span>
-<span id="cb12-505"><a href="#cb12-505"></a>Table: Iteraciones de Punto fijo (Tabla abreviada). {<span class="sc">\#</span>tbl-punto-fijo-iteraciones-4}</span>
-<span id="cb12-506"><a href="#cb12-506"></a></span>
-<span id="cb12-507"><a href="#cb12-507"></a><span class="pp">|</span> Iteración <span class="pp">|</span> $x_k$ <span class="pp">|</span> $x_{k+1}$ (calculado) <span class="pp">|</span> Error ($<span class="pp">|</span>x_{k+1}-x_k<span class="pp">|</span>$) <span class="pp">|</span></span>
-<span id="cb12-508"><a href="#cb12-508"></a><span class="pp">|:---:|:---:|:---:|:---|</span></span>
-<span id="cb12-509"><a href="#cb12-509"></a><span class="pp">|</span> 1 <span class="pp">|</span> 0.5000000000 <span class="pp">|</span> 0.7313851864 <span class="pp">|</span> $2.3138 \times 10^{-01}$ <span class="pp">|</span></span>
-<span id="cb12-510"><a href="#cb12-510"></a><span class="pp">|</span> 2 <span class="pp">|</span> 0.7313851864 <span class="pp">|</span> 0.7390763404 <span class="pp">|</span> $7.6911 \times 10^{-03}$ <span class="pp">|</span></span>
-<span id="cb12-511"><a href="#cb12-511"></a><span class="pp">|</span> 3 <span class="pp">|</span> 0.7390763404 <span class="pp">|</span> 0.7390851332 <span class="pp">|</span> $8.7928 \times 10^{-06}$ <span class="pp">|</span></span>
-<span id="cb12-512"><a href="#cb12-512"></a><span class="pp">|</span> 4 <span class="pp">|</span> 0.7390851332 <span class="pp">|</span> 0.7390851332 <span class="pp">|</span> $1.1102 \times 10^{-16}$ <span class="pp">|</span></span>
-<span id="cb12-513"><a href="#cb12-513"></a>Table: Iteraciones del método de Steffensen. {<span class="sc">\#</span>tbl-steffensen-iteraciones-4}</span>
-<span id="cb12-514"><a href="#cb12-514"></a></span>
-<span id="cb12-515"><a href="#cb12-515"></a><span class="fu">### Análisis comparativo</span></span>
-<span id="cb12-516"><a href="#cb12-516"></a></span>
-<span id="cb12-517"><a href="#cb12-517"></a>La diferencia en rendimiento es abrumadora y se explica teóricamente por el **orden de convergencia**.</span>
-<span id="cb12-518"><a href="#cb12-518"></a></span>
-<span id="cb12-519"><a href="#cb12-519"></a><span class="ss">  - </span>**Método de Punto fijo**: Tiene **convergencia lineal** (orden 1). El error disminuye a un ritmo constante, lo que resulta en un progreso lento pero seguro. En este caso, requirió **45 iteraciones**.</span>
-<span id="cb12-520"><a href="#cb12-520"></a><span class="ss">  - </span>**Método de Steffensen**: Es una técnica de aceleración que transforma la convergencia lineal en **convergencia cuadrática** (orden 2). El error en cada paso es aproximadamente el *cuadrado* del error anterior ($e_{k+1} \approx C \cdot e_k^2$). Esto significa que el número de cifras decimales correctas se duplica en cada iteración, logrando una convergencia extremadamente rápida en solo **4 iteraciones**. Steffensen es inmensamente superior para acelerar la convergencia de iteraciones de Punto fijo.</span>
-<span id="cb12-521"><a href="#cb12-521"></a></span>
-<span id="cb12-522"><a href="#cb12-522"></a><span class="fu">### Gráfico de convergencia del error</span></span>
-<span id="cb12-523"><a href="#cb12-523"></a></span>
-<span id="cb12-526"><a href="#cb12-526"></a><span class="in">```{julia}</span></span>
-<span id="cb12-527"><a href="#cb12-527"></a><span class="co">#| label: fig-error-pf-steffensen</span></span>
-<span id="cb12-528"><a href="#cb12-528"></a><span class="co">#| fig-cap: &quot;Comparación del Error absoluto por iteración (escala logarítmica).&quot;</span></span>
+<span id="cb12-498"><a href="#cb12-498"></a><span class="co"># 5. Mostrar el gráfico</span></span>
+<span id="cb12-499"><a href="#cb12-499"></a>p</span>
+<span id="cb12-500"><a href="#cb12-500"></a><span class="in">```</span></span>
+<span id="cb12-501"><a href="#cb12-501"></a></span>
+<span id="cb12-502"><a href="#cb12-502"></a><span class="fu">### Resultados tabulares</span></span>
+<span id="cb12-503"><a href="#cb12-503"></a></span>
+<span id="cb12-504"><a href="#cb12-504"></a><span class="pp">|</span> Iteración <span class="pp">|</span>   $x_k$   <span class="pp">|</span> $g(x_k)$  <span class="pp">|</span> $g(g(x_k))$ <span class="pp">|</span> Error ($<span class="pp">|</span>x_{k+1}-x_k<span class="pp">|</span>$)  <span class="pp">|</span></span>
+<span id="cb12-505"><a href="#cb12-505"></a><span class="pp">|:---------:|:---------:|:---------:|:-----------:|:-------------------------|</span></span>
+<span id="cb12-506"><a href="#cb12-506"></a><span class="pp">|</span>     1     <span class="pp">|</span> 0.5000000 <span class="pp">|</span> 0.8775826 <span class="pp">|</span>  0.6390125  <span class="pp">|</span> $3.7758 \times 10^{-01}$ <span class="pp">|</span></span>
+<span id="cb12-507"><a href="#cb12-507"></a><span class="pp">|</span>     2     <span class="pp">|</span> 0.8775826 <span class="pp">|</span> 0.6390125 <span class="pp">|</span>  0.8026851  <span class="pp">|</span> $2.3857 \times 10^{-01}$ <span class="pp">|</span></span>
+<span id="cb12-508"><a href="#cb12-508"></a><span class="pp">|</span>    ...    <span class="pp">|</span>    ...    <span class="pp">|</span>    ...    <span class="pp">|</span>     ...     <span class="pp">|</span> ...                      <span class="pp">|</span></span>
+<span id="cb12-509"><a href="#cb12-509"></a><span class="pp">|</span>    44     <span class="pp">|</span> 0.7390851 <span class="pp">|</span> 0.7390851 <span class="pp">|</span>  0.7390851  <span class="pp">|</span> $9.9894 \times 10^{-09}$ <span class="pp">|</span></span>
+<span id="cb12-510"><a href="#cb12-510"></a><span class="pp">|</span>    45     <span class="pp">|</span> 0.7390851 <span class="pp">|</span> 0.7390851 <span class="pp">|</span>  0.7390851  <span class="pp">|</span> $6.7290 \times 10^{-09}$ <span class="pp">|</span></span>
+<span id="cb12-511"><a href="#cb12-511"></a></span>
+<span id="cb12-512"><a href="#cb12-512"></a>: Iteraciones de Punto fijo (Tabla abreviada). {#tbl-punto-fijo-iteraciones-4}</span>
+<span id="cb12-513"><a href="#cb12-513"></a></span>
+<span id="cb12-514"><a href="#cb12-514"></a><span class="pp">|</span> Iteración <span class="pp">|</span>    $x_k$     <span class="pp">|</span> $x_{k+1}$ (calculado) <span class="pp">|</span> Error ($<span class="pp">|</span>x_{k+1}-x_k<span class="pp">|</span>$)  <span class="pp">|</span></span>
+<span id="cb12-515"><a href="#cb12-515"></a><span class="pp">|:---------:|:------------:|:---------------------:|:-------------------------|</span></span>
+<span id="cb12-516"><a href="#cb12-516"></a><span class="pp">|</span>     1     <span class="pp">|</span> 0.5000000000 <span class="pp">|</span>     0.7313851864      <span class="pp">|</span> $2.3138 \times 10^{-01}$ <span class="pp">|</span></span>
+<span id="cb12-517"><a href="#cb12-517"></a><span class="pp">|</span>     2     <span class="pp">|</span> 0.7313851864 <span class="pp">|</span>     0.7390763404      <span class="pp">|</span> $7.6911 \times 10^{-03}$ <span class="pp">|</span></span>
+<span id="cb12-518"><a href="#cb12-518"></a><span class="pp">|</span>     3     <span class="pp">|</span> 0.7390763404 <span class="pp">|</span>     0.7390851332      <span class="pp">|</span> $8.7928 \times 10^{-06}$ <span class="pp">|</span></span>
+<span id="cb12-519"><a href="#cb12-519"></a><span class="pp">|</span>     4     <span class="pp">|</span> 0.7390851332 <span class="pp">|</span>     0.7390851332      <span class="pp">|</span> $1.1102 \times 10^{-16}$ <span class="pp">|</span></span>
+<span id="cb12-520"><a href="#cb12-520"></a></span>
+<span id="cb12-521"><a href="#cb12-521"></a>: Iteraciones del método de Steffensen. {#tbl-steffensen-iteraciones-4}</span>
+<span id="cb12-522"><a href="#cb12-522"></a></span>
+<span id="cb12-523"><a href="#cb12-523"></a><span class="fu">### Análisis comparativo</span></span>
+<span id="cb12-524"><a href="#cb12-524"></a></span>
+<span id="cb12-525"><a href="#cb12-525"></a>La diferencia en rendimiento es abrumadora y se explica teóricamente por el **orden de convergencia**.</span>
+<span id="cb12-526"><a href="#cb12-526"></a></span>
+<span id="cb12-527"><a href="#cb12-527"></a><span class="ss">-   </span>**Método de Punto fijo**: Tiene **convergencia lineal** (orden 1). El error disminuye a un ritmo constante, lo que resulta en un progreso lento pero seguro. En este caso, requirió **45 iteraciones**.</span>
+<span id="cb12-528"><a href="#cb12-528"></a><span class="ss">-   </span>**Método de Steffensen**: Es una técnica de aceleración que transforma la convergencia lineal en **convergencia cuadrática** (orden 2). El error en cada paso es aproximadamente el *cuadrado* del error anterior ($e_{k+1} \approx C \cdot e_k^2$). Esto significa que el número de cifras decimales correctas se duplica en cada iteración, logrando una convergencia extremadamente rápida en solo **4 iteraciones**. Steffensen es inmensamente superior para acelerar la convergencia de iteraciones de Punto fijo.</span>
 <span id="cb12-529"><a href="#cb12-529"></a></span>
-<span id="cb12-530"><a href="#cb12-530"></a><span class="co"># Datos de Error absoluto extraídos de las tablas</span></span>
-<span id="cb12-531"><a href="#cb12-531"></a>error_pf <span class="op">=</span> <span class="fu">abs</span>.([<span class="fl">2.38e-01</span>, <span class="fl">1.63e-01</span>, <span class="fl">1.07e-01</span>, <span class="fl">7.34e-02</span>, <span class="fl">4.90e-02</span>, <span class="fl">3.31e-02</span>, <span class="fl">2.22e-02</span>, <span class="fl">1.50e-02</span>, <span class="fl">1.01e-02</span>, <span class="fl">6.82e-03</span>, <span class="fl">4.59e-03</span>, <span class="fl">3.09e-03</span>, <span class="fl">2.08e-03</span>, <span class="fl">1.40e-03</span>, <span class="fl">9.45e-04</span>, <span class="fl">6.36e-04</span>, <span class="fl">4.29e-04</span>, <span class="fl">2.88e-04</span>, <span class="fl">1.94e-04</span>, <span class="fl">1.31e-04</span>, <span class="fl">8.83e-05</span>, <span class="fl">5.95e-05</span>, <span class="fl">4.00e-05</span>, <span class="fl">2.69e-05</span>, <span class="fl">1.81e-05</span>, <span class="fl">1.22e-05</span>, <span class="fl">8.25e-06</span>, <span class="fl">5.55e-06</span>, <span class="fl">3.74e-06</span>, <span class="fl">2.52e-06</span>, <span class="fl">1.69e-06</span>, <span class="fl">1.14e-06</span>, <span class="fl">7.70e-07</span>, <span class="fl">5.19e-07</span>, <span class="fl">3.49e-07</span>, <span class="fl">2.35e-07</span>, <span class="fl">1.58e-07</span>, <span class="fl">1.06e-07</span>, <span class="fl">7.20e-08</span>, <span class="fl">4.85e-08</span>, <span class="fl">3.26e-08</span>, <span class="fl">2.20e-08</span>, <span class="fl">1.48e-08</span>, <span class="fl">9.98e-09</span>, <span class="fl">6.72e-09</span>])</span>
-<span id="cb12-532"><a href="#cb12-532"></a></span>
-<span id="cb12-533"><a href="#cb12-533"></a><span class="co"># ¡Este es el cambio! Reemplazamos 0.0 con un número muy pequeño (1e-16) para visualizarlo en la escala logarítmica</span></span>
-<span id="cb12-534"><a href="#cb12-534"></a>error_steffensen <span class="op">=</span> <span class="fu">abs</span>.([<span class="fl">2.31e-01</span>, <span class="fl">7.69e-03</span>, <span class="fl">8.79e-06</span>, <span class="fl">1e-16</span>]) </span>
-<span id="cb12-535"><a href="#cb12-535"></a></span>
-<span id="cb12-536"><a href="#cb12-536"></a><span class="fu">plot</span>(<span class="fl">1</span><span class="op">:</span><span class="fu">length</span>(error_pf), error_pf,</span>
-<span id="cb12-537"><a href="#cb12-537"></a>    label<span class="op">=</span><span class="st">&quot;Punto fijo (45 iter.)&quot;</span>, yscale<span class="op">=:</span>log10, marker<span class="op">=:</span>circle,</span>
-<span id="cb12-538"><a href="#cb12-538"></a>    title<span class="op">=</span><span class="st">&quot;Error por Iteración&quot;</span>, xlabel<span class="op">=</span><span class="st">&quot;Iteración&quot;</span>, ylabel<span class="op">=</span><span class="st">&quot;Error absoluto (log)&quot;</span>)</span>
-<span id="cb12-539"><a href="#cb12-539"></a><span class="fu">plot!</span>(<span class="fl">1</span><span class="op">:</span><span class="fu">length</span>(error_steffensen), error_steffensen,</span>
-<span id="cb12-540"><a href="#cb12-540"></a>    label<span class="op">=</span><span class="st">&quot;Steffensen (4 iter.)&quot;</span>, yscale<span class="op">=:</span>log10, marker<span class="op">=:</span>square)</span>
-<span id="cb12-541"><a href="#cb12-541"></a><span class="in">```</span></span>
-<span id="cb12-542"><a href="#cb12-542"></a></span>
-<span id="cb12-543"><a href="#cb12-543"></a><span class="fu"># Conclusiones</span></span>
-<span id="cb12-544"><a href="#cb12-544"></a></span>
-<span id="cb12-545"><a href="#cb12-545"></a>Este análisis comparativo ha permitido verificar empírica y teóricamente las fortalezas y debilidades de varios algoritmos para encontrar raíces. La principal conclusión es que las mejoras algorítmicas que incorporan más información sobre el comportamiento de la función (como la magnitud de $f(x)$ o la aceleración de secuencias) ofrecen ganancias sustanciales en eficiencia.</span>
-<span id="cb12-546"><a href="#cb12-546"></a></span>
-<span id="cb12-547"><a href="#cb12-547"></a><span class="ss">  - </span>El método de **Regula falsi** es una mejora clara sobre la **Bisección**, aunque puede sufrir de convergencia lenta si uno de los extremos del intervalo se estanca.</span>
-<span id="cb12-548"><a href="#cb12-548"></a><span class="ss">  - </span>El **método de Illinois** se presenta como una solución robusta y eficaz a este estancamiento, siendo una alternativa superior a Regula falsi en la práctica.</span>
-<span id="cb12-549"><a href="#cb12-549"></a><span class="ss">  - </span>El **método de la Secante**, si bien es el más rápido de los métodos basados en intervalos, sacrifica la convergencia garantizada, lo que lo hace potente pero potencialmente inestable.</span>
-<span id="cb12-550"><a href="#cb12-550"></a><span class="ss">  - </span>Finalmente, el **método de Steffensen** demuestra el poder de las técnicas de aceleración, transformando un proceso de convergencia lineal (Punto fijo) en uno cuadrático, lo que reduce drásticamente el costo computacional.</span>
-<span id="cb12-551"><a href="#cb12-551"></a>  </span>
+<span id="cb12-530"><a href="#cb12-530"></a><span class="fu">### Gráfico de convergencia del error</span></span>
+<span id="cb12-531"><a href="#cb12-531"></a></span>
+<span id="cb12-534"><a href="#cb12-534"></a><span class="in">```{julia}</span></span>
+<span id="cb12-535"><a href="#cb12-535"></a><span class="co">#| label: fig-error-pf-steffensen</span></span>
+<span id="cb12-536"><a href="#cb12-536"></a><span class="co">#| fig-cap: &quot;Comparación del Error absoluto por iteración (escala logarítmica).&quot;</span></span>
+<span id="cb12-537"><a href="#cb12-537"></a></span>
+<span id="cb12-538"><a href="#cb12-538"></a><span class="co"># Datos de Error absoluto extraídos de las tablas</span></span>
+<span id="cb12-539"><a href="#cb12-539"></a>error_pf <span class="op">=</span> <span class="fu">abs</span>.([<span class="fl">2.38e-01</span>, <span class="fl">1.63e-01</span>, <span class="fl">1.07e-01</span>, <span class="fl">7.34e-02</span>, <span class="fl">4.90e-02</span>, <span class="fl">3.31e-02</span>, <span class="fl">2.22e-02</span>, <span class="fl">1.50e-02</span>, <span class="fl">1.01e-02</span>, <span class="fl">6.82e-03</span>, <span class="fl">4.59e-03</span>, <span class="fl">3.09e-03</span>, <span class="fl">2.08e-03</span>, <span class="fl">1.40e-03</span>, <span class="fl">9.45e-04</span>, <span class="fl">6.36e-04</span>, <span class="fl">4.29e-04</span>, <span class="fl">2.88e-04</span>, <span class="fl">1.94e-04</span>, <span class="fl">1.31e-04</span>, <span class="fl">8.83e-05</span>, <span class="fl">5.95e-05</span>, <span class="fl">4.00e-05</span>, <span class="fl">2.69e-05</span>, <span class="fl">1.81e-05</span>, <span class="fl">1.22e-05</span>, <span class="fl">8.25e-06</span>, <span class="fl">5.55e-06</span>, <span class="fl">3.74e-06</span>, <span class="fl">2.52e-06</span>, <span class="fl">1.69e-06</span>, <span class="fl">1.14e-06</span>, <span class="fl">7.70e-07</span>, <span class="fl">5.19e-07</span>, <span class="fl">3.49e-07</span>, <span class="fl">2.35e-07</span>, <span class="fl">1.58e-07</span>, <span class="fl">1.06e-07</span>, <span class="fl">7.20e-08</span>, <span class="fl">4.85e-08</span>, <span class="fl">3.26e-08</span>, <span class="fl">2.20e-08</span>, <span class="fl">1.48e-08</span>, <span class="fl">9.98e-09</span>, <span class="fl">6.72e-09</span>])</span>
+<span id="cb12-540"><a href="#cb12-540"></a></span>
+<span id="cb12-541"><a href="#cb12-541"></a><span class="co"># ¡Este es el cambio! Reemplazamos 0.0 con un número muy pequeño (1e-16) para visualizarlo en la escala logarítmica</span></span>
+<span id="cb12-542"><a href="#cb12-542"></a>error_steffensen <span class="op">=</span> <span class="fu">abs</span>.([<span class="fl">2.31e-01</span>, <span class="fl">7.69e-03</span>, <span class="fl">8.79e-06</span>, <span class="fl">1e-16</span>]) </span>
+<span id="cb12-543"><a href="#cb12-543"></a></span>
+<span id="cb12-544"><a href="#cb12-544"></a><span class="fu">plot</span>(<span class="fl">1</span><span class="op">:</span><span class="fu">length</span>(error_pf), error_pf,</span>
+<span id="cb12-545"><a href="#cb12-545"></a>    label<span class="op">=</span><span class="st">&quot;Punto fijo (45 iter.)&quot;</span>, yscale<span class="op">=:</span>log10, marker<span class="op">=:</span>circle,</span>
+<span id="cb12-546"><a href="#cb12-546"></a>    title<span class="op">=</span><span class="st">&quot;Error por Iteración&quot;</span>, xlabel<span class="op">=</span><span class="st">&quot;Iteración&quot;</span>, ylabel<span class="op">=</span><span class="st">&quot;Error absoluto (log)&quot;</span>)</span>
+<span id="cb12-547"><a href="#cb12-547"></a><span class="fu">plot!</span>(<span class="fl">1</span><span class="op">:</span><span class="fu">length</span>(error_steffensen), error_steffensen,</span>
+<span id="cb12-548"><a href="#cb12-548"></a>    label<span class="op">=</span><span class="st">&quot;Steffensen (4 iter.)&quot;</span>, yscale<span class="op">=:</span>log10, marker<span class="op">=:</span>square)</span>
+<span id="cb12-549"><a href="#cb12-549"></a><span class="in">```</span></span>
+<span id="cb12-550"><a href="#cb12-550"></a></span>
+<span id="cb12-551"><a href="#cb12-551"></a><span class="fu"># Conclusiones</span></span>
+<span id="cb12-552"><a href="#cb12-552"></a></span>
+<span id="cb12-553"><a href="#cb12-553"></a>Este análisis comparativo ha permitido verificar empírica y teóricamente las fortalezas y debilidades de varios algoritmos para encontrar raíces. La principal conclusión es que las mejoras algorítmicas que incorporan más información sobre el comportamiento de la función (como la magnitud de $f(x)$ o la aceleración de secuencias) ofrecen ganancias sustanciales en eficiencia.</span>
+<span id="cb12-554"><a href="#cb12-554"></a></span>
+<span id="cb12-555"><a href="#cb12-555"></a><span class="ss">-   </span>El método de **Regula falsi** es una mejora clara sobre la **Bisección**, aunque puede sufrir de convergencia lenta si uno de los extremos del intervalo se estanca.</span>
+<span id="cb12-556"><a href="#cb12-556"></a><span class="ss">-   </span>El **método de Illinois** se presenta como una solución robusta y eficaz a este estancamiento, siendo una alternativa superior a Regula falsi en la práctica.</span>
+<span id="cb12-557"><a href="#cb12-557"></a><span class="ss">-   </span>El **método de la Secante**, si bien es el más rápido de los métodos basados en intervalos, sacrifica la convergencia garantizada, lo que lo hace potente pero potencialmente inestable.</span>
+<span id="cb12-558"><a href="#cb12-558"></a><span class="ss">-   </span>Finalmente, el **método de Steffensen** demuestra el poder de las técnicas de aceleración, transformando un proceso de convergencia lineal (Punto fijo) en uno cuadrático, lo que reduce drásticamente el costo computacional.</span>
 </code><button title="Copiar al portapapeles" class="code-copy-button" data-in-quarto-modal><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->

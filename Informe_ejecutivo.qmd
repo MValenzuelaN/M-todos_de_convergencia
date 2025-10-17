@@ -60,16 +60,16 @@ format:
 
 ## Contexto
 
-El presente informe se centra en la implementación y análisis comparativo de diversos métodos numéricos para la resolución de ecuaciones no lineales. La tarea consiste en programar los algoritmos de Regula falsi, Secante, Illinois, Punto fijo y Steffensen en Julia. Posteriormente, estos métodos se aplicarán para resolver ecuaciones específicas, comparando su rendimiento con otros métodos como Bisección y Punto fijo, bajo una tolerancia de $10^{-6}$. El objetivo general del presente informe es realizar un análisis de la eficiencia, velocidad y características de convergencia de cada algoritmo.
+El presente informe se centra en la implementación y análisis comparativo de diversos métodos numéricos para la resolución de ecuaciones no lineales. La tarea consiste en programar los algoritmos de Regula falsi, Secante, Illinois, Punto fijo y Steffensen en Julia. Posteriormente, estos métodos se aplicarán para resolver ecuaciones específicas, comparando su rendimiento bajo una tolerancia de $10^{-6}$. El objetivo general del presente informe es realizar un análisis de la eficiencia, velocidad y características de convergencia de cada algoritmo.
 
 ## Objetivos específicos
 
 Los objetivos puntuales a desarrollar en este trabajo son los siguientes:
 
-  - **Implementar**: los métodos de Regula falsi, Secante, Illinois, Punto fijo y Steffensen.
-  - **Resolver**: las ecuaciones propuestas utilizando los métodos implementados.
-  - **Comparar**: el rendimiento de los diferentes métodos ante los problemas planteados.
-  - **Elaborar**: gráficos comparativos que ilustren la evolución de las aproximaciones, el error y el número de iteraciones para cada par de métodos.
+-   **Implementar**: los métodos de Regula falsi, Secante, Illinois, Punto fijo y Steffensen.
+-   **Resolver**: las ecuaciones propuestas utilizando los métodos implementados.
+-   **Comparar**: el rendimiento de los diferentes métodos ante los problemas planteados.
+-   **Elaborar**: gráficos comparativos que ilustren la evolución de las aproximaciones, el error y el número de iteraciones para cada par de métodos.
 
 # Hallazgos principales
 
@@ -121,23 +121,25 @@ p
 
 A continuación, se presentan las tablas de iteraciones para ambos métodos.
 
-| Iteración | Cota inferior | Cota superior | Raíz aproximada | f(x\_k) |
-|:---:|:---:|:---:|:---:|:---|
+| Iteración | Cota inferior | Cota superior | Raíz aproximada | f(x_k) |
+|:-------------:|:-------------:|:-------------:|:-------------:|:--------------|
 | 1 | 0 | 1 | 0.5 | $1.0653 \times 10^{-01}$ |
 | 2 | 0.5 | 1 | 0.75 | $-2.7763 \times 10^{-01}$ |
 | ... | ... | ... | ... | ... |
 | 19 | 0.5671425 | 0.5671463 | 0.5671444 | $-1.7294 \times 10^{-06}$ |
 | 20 | 0.5671425 | 0.5671444 | 0.5671434 | $-2.3482 \times 10^{-07}$ |
-Table: Iteraciones del método de Bisección (Tabla abreviada). {\#tbl-biseccion-iteraciones}
 
-| Iteración | Cota inferior | Cota superior | Raíz aproximada | f(x\_k) |
-|:---:|:---:|:---:|:---:|:---|
+: Iteraciones del método de Bisección (Tabla abreviada). {#tbl-biseccion-iteraciones}
+
+| Iteración | Cota inferior | Cota superior | Raíz aproximada | f(x_k) |
+|:-------------:|:-------------:|:-------------:|:-------------:|:--------------|
 | 1 | 0 | 1 | 0.6126998 | $-7.0814 \times 10^{-02}$ |
 | 2 | 0 | 0.6126998 | 0.5721814 | $-7.8883 \times 10^{-03}$ |
 | ... | ... | ... | ... | ... |
 | 6 | 0 | 0.5671502 | 0.5671441 | $-1.2066 \times 10^{-06}$ |
 | 7 | 0 | 0.5671441 | 0.5671434 | $-1.3419 \times 10^{-07}$ |
-Table: Iteraciones del método de Regula falsi (Tabla abreviada). {\#tbl-regula-falsi-iteraciones}
+
+: Iteraciones del método de Regula falsi (Tabla abreviada). {#tbl-regula-falsi-iteraciones}
 
 ### Análisis comparativo
 
@@ -213,24 +215,26 @@ p
 ### Resultados tabulares
 
 | Iteración | Cota inferior | Cota superior | Raíz aproximada | Error |
-|:---:|:---:|:---:|:---:|:---|
+|:--:|:--:|:--:|:--:|:---|
 | 1 | 1 | 2 | 1.1666667 | $-5.7870 \times 10^{-01}$ |
 | 2 | 1.1666667 | 2 | 1.2531120 | $-2.8536 \times 10^{-01}$ |
 | ... | ... | ... | ... | ... |
 | 16 | 1.3247169 | 2 | 1.3247175 | $-1.9552 \times 10^{-06}$ |
 | 17 | 1.3247175 | 2 | 1.3247178 | $-8.2907 \times 10^{-07}$ |
-Table: Iteraciones de Regula falsi (Tabla abreviada). {\#tbl-regula-falsi-iteraciones-2}
 
-| Iteración | $x_{k-1}$ | $x_k$ | Raíz aproximada | Error |
-|:---:|:---:|:---:|:---:|:---|
-| 1 | 1 | 2 | 1.1666667 | $-5.7870 \times 10^{-01}$ |
-| 2 | 2 | 1.1666667 | 1.2531120 | $-2.8536 \times 10^{-01}$ |
-| 3 | 1.1666667 | 1.2531120 | 1.3372064 | $5.3881 \times 10^{-02}$ |
-| 4 | 1.2531120 | 1.3372064 | 1.3238501 | $-3.6981 \times 10^{-03}$ |
-| 5 | 1.3372064 | 1.3238501 | 1.3247079 | $-4.2734 \times 10^{-05}$ |
-| 6 | 1.3238501 | 1.3247079 | 1.3247180 | $3.4582 \times 10^{-08}$ |
-| 7 | 1.3247079 | 1.3247180 | 1.3247180 | $-3.2285 \times 10^{-13}$ |
-Table: Iteraciones del método de la Secante. {\#tbl-secante-iteraciones-2}
+: Iteraciones de Regula falsi (Tabla abreviada). {#tbl-regula-falsi-iteraciones-2}
+
+| Iteración | $x_{k-1}$ |   $x_k$   | Raíz aproximada | Error                     |
+|:---------:|:---------:|:---------:|:---------------:|:--------------------------|
+|     1     |     1     |     2     |    1.1666667    | $-5.7870 \times 10^{-01}$ |
+|     2     |     2     | 1.1666667 |    1.2531120    | $-2.8536 \times 10^{-01}$ |
+|     3     | 1.1666667 | 1.2531120 |    1.3372064    | $5.3881 \times 10^{-02}$  |
+|     4     | 1.2531120 | 1.3372064 |    1.3238501    | $-3.6981 \times 10^{-03}$ |
+|     5     | 1.3372064 | 1.3238501 |    1.3247079    | $-4.2734 \times 10^{-05}$ |
+|     6     | 1.3238501 | 1.3247079 |    1.3247180    | $3.4582 \times 10^{-08}$  |
+|     7     | 1.3247079 | 1.3247180 |    1.3247180    | $-3.2285 \times 10^{-13}$ |
+
+: Iteraciones del método de la Secante. {#tbl-secante-iteraciones-2}
 
 ### Análisis comparativo
 
@@ -322,23 +326,25 @@ p
 ### Resultados tabulares
 
 | Iteración | Cota inferior | Cota superior | Raíz aproximada | Error |
-|:---:|:---:|:---:|:---:|:---|
+|:--:|:--:|:--:|:--:|:---|
 | 1 | 1 | **2** | 1.1666667 | $-5.7870 \times 10^{-01}$ |
 | 2 | 1.1666667 | **2** | 1.2531120 | $-2.8536 \times 10^{-01}$ |
 | 3 | 1.2531120 | **2** | 1.2934374 | $-1.2954 \times 10^{-01}$ |
 | ... | ... | ... | ... | ... |
 | 17 | 1.3247175 | **2** | 1.3247178 | $-8.2907 \times 10^{-07}$ |
-Table: Estancamiento de la cota superior en Regula falsi (Tabla abreviada). {\#tbl-regula-falsi-iteraciones-3}
+
+: Estancamiento de la cota superior en Regula falsi (Tabla abreviada). {#tbl-regula-falsi-iteraciones-3}
 
 | Iteración | Cota inferior | Cota superior | Raíz aproximada | Error |
-|:---:|:---:|:---:|:---:|:---|
+|:-------------:|:-------------:|:-------------:|:-------------:|:--------------|
 | 1 | 1 | 2 | 1.1666667 | $-5.7870 \times 10^{-01}$ |
 | 2 | 1.1666667 | 2 | 1.2531120 | $-2.8536 \times 10^{-01}$ |
 | 3 | 1.2531120 | **2** | 1.3296314 | $2.1050 \times 10^{-02}$ |
 | 4 | 1.2531120 | **1.3296314** | 1.3243746 | $-1.4636 \times 10^{-03}$ |
 | ... | ... | ... | ... | ... |
 | 7 | 1.3247164 | 1.3247195 | 1.3247180 | $-9.6652 \times 10^{-12}$ |
-Table: El método de Illinois actualiza ambas cotas y converge rápidamente. {\#tbl-illinois-iteraciones-3}
+
+: El método de Illinois actualiza ambas cotas y converge rápidamente. {#tbl-illinois-iteraciones-3}
 
 ### Análisis comparativo
 
@@ -475,29 +481,31 @@ p
 
 ### Resultados tabulares
 
-| Iteración | $x_k$ | $g(x_k)$ | $g(g(x_k))$ | Error ($|x_{k+1}-x_k|$) |
-|:---:|:---:|:---:|:---:|:---|
-| 1 | 0.5000000 | 0.8775826 | 0.6390125 | $3.7758 \times 10^{-01}$ |
-| 2 | 0.8775826 | 0.6390125 | 0.8026851 | $2.3857 \times 10^{-01}$ |
-| ... | ... | ... | ... | ... |
-| 44 | 0.7390851 | 0.7390851 | 0.7390851 | $9.9894 \times 10^{-09}$ |
-| 45 | 0.7390851 | 0.7390851 | 0.7390851 | $6.7290 \times 10^{-09}$ |
-Table: Iteraciones de Punto fijo (Tabla abreviada). {\#tbl-punto-fijo-iteraciones-4}
+| Iteración |   $x_k$   | $g(x_k)$  | $g(g(x_k))$ | Error ($|x_{k+1}-x_k|$)  |
+|:---------:|:---------:|:---------:|:-----------:|:-------------------------|
+|     1     | 0.5000000 | 0.8775826 |  0.6390125  | $3.7758 \times 10^{-01}$ |
+|     2     | 0.8775826 | 0.6390125 |  0.8026851  | $2.3857 \times 10^{-01}$ |
+|    ...    |    ...    |    ...    |     ...     | ...                      |
+|    44     | 0.7390851 | 0.7390851 |  0.7390851  | $9.9894 \times 10^{-09}$ |
+|    45     | 0.7390851 | 0.7390851 |  0.7390851  | $6.7290 \times 10^{-09}$ |
 
-| Iteración | $x_k$ | $x_{k+1}$ (calculado) | Error ($|x_{k+1}-x_k|$) |
-|:---:|:---:|:---:|:---|
-| 1 | 0.5000000000 | 0.7313851864 | $2.3138 \times 10^{-01}$ |
-| 2 | 0.7313851864 | 0.7390763404 | $7.6911 \times 10^{-03}$ |
-| 3 | 0.7390763404 | 0.7390851332 | $8.7928 \times 10^{-06}$ |
-| 4 | 0.7390851332 | 0.7390851332 | $1.1102 \times 10^{-16}$ |
-Table: Iteraciones del método de Steffensen. {\#tbl-steffensen-iteraciones-4}
+: Iteraciones de Punto fijo (Tabla abreviada). {#tbl-punto-fijo-iteraciones-4}
+
+| Iteración |    $x_k$     | $x_{k+1}$ (calculado) | Error ($|x_{k+1}-x_k|$)  |
+|:---------:|:------------:|:---------------------:|:-------------------------|
+|     1     | 0.5000000000 |     0.7313851864      | $2.3138 \times 10^{-01}$ |
+|     2     | 0.7313851864 |     0.7390763404      | $7.6911 \times 10^{-03}$ |
+|     3     | 0.7390763404 |     0.7390851332      | $8.7928 \times 10^{-06}$ |
+|     4     | 0.7390851332 |     0.7390851332      | $1.1102 \times 10^{-16}$ |
+
+: Iteraciones del método de Steffensen. {#tbl-steffensen-iteraciones-4}
 
 ### Análisis comparativo
 
 La diferencia en rendimiento es abrumadora y se explica teóricamente por el **orden de convergencia**.
 
-  - **Método de Punto fijo**: Tiene **convergencia lineal** (orden 1). El error disminuye a un ritmo constante, lo que resulta en un progreso lento pero seguro. En este caso, requirió **45 iteraciones**.
-  - **Método de Steffensen**: Es una técnica de aceleración que transforma la convergencia lineal en **convergencia cuadrática** (orden 2). El error en cada paso es aproximadamente el *cuadrado* del error anterior ($e_{k+1} \approx C \cdot e_k^2$). Esto significa que el número de cifras decimales correctas se duplica en cada iteración, logrando una convergencia extremadamente rápida en solo **4 iteraciones**. Steffensen es inmensamente superior para acelerar la convergencia de iteraciones de Punto fijo.
+-   **Método de Punto fijo**: Tiene **convergencia lineal** (orden 1). El error disminuye a un ritmo constante, lo que resulta en un progreso lento pero seguro. En este caso, requirió **45 iteraciones**.
+-   **Método de Steffensen**: Es una técnica de aceleración que transforma la convergencia lineal en **convergencia cuadrática** (orden 2). El error en cada paso es aproximadamente el *cuadrado* del error anterior ($e_{k+1} \approx C \cdot e_k^2$). Esto significa que el número de cifras decimales correctas se duplica en cada iteración, logrando una convergencia extremadamente rápida en solo **4 iteraciones**. Steffensen es inmensamente superior para acelerar la convergencia de iteraciones de Punto fijo.
 
 ### Gráfico de convergencia del error
 
@@ -522,8 +530,7 @@ plot!(1:length(error_steffensen), error_steffensen,
 
 Este análisis comparativo ha permitido verificar empírica y teóricamente las fortalezas y debilidades de varios algoritmos para encontrar raíces. La principal conclusión es que las mejoras algorítmicas que incorporan más información sobre el comportamiento de la función (como la magnitud de $f(x)$ o la aceleración de secuencias) ofrecen ganancias sustanciales en eficiencia.
 
-  - El método de **Regula falsi** es una mejora clara sobre la **Bisección**, aunque puede sufrir de convergencia lenta si uno de los extremos del intervalo se estanca.
-  - El **método de Illinois** se presenta como una solución robusta y eficaz a este estancamiento, siendo una alternativa superior a Regula falsi en la práctica.
-  - El **método de la Secante**, si bien es el más rápido de los métodos basados en intervalos, sacrifica la convergencia garantizada, lo que lo hace potente pero potencialmente inestable.
-  - Finalmente, el **método de Steffensen** demuestra el poder de las técnicas de aceleración, transformando un proceso de convergencia lineal (Punto fijo) en uno cuadrático, lo que reduce drásticamente el costo computacional.
-  
+-   El método de **Regula falsi** es una mejora clara sobre la **Bisección**, aunque puede sufrir de convergencia lenta si uno de los extremos del intervalo se estanca.
+-   El **método de Illinois** se presenta como una solución robusta y eficaz a este estancamiento, siendo una alternativa superior a Regula falsi en la práctica.
+-   El **método de la Secante**, si bien es el más rápido de los métodos basados en intervalos, sacrifica la convergencia garantizada, lo que lo hace potente pero potencialmente inestable.
+-   Finalmente, el **método de Steffensen** demuestra el poder de las técnicas de aceleración, transformando un proceso de convergencia lineal (Punto fijo) en uno cuadrático, lo que reduce drásticamente el costo computacional.
